@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Penpals' League (IPL) | Love, Friendship &amp; Humanity</title>
+    <meta name="description" content="Indian Penpals' League (IPL) — a confederation of friends united since 1995 to uphold Love, Friendship and Humanity. Reg #F23778. 80G Certified.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<style>
+/* =====================================================================
+   INDIAN PENPALS' LEAGUE — Complete Design System
+   Single-File SPA | All CSS Embedded
+   ===================================================================== */
+
+/* --- DESIGN TOKENS --- */
+:root {
+    --color-navy: #0B1F3A; --color-navy-dark: #071527; --color-navy-light: #172C4C;
+    --color-blue: #1456A0; --color-blue-dark: #003F7C; --color-blue-light: #225EA9;
+    --color-gold: #D4A72C; --color-gold-dark: #503C00; --color-gold-light: #F5C549;
+    --color-gold-pale: #FCF7EB; --color-gold-badge: #FFDF98;
+    --color-accent-magenta: #801475;
+    --color-white: #FFFFFF; --color-surface: #F6FAFF;
+    --color-surface-dim: #D6DADF; --color-surface-low: #F0F4F9;
+    --color-surface-container: #EAEEF3; --color-surface-high: #E4E9ED;
+    --color-surface-highest: #DFE3E8; --color-light-blue: #F3F7FC;
+    --color-secondary-container: #C8DBFE;
+    --color-text-primary: #0B1F3A; --color-text-secondary: #4B5D73;
+    --color-text-muted: #667085; --color-text-on-dark: #F6FAFF;
+    --color-border: #E5EAF0; --color-border-focus: #1456A0;
+    --color-error: #BA1A1A; --color-success: #1E7E34;
+    --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --space-xs:.25rem; --space-sm:.5rem; --space-md:1rem;
+    --space-lg:1.5rem; --space-xl:2.5rem; --space-2xl:4rem; --space-3xl:6rem;
+    --radius-sm:.25rem; --radius-md:.5rem; --radius-lg:.75rem;
+    --radius-xl:1rem; --radius-2xl:1.5rem; --radius-full:9999px;
+    --shadow-sm:0 1px 3px rgba(11,31,58,.06),0 1px 2px rgba(11,31,58,.04);
+    --shadow-md:0 4px 12px -2px rgba(11,31,58,.08),0 2px 6px -1px rgba(11,31,58,.04);
+    --shadow-lg:0 12px 28px -4px rgba(11,31,58,.12),0 4px 12px -2px rgba(11,31,58,.06);
+    --shadow-xl:0 20px 40px -8px rgba(11,31,58,.18);
+    --container-max-width:1280px; --header-height:112px;
+}
+
+/* --- RESET --- */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:var(--font-body);font-size:1rem;line-height:1.6;color:var(--color-text-primary);background:var(--color-surface);overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+img,picture,svg{display:block;max-width:100%;height:auto}
+input,button,textarea,select{font:inherit}
+a{color:inherit;text-decoration:none;transition:color .2s ease,background-color .2s ease}
+button{cursor:pointer;border:none;background:none}
+ul,ol{list-style:none}
+.material-symbols-outlined{font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;-webkit-font-smoothing:antialiased;vertical-align:middle}
+
+/* --- TYPOGRAPHY --- */
+h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--color-text-primary);line-height:1.25}
+.display-hero{font-size:clamp(2.25rem,4vw + 1rem,3.25rem);font-weight:800;line-height:1.15;letter-spacing:-.02em}
+.headline-xl{font-size:clamp(1.9rem,3vw + .5rem,2.75rem);font-weight:700;line-height:1.2;letter-spacing:-.015em}
+.headline-lg{font-size:clamp(1.75rem,3vw + .5rem,2.5rem);font-weight:700;line-height:1.2;letter-spacing:-.015em}
+.headline-md{font-size:clamp(1.35rem,2vw + .5rem,1.75rem);font-weight:600;line-height:1.3}
+.headline-sm{font-size:1.25rem;font-weight:600;line-height:1.4}
+.body-lg{font-size:1.125rem;line-height:1.65}
+.body-md{font-size:1rem;line-height:1.6}
+.body-sm{font-size:.875rem;line-height:1.5}
+.label-sm{font-size:.6875rem;font-weight:600;line-height:1.2;letter-spacing:.04em}
+.text-muted{color:var(--color-text-muted)}.text-secondary{color:var(--color-text-secondary)}
+.text-primary{color:var(--color-blue)}.text-gold{color:var(--color-gold)}
+.text-navy{color:var(--color-navy)}.text-white{color:var(--color-white)}
+.italic{font-style:italic}
+
+/* --- LAYOUT --- */
+.container{width:100%;max-width:var(--container-max-width);margin:0 auto;padding:0 1.5rem}
+.section{padding:var(--space-2xl) 0;position:relative}
+.section-sm{padding:var(--space-xl) 0}
+.section-lg{padding:var(--space-3xl) 0}
+.bg-surface{background:var(--color-surface)}.bg-white{background:#fff}
+.bg-surface-low{background:var(--color-surface-low)}.bg-navy{background:var(--color-navy);color:#fff}
+.flex{display:flex}.flex-col{flex-direction:column}.items-center{align-items:center}
+.items-start{align-items:flex-start}.items-end{align-items:flex-end}
+.justify-between{justify-content:space-between}.justify-center{justify-content:center}
+.flex-wrap{flex-wrap:wrap}.flex-1{flex:1}.shrink-0{flex-shrink:0}
+.gap-xs{gap:var(--space-xs)}.gap-sm{gap:var(--space-sm)}.gap-md{gap:var(--space-md)}
+.gap-lg{gap:var(--space-lg)}.gap-xl{gap:var(--space-xl)}
+.grid{display:grid;gap:1.5rem}
+.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.col-span-2{grid-column:span 2}.col-span-3{grid-column:span 3}
+.text-center{text-align:center}.relative{position:relative}.overflow-hidden{overflow:hidden}
+.rounded-full{border-radius:var(--radius-full)}.rounded-lg{border-radius:var(--radius-lg)}
+.shadow-sm{box-shadow:var(--shadow-sm)}.shadow-lg{box-shadow:var(--shadow-lg)}
+.border{border:1px solid var(--color-border)}.border-t{border-top:1px solid var(--color-border)}
+.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}
+.leading-relaxed{line-height:1.7}.font-bold{font-weight:700}.font-semibold{font-weight:600}
+.uppercase{text-transform:uppercase}.mb-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}
+.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}
+.mb-8{margin-bottom:2rem}.mb-10{margin-bottom:2.5rem}.mt-6{margin-top:1.5rem}
+.mt-8{margin-top:2rem}.p-2{padding:.5rem}.p-4{padding:1rem}.p-5{padding:1.25rem}
+.p-6{padding:1.5rem}.inline-flex{display:inline-flex}
+
+/* --- ACCESSIBILITY --- */
+.skip-link{position:absolute;top:-40px;left:1rem;background:var(--color-gold);color:var(--color-navy);padding:.5rem 1rem;font-weight:700;z-index:9999;border-radius:var(--radius-md);transition:top .2s ease}
+.skip-link:focus{top:1rem}
+:focus-visible{outline:2px solid var(--color-blue);outline-offset:2px}
+
+/* --- TOP BAR --- */
+.top-bar{background:var(--color-navy);color:#fff;padding:.375rem 1.5rem;font-size:.8125rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.top-bar-container{max-width:var(--container-max-width);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1rem}
+.top-bar-info{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+.top-bar-divider{color:rgba(255,255,255,.3)}
+.top-bar-links{display:flex;align-items:center;gap:1rem}
+.top-bar-links a{display:inline-flex;align-items:center;gap:.25rem;color:#fff;transition:color .2s}
+.top-bar-links a:hover{color:var(--color-gold-light)}
+
+/* --- HEADER & NAV --- */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--color-border);box-shadow:0 2px 10px rgba(11,31,58,.05);transition:all .3s ease}
+.site-header.scrolled{box-shadow:0 4px 20px rgba(11,31,58,.12)}
+.main-nav{height:72px;display:flex;align-items:center;justify-content:space-between;max-width:var(--container-max-width);margin:0 auto;padding:0 1.5rem}
+.brand-logo-wrapper{display:flex;align-items:center;gap:.875rem;cursor:pointer}
+.brand-logo{width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(11,31,58,.15);border:2px solid var(--color-border);background:#fff}
+.brand-text{display:flex;flex-direction:column}
+.brand-title{font-family:var(--font-heading);font-size:1.125rem;font-weight:800;color:var(--color-navy);letter-spacing:-.01em;line-height:1.15}
+.brand-subtitle{font-size:.6875rem;font-weight:500;color:var(--color-text-muted);letter-spacing:.02em}
+.nav-menu{display:flex;align-items:center;gap:.5rem}
+.nav-item{position:relative;display:inline-flex;align-items:center}
+.nav-link{font-size:.95rem;font-weight:600;color:var(--color-text-secondary);padding:.55rem 1rem;border-radius:10px;display:inline-flex;align-items:center;gap:.35rem;transition:all .2s ease;cursor:pointer;text-decoration:none;line-height:1.2;border-bottom:3px solid transparent;background:none;border-top:none;border-left:none;border-right:none}
+.nav-link:hover,.nav-dropdown:hover>.nav-link,.nav-link.active{color:var(--color-blue);font-weight:700;background:rgba(20,86,160,.08);border-bottom:3px solid var(--color-blue);border-radius:10px 10px 4px 4px}
+.nav-link .dropdown-chevron{font-size:1.15rem;transition:transform .25s cubic-bezier(.16,1,.3,1);color:var(--color-text-muted)}
+.nav-dropdown:hover .dropdown-chevron{transform:rotate(180deg);color:var(--color-blue)}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 6px);left:0;min-width:220px;background:#fff;border-radius:14px;box-shadow:0 12px 32px rgba(11,31,58,.14),0 2px 6px rgba(0,0,0,.04);border:1px solid var(--color-border);padding:.5rem;display:flex;flex-direction:column;gap:.25rem;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s ease,transform .2s cubic-bezier(.16,1,.3,1),visibility .2s;z-index:1100}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:12px}
+.nav-dropdown:hover .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-dropdown-item{font-size:.9375rem;font-weight:600;color:var(--color-text-primary);padding:.65rem 1rem;border-radius:8px;transition:all .18s ease;display:flex;align-items:center;cursor:pointer;text-decoration:none;line-height:1.3}
+.nav-dropdown-item:hover{background:var(--color-surface-low);color:var(--color-blue)}
+.nav-dropdown-item.active{background:rgba(20,86,160,.08);color:var(--color-blue);font-weight:700}
+.nav-actions{display:flex;align-items:center;gap:.75rem}
+.lang-switch{display:flex;align-items:center;background:var(--color-surface-container);border-radius:var(--radius-md);padding:2px;border:1px solid var(--color-border)}
+.lang-btn{padding:.25rem .625rem;font-size:.75rem;font-weight:600;border-radius:calc(var(--radius-md) - 2px);color:var(--color-text-secondary);transition:all .2s ease}
+.lang-btn.active{background:#fff;color:var(--color-navy);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.dot-indicator{width:6px;height:6px;border-radius:50%;background:var(--color-gold-light);display:inline-block;margin-right:.35rem}
+.mobile-menu-toggle{display:none;background:none;border:none;font-size:1.75rem;color:var(--color-navy);padding:.375rem;cursor:pointer}
+
+/* --- MOBILE DRAWER --- */
+.mobile-nav-drawer{position:fixed;top:0;right:-100%;width:320px;max-width:85vw;height:100vh;background:#fff;z-index:1001;box-shadow:-4px 0 24px rgba(0,0,0,.2);padding:1.75rem 1.5rem;display:flex;flex-direction:column;gap:1.5rem;transition:right .35s cubic-bezier(.16,1,.3,1);overflow-y:auto}
+.mobile-nav-drawer.open{right:0}
+.mobile-drawer-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--color-border);padding-bottom:1rem}
+.mobile-nav-links{display:flex;flex-direction:column;gap:.5rem}
+.mobile-nav-link{font-size:1rem;font-weight:600;color:var(--color-text-primary);padding:.75rem .875rem;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:none;border:none;width:100%;text-align:left;cursor:pointer;transition:all .2s ease}
+.mobile-nav-link:hover,.mobile-nav-link.active{background:var(--color-surface-low);color:#801475}
+.mobile-nav-accordion{display:flex;flex-direction:column}
+.mobile-accordion-toggle .accordion-icon{transition:transform .25s ease}
+.accordion-icon.rotated{transform:rotate(180deg)}
+.mobile-sub-menu{display:flex;flex-direction:column;gap:.25rem;padding:0;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}
+.mobile-sub-menu.open{max-height:400px;padding:.25rem 0 .5rem 1.25rem}
+.mobile-sub-link{font-size:.9375rem;font-weight:500;color:var(--color-text-secondary);padding:.5rem .75rem;border-radius:var(--radius-sm);text-decoration:none;transition:all .15s ease;cursor:pointer;display:block}
+.mobile-sub-link:hover,.mobile-sub-link.active{color:#801475;background:var(--color-surface-low);font-weight:600}
+.mobile-drawer-cta{margin-top:1rem;padding-top:1rem;border-top:1px solid var(--color-border)}
+.drawer-overlay{position:fixed;inset:0;background:rgba(11,31,58,.5);backdrop-filter:blur(2px);z-index:1000;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.drawer-overlay.active{opacity:1;pointer-events:auto}
+
+/* --- MAIN CONTENT AREA --- */
+.main-content{margin-top:calc(var(--header-height) - 10px);flex:1}
+
+/* --- SPA PAGE SECTIONS --- */
+.page-section{display:none}
+.page-section.active{display:block}
+
+/* --- BREADCRUMB --- */
+.breadcrumb-bar{background:var(--color-surface-low);padding:.75rem 1.5rem;border-bottom:1px solid var(--color-border)}
+.breadcrumb-list{display:flex;align-items:center;gap:.5rem;max-width:var(--container-max-width);margin:0 auto;font-size:.875rem;color:var(--color-text-muted);flex-wrap:wrap}
+.breadcrumb-item a{color:var(--color-text-secondary);display:inline-flex;align-items:center;gap:.25rem;cursor:pointer}
+.breadcrumb-item a:hover,.breadcrumb-item.active{color:var(--color-blue);font-weight:600}
+.breadcrumb-separator{color:var(--color-surface-dim)}
+
+/* --- BUTTONS --- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--font-body);font-weight:600;font-size:.9375rem;padding:.625rem 1.375rem;border-radius:var(--radius-md);transition:all .25s cubic-bezier(.16,1,.3,1);text-align:center;white-space:nowrap;line-height:1.4;cursor:pointer;border:none}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--color-blue);color:#fff;box-shadow:0 2px 8px rgba(20,86,160,.25)}
+.btn-primary:hover{background:var(--color-blue-dark);box-shadow:0 4px 14px rgba(20,86,160,.35);color:#fff}
+.btn-secondary{background:var(--color-surface-container);color:var(--color-navy);border:1px solid var(--color-border)}
+.btn-secondary:hover{background:var(--color-surface-high);color:var(--color-navy)}
+.btn-gold{background:var(--color-gold);color:var(--color-navy);font-weight:700;box-shadow:0 2px 8px rgba(212,167,44,.25)}
+.btn-gold:hover{background:var(--color-gold-light);color:var(--color-navy)}
+.btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6)}
+.btn-outline-white:hover{background:#fff;color:var(--color-navy)}
+.btn-sm{padding:.375rem .875rem;font-size:.8125rem;border-radius:var(--radius-sm)}
+.btn-lg{padding:.875rem 1.75rem;font-size:1.05rem;border-radius:var(--radius-lg)}
+.btn-full,.btn-block{width:100%}
+.btn-circle{width:40px;height:40px;border-radius:50%;padding:0}
+
+/* --- BADGES --- */
+.badge{display:inline-flex;align-items:center;gap:.375rem;padding:.25rem .625rem;border-radius:var(--radius-sm);font-size:.75rem;font-weight:600;line-height:1.2}
+.badge-pill{border-radius:var(--radius-full);padding:.25rem .875rem}
+.badge-gold{background:var(--color-gold-pale);color:var(--color-gold-dark);border:1px solid var(--color-gold-light)}
+.badge-navy{background:var(--color-navy);color:#fff}
+.badge-blue{background:var(--color-secondary-container);color:var(--color-blue-dark)}
+.badge-light{background:var(--color-surface-container);color:var(--color-text-secondary)}
+
+/* --- CARDS --- */
+.card{background:#fff;border-radius:var(--radius-xl);border:1px solid var(--color-border);padding:1.75rem;box-shadow:var(--shadow-sm);transition:all .3s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column}
+.card-hover:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:rgba(20,86,160,.2)}
+.card-image-wrapper{position:relative;border-radius:var(--radius-lg);overflow:hidden;margin-bottom:1.25rem;background:var(--color-surface-container)}
+.card-image-wrapper img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card:hover .card-image-wrapper img{transform:scale(1.04)}
+.card-overlay-badge{position:absolute;top:.75rem;left:.75rem;z-index:2}
+.news-card-date{position:absolute;top:.75rem;right:.75rem;background:rgba(11,31,58,.85);backdrop-filter:blur(4px);color:#fff;padding:.25rem .625rem;border-radius:var(--radius-sm);font-size:.75rem;font-weight:600}
+.service-card{position:relative;border-top:4px solid var(--color-blue)}
+.service-card.gold-trim{border-top-color:var(--color-gold)}
+.service-card.magenta-trim{border-top-color:var(--color-accent-magenta)}
+
+/* --- SECTION HEADERS --- */
+.section-tag{display:inline-flex;align-items:center;gap:.375rem;font-size:.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--color-blue);margin-bottom:.5rem}
+.section-title{font-family:var(--font-heading);font-size:clamp(1.75rem,2.5vw + .5rem,2.375rem);color:var(--color-navy);font-weight:700;line-height:1.2}
+.section-desc{color:var(--color-text-secondary);font-size:1.05rem;max-width:680px;margin-top:.5rem}
+.section-header{margin-bottom:var(--space-xl)}
+
+/* --- HERO BANNERS --- */
+.hero-banner{position:relative;background:linear-gradient(180deg,var(--color-surface-low) 0%,var(--color-surface) 50%,#fff 100%);padding:var(--space-2xl) 0;overflow:hidden}
+.quote-banner{background:var(--color-navy);color:#fff;padding:var(--space-2xl) 0;position:relative;overflow:hidden;box-shadow:var(--shadow-xl)}
+
+/* --- TIMELINE --- */
+.timeline{position:relative;padding-left:2.5rem}
+.timeline::before{content:'';position:absolute;left:1.25rem;top:.5rem;bottom:.5rem;width:2px;background:var(--color-surface-highest)}
+.timeline-item{position:relative;margin-bottom:2.5rem}
+.timeline-item:last-child{margin-bottom:0}
+.timeline-marker{position:absolute;left:-2.5rem;top:.25rem;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.875rem;box-shadow:0 2px 8px rgba(20,86,160,.3);z-index:2}
+.timeline-content{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:1.5rem;box-shadow:var(--shadow-sm)}
+
+/* --- FORMS --- */
+.form-group{display:flex;flex-direction:column;gap:.375rem;margin-bottom:1.25rem}
+.form-label{font-size:.875rem;font-weight:600;color:var(--color-text-primary);display:flex;justify-content:space-between}
+.form-label .required{color:var(--color-error)}
+.form-input,.form-select,.form-textarea{width:100%;padding:.6875rem .875rem;border-radius:var(--radius-md);border:1px solid var(--color-border);background:var(--color-surface-low);color:var(--color-text-primary);font-size:.9375rem;transition:all .2s ease}
+.form-input:focus,.form-select:focus,.form-textarea:focus{background:#fff;border-color:var(--color-blue);box-shadow:0 0 0 3px rgba(20,86,160,.15);outline:none}
+.form-checkbox-label{display:flex;align-items:flex-start;gap:.625rem;font-size:.875rem;color:var(--color-text-secondary);cursor:pointer}
+.form-checkbox-label input[type="checkbox"]{margin-top:.2rem;accent-color:var(--color-blue);width:16px;height:16px}
+
+/* --- ACCORDION (FAQ) --- */
+.accordion{display:flex;flex-direction:column;gap:.75rem}
+.accordion-item{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .2s ease}
+.accordion-item:hover{box-shadow:var(--shadow-sm)}
+.accordion-header{width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.125rem 1.5rem;font-family:var(--font-heading);font-size:1rem;font-weight:600;color:var(--color-navy);text-align:left;background:none;cursor:pointer}
+.accordion-item.active .accordion-icon{transform:rotate(180deg)}
+.accordion-content{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;padding:0 1.5rem;color:var(--color-text-secondary);font-size:.9375rem;line-height:1.6}
+.accordion-item.active .accordion-content{max-height:300px;padding-bottom:1.25rem}
+
+/* --- FILTER TABS --- */
+.filter-tabs{display:flex;flex-wrap:wrap;gap:.5rem;background:var(--color-surface-container);padding:.375rem;border-radius:var(--radius-xl);width:fit-content}
+.filter-btn{padding:.5rem 1rem;font-size:.875rem;font-weight:600;color:var(--color-text-secondary);border-radius:var(--radius-lg);transition:all .2s ease;display:inline-flex;align-items:center;gap:.375rem;cursor:pointer;border:none;background:none}
+.filter-btn.active{background:var(--color-blue);color:#fff;box-shadow:var(--shadow-sm)}
+
+/* --- STATS --- */
+.stat-box{background:var(--color-surface-low);padding:1.25rem;border-radius:var(--radius-lg);display:flex;flex-direction:column;text-align:center}
+.stat-number{font-family:var(--font-heading);font-size:2rem;font-weight:800;color:var(--color-navy);line-height:1.1}
+.stat-label{font-size:.8125rem;color:var(--color-text-muted);margin-top:.25rem}
+
+/* --- TOAST --- */
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--color-navy);color:#fff;padding:1rem 1.5rem;border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);display:flex;align-items:center;gap:.75rem;z-index:3000;transform:translateY(100px);opacity:0;transition:all .35s cubic-bezier(.16,1,.3,1);max-width:400px;border-left:4px solid var(--color-gold)}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* --- FOOTER --- */
+.site-footer{background:var(--color-navy);color:var(--color-text-on-dark);padding-top:var(--space-3xl);margin-top:auto}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.2fr;gap:2.5rem;padding-bottom:var(--space-2xl);border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-col h4{font-size:1rem;font-weight:700;color:#fff;margin-bottom:1.25rem;letter-spacing:.02em}
+.footer-links{display:flex;flex-direction:column;gap:.625rem}
+.footer-links a,.footer-links span[onclick]{color:var(--color-surface-dim);font-size:.9375rem;transition:color .2s ease;cursor:pointer;display:inline-block}
+.footer-links a:hover,.footer-links span[onclick]:hover{color:var(--color-gold-light)}
+.footer-bottom{padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.8125rem;color:rgba(255,255,255,.6)}
+
+/* --- BACK TO TOP --- */
+.back-to-top{position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);z-index:900;opacity:0;visibility:hidden;transform:translateY(20px);transition:all .3s ease;cursor:pointer;border:none}
+.back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.back-to-top:hover{background:var(--color-navy);transform:translateY(-3px)}
+
+/* --- RESPONSIVE --- */
+@media (max-width:1024px){
+    :root{--header-height:100px}
+    .main-nav{height:64px}
+    .nav-menu{display:none}
+    .mobile-menu-toggle{display:block}
+    .footer-grid{grid-template-columns:repeat(2,1fr);gap:2rem}
+}
+@media (max-width:768px){
+    :root{--space-2xl:2.75rem;--space-3xl:3.5rem;--header-height:105px}
+    .top-bar-container{flex-direction:column;align-items:flex-start;gap:.35rem}
+    .grid-cols-2,.grid-cols-3,.grid-cols-4{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr}
+    .filter-tabs{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .filter-btn{white-space:nowrap}
+    .col-span-2,.col-span-3{grid-column:span 1}
+}
+@media (max-width:480px){
+    .container{padding:0 1rem}
+    .brand-title{font-size:.95rem}
+    .brand-subtitle{display:none}
+    .brand-logo{width:38px;height:38px}
+    .top-bar{font-size:.75rem;padding:.35rem 1rem}
+    .display-hero{font-size:1.85rem}
+    .headline-lg{font-size:1.5rem}
+}
+@media (min-width:1440px){
+    :root{--container-max-width:1360px}
+    .container{padding:0 2rem}
+    .display-hero{font-size:3.5rem}
+}
+
+/* --- PAGE TRANSITIONS --- */
+.page-section{animation:none}
+.page-section.active{animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* --- SCROLL REVEAL --- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1)}
+.reveal.revealed{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<a href="#" class="skip-link" onclick="navigate('home')">Skip to main content</a>
+
+<!-- TOP STATUTORY BAR -->
+<aside class="top-bar">
+    <div class="top-bar-container">
+        <div class="top-bar-info">
+            <span class="text-gold font-semibold">Est. March 12, 1995</span>
+            <span class="top-bar-divider">•</span><span>Reg #F23778</span>
+            <span class="top-bar-divider">•</span>
+            <span class="badge badge-gold">80G Certified Social Welfare Trust</span>
+            <span class="top-bar-divider">•</span><span>Chembur, Mumbai, India</span>
+        </div>
+        <div class="top-bar-links">
+            <a href="tel:+919892035187"><span class="material-symbols-outlined text-sm" style="font-size:14px">call</span>+91 9892035187</a>
+            <span class="top-bar-divider">•</span>
+            <a href="mailto:iplmumbai12395@gmail.com"><span class="material-symbols-outlined" style="font-size:14px">mail</span>iplmumbai12395@gmail.com</a>
+        </div>
+    </div>
+</aside>
+
+<!-- SHARED HEADER — Edit once, updates everywhere -->
+<header class="site-header" id="site-header">
+    <div class="main-nav">
+        <div class="brand-logo-wrapper" onclick="navigate('home')" role="link" tabindex="0" aria-label="IPL Home">
+            <img src="https://lh3.googleusercontent.com/aida/AEtjO1VR7vTVKN-3q2akI30rjGeKgF9wy9VeplQ-sIx8V7AhsXTtTPdUzXs4oZGVDeTG4pW52Fh1Klizlqk-jBx129AvSvacaXUxCcpV1Xf8nt_krIGaUKV3SoJSXiJIX8dzFJXtw6RvUpGt_ZICc9lVMtBzS98sF69riVGwX7fyPlCODnG1ptN98JrV3KxGrZ6PULcIewW2f-Bqonilz-hS5sTkCmOG0pppxcEyxkmRWr5P-sbDBA6oKaWlZyRm" alt="IPL Emblem" class="brand-logo" onerror="this.src='https://placehold.co/88x88/0B1F3A/F5C549?text=IPL'">
+            <div class="brand-text">
+                <span class="brand-title">INDIAN PENPALS' LEAGUE</span>
+                <span class="brand-subtitle">Love, Friendship &amp; Humanity • Estd. 1995</span>
+            </div>
+        </div>
+        <nav class="nav-menu" aria-label="Primary Navigation">
+            <button class="nav-link" onclick="navigate('home')" data-page="home">Home</button>
+            <div class="nav-item nav-dropdown">
+                <button class="nav-link" data-page="about" onclick="navigate('about')">
+                    <span>About</span><span class="material-symbols-outlined dropdown-chevron">expand_more</span>
+                </button>
+                <div class="nav-dropdown-menu">
+                    <button class="nav-dropdown-item" onclick="navigate('history')">History</button>
+                    <button class="nav-dropdown-item" onclick="navigate('presidents-blog')">IPL President's Blog</button>
+                </div>
+            </div>
+            <button class="nav-link" onclick="navigate('team')" data-page="team">Our Team</button>
+            <button class="nav-link" onclick="navigate('humanitarian')" data-page="humanitarian">Humanitarian Services</button>
+            <div class="nav-item nav-dropdown">
+                <button class="nav-link" data-page="news-events" onclick="navigate('news-events')">
+                    <span>News &amp; Events</span><span class="material-symbols-outlined dropdown-chevron">expand_more</span>
+                </button>
+                <div class="nav-dropdown-menu">
+                    <button class="nav-dropdown-item" onclick="navigate('news-events')">IPL News</button>
+                    <button class="nav-dropdown-item" onclick="navigate('events')">Events</button>
+                    <button class="nav-dropdown-item" onclick="navigate('friendship-meets')">Friendship Meets</button>
+                    <button class="nav-dropdown-item" onclick="navigate('friends-day')">Friends Day</button>
+                </div>
+            </div>
+            <button class="nav-link" onclick="navigate('contact')" data-page="contact">Contact</button>
+        </nav>
+        <div class="nav-actions">
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" id="langEN">EN</button>
+                <button type="button" class="lang-btn" id="langTA">தமிழ்</button>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="navigate('join')">
+                <span class="dot-indicator"></span>Join Now
+            </button>
+            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+        <span class="brand-title">IPL Navigation</span>
+        <button class="btn-circle" id="drawerClose" style="background:var(--color-surface-container);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <div class="mobile-nav-links">
+        <button class="mobile-nav-link" onclick="navigate('home');closeDrawer()"><span>Home</span><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
+        <div class="mobile-nav-accordion">
+            <button class="mobile-nav-link mobile-accordion-toggle"><span>About</span><span class="material-symbols-outlined accordion-icon" style="font-size:18px">expand_more</span></button>
+            <div class="mobile-sub-menu">
+                <button class="mobile-sub-link" onclick="navigate('about');closeDrawer()">About Us Overview</button>
+                <button class="mobile-sub-link" onclick="navigate('history');closeDrawer()">History &amp; Milestones</button>
+                <button class="mobile-sub-link" onclick="navigate('presidents-blog');closeDrawer()">IPL President's Blog</button>
+            </div>
+        </div>
+        <button class="mobile-nav-link" onclick="navigate('team');closeDrawer()"><span>Our Team</span><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
+        <button class="mobile-nav-link" onclick="navigate('humanitarian');closeDrawer()"><span>Humanitarian Services</span><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
+        <div class="mobile-nav-accordion">
+            <button class="mobile-nav-link mobile-accordion-toggle"><span>News &amp; Events</span><span class="material-symbols-outlined accordion-icon" style="font-size:18px">expand_more</span></button>
+            <div class="mobile-sub-menu">
+                <button class="mobile-sub-link" onclick="navigate('news-events');closeDrawer()">IPL News</button>
+                <button class="mobile-sub-link" onclick="navigate('events');closeDrawer()">Events</button>
+                <button class="mobile-sub-link" onclick="navigate('friendship-meets');closeDrawer()">Friendship Meets</button>
+                <button class="mobile-sub-link" onclick="navigate('friends-day');closeDrawer()">Friends Day</button>
+            </div>
+        </div>
+        <button class="mobile-nav-link" onclick="navigate('contact');closeDrawer()"><span>Contact</span><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
+    </div>
+    <div class="mobile-drawer-cta">
+        <button class="btn btn-primary btn-block" onclick="navigate('join');closeDrawer()">Join Now</button>
+    </div>
+</div>
+
+<!-- MAIN SPA CONTENT -->
+<main class="main-content" id="main-content">
+
+<!-- ===== HOME PAGE ===== -->
+<section id="page-home" class="page-section active">
+    <section class="hero-banner section-lg">
+        <div class="container">
+            <div class="flex flex-col items-center text-center">
+                <div class="badge badge-gold mb-6" style="padding:.5rem 1.25rem;font-size:.9rem;">
+                    <span class="material-symbols-outlined" style="font-size:16px">star</span>
+                    Established March 12, 1995 • 80G Certified
+                </div>
+                <h1 class="display-hero text-navy mb-4" style="font-size:clamp(2.5rem,6vw,5rem);letter-spacing:-.03em;">
+                    INDIAN PENPALS' LEAGUE
+                </h1>
+                <p class="body-lg text-secondary mb-2">Love, Friendship &amp; Humanity</p>
+                <p class="body-md text-muted mb-8 max-w-3xl">A confederation of groups of friends in India and abroad, united since 1995 to uphold three basic principles — overcoming the barriers of caste, color, creed, religion, language and geography.</p>
+                <div class="flex flex-wrap gap-sm" style="justify-content:center;">
+                    <button class="btn btn-primary btn-lg" onclick="navigate('about')">About IPL</button>
+                    <button class="btn btn-secondary btn-lg" onclick="navigate('contact')">Contact Us</button>
+                    <button class="btn btn-secondary btn-lg" onclick="navigate('events')">Events</button>
+                    <button class="btn btn-secondary btn-lg" onclick="navigate('news-events')">IPL News</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="section bg-navy">
+        <div class="container">
+            <div class="flex flex-col" style="gap:4rem;">
+                <div style="max-width:600px;">
+                    <blockquote class="headline-md text-white mb-4 italic">"Let us breathe friendship! Let us love our friends! Let us sow love, friendship, and humanity! Let us nurture and continue tirelessly, the journey of friendship..."</blockquote>
+                    <cite class="body-md text-gold" style="font-style:normal;">— M. Karun, Founder-President</cite>
+                </div>
+                <div class="card" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);color:#fff;max-width:580px;align-self:flex-end;">
+                    <h2 class="headline-md text-white mb-4">Welcome to IPL</h2>
+                    <p style="color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:1.5rem;">The INDIAN PENPALS' LEAGUE (IPL) is a confederation of groups of friends in India and abroad. IPL had its inception in Mumbai on March 12, 1995, formed by like-minded pen-pals coming together to uphold three basic principles of Love, Friendship and Humanity.</p>
+                    <div class="grid grid-cols-2 gap-sm mb-6">
+                        <div style="padding:1rem;background:rgba(255,255,255,.05);border-radius:var(--radius-md);border:1px solid rgba(255,255,255,.08);">
+                            <p style="font-size:.7rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Registration</p>
+                            <p style="font-family:monospace;font-weight:700;color:var(--color-gold-light);">#F23778</p>
+                        </div>
+                        <div style="padding:1rem;background:rgba(255,255,255,.05);border-radius:var(--radius-md);border:1px solid rgba(255,255,255,.08);">
+                            <p style="font-size:.7rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Tax Benefit</p>
+                            <p style="font-family:monospace;font-weight:700;color:var(--color-gold-light);">80G Certified</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-gold" onclick="navigate('about')">Read More About Us →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section bg-surface">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">insights</span>IPL by Numbers</div>
+                <h2 class="section-title">30 Years of Friendship &amp; Humanity</h2>
+            </div>
+            <div class="grid grid-cols-4 gap-lg">
+                <div class="stat-box card reveal"><div class="stat-number" data-target="30" data-suffix="+">30+</div><div class="stat-label">Years of Service</div></div>
+                <div class="stat-box card reveal"><div class="stat-number" data-target="14" data-suffix="">14</div><div class="stat-label">Indian States</div></div>
+                <div class="stat-box card reveal"><div class="stat-number" data-target="500" data-suffix="+">500+</div><div class="stat-label">Convention Delegates</div></div>
+                <div class="stat-box card reveal"><div class="stat-number" data-target="1000" data-suffix="+">1000+</div><div class="stat-label">Active Members</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Preview -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="flex justify-between items-end mb-8 flex-wrap gap-sm">
+                <div><h2 class="section-title">News &amp; Current Events</h2><p class="section-desc">Catch up with our latest events and news</p></div>
+                <button class="btn btn-secondary" onclick="navigate('events')">View All Events</button>
+            </div>
+            <div class="grid grid-cols-3 gap-lg">
+                <article class="card card-hover">
+                    <div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyS5D_ufxVWiFMXC9mYbTHnx2ZYKPrHbQoBj2Cwq_1P4OITx33bstFKeZSTQygv7NTzwZ7Db9CdsgICJaRM840PXFqzhIV2My4ncX2GLjItcYUIsMNE3Day1ambTOTVRpihyKCjd6VCLI6LThUPs1pVjTnIh43u4qndcB93P7q4OCGFNQSNyCbBQNeI53Hnm1ZsDzHr1bR99QjXUBsld980XjYC25Py8lLTDvFRjtpzD01qW_DifzMA" alt="Chembur Meet"><span class="news-card-date">Aug 25, 2024</span><span class="card-overlay-badge badge badge-gold">Fellowship</span></div>
+                    <span class="label-sm text-primary uppercase font-bold mb-1 block">மும்பை நலம் விசாரிப்பு</span>
+                    <h3 class="headline-sm text-navy mb-2">Chembur Fellowship Gathering</h3>
+                    <button class="btn btn-secondary btn-sm" onclick="navigate('news-events')" style="margin-top:auto;">Read Report</button>
+                </article>
+                <article class="card card-hover">
+                    <div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuTESTo9goWuvhEftkW19PTB8hL74ZHzoZhL-6-U7x64BGxq_Tht9edR7jum5Qz1MD1IknwhoZFgaLFsYWONbs2v3rlCuJVd3EHWf8vDOn48wAdn4wMOseVrwsAiwrcjDLohoKiZWyjE4wOyWs9HYtxpAtOBn0w33Nj1K41gRksdUT0ZYaJN5N6kOFHwbpCrdto8lDTUC4e5ELHnDgW4vKAxhUBFchejBek4MxKPQqXTn6Tk-Q-59qw" alt="Friends Day"><span class="news-card-date">Annual</span><span class="card-overlay-badge badge badge-navy">Convention</span></div>
+                    <span class="label-sm text-gold uppercase font-bold mb-1 block">National Convention</span>
+                    <h3 class="headline-sm text-navy mb-2">Friends Day Annual Convention</h3>
+                    <button class="btn btn-primary btn-sm" onclick="navigate('friends-day')" style="margin-top:auto;">Event Details</button>
+                </article>
+                <article class="card card-hover">
+                    <div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Ev4UKCt22mpVBaxcOubMLtMRldqos_JRjmexuGKMv67niP-nFpTWSsZNncx1vExQYwHX2b230nfZvixRDQCUYAjFrzkUxOpM9-MBx3c5Zh_6vsGbJNEmCWrD6MzG5adGXRsJFyVbgmK7ZumCYQRqisUjwO_7mgDgIpM2ysClFd_mLAfXfxpHBpEjqJGYVD-DB8723gNK9pgqlS_auBmG5W8oy7lOZ3gE_6oI3DQQu5CKfmTlugkCA" alt="Pearl Jubilee"><span class="news-card-date">1995–2025</span><span class="card-overlay-badge badge badge-gold">30th Year</span></div>
+                    <span class="label-sm text-primary uppercase font-bold mb-1 block">Pearl Jubilee</span>
+                    <h3 class="headline-sm text-navy mb-2">Pearl Jubilee Book Launch</h3>
+                    <button class="btn btn-secondary btn-sm" onclick="navigate('news-events')" style="margin-top:auto;">Read Summary</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mother Teresa Quote -->
+    <section class="section" style="background:var(--color-surface-low);">
+        <div class="container">
+            <div class="card bg-navy text-center" style="max-width:800px;margin:0 auto;padding:3rem;">
+                <span class="material-symbols-outlined" style="font-size:3rem;color:var(--color-gold);display:block;margin-bottom:1.5rem;">favorite</span>
+                <blockquote class="headline-md text-white italic mb-4">"We feel what we are doing is just a drop in the ocean but the ocean would be less because of that missing drop"</blockquote>
+                <cite class="body-md text-gold" style="font-style:normal;">— Mother Teresa</cite>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- ===== ABOUT PAGE ===== -->
+<section id="page-about" class="page-section">
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">About IPL</li></ul></div>
+    <section class="section bg-surface">
+        <div class="container">
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">info</span>About the League</div><h1 class="section-title mb-3">About Indian Penpals' League</h1><p class="section-desc">A registered social welfare trust — 30 years of unbroken friendship, correspondence, and community service.</p></div>
+            <div class="grid grid-cols-2 gap-xl items-center">
+                <div>
+                    <h2 class="headline-md text-navy mb-4">Our Story</h2>
+                    <p class="body-lg text-secondary leading-relaxed mb-4">The INDIAN PENPALS' LEAGUE (IPL) is a confederation of groups of friends in India and abroad. IPL had its inception in Mumbai on March 12, 1995, formed by like-minded pen-pals coming together to uphold three basic principles of Love, Friendship and Humanity, overcoming the barriers of caste, color, creed, religion, language and geographical bounds separating humankind.</p>
+                    <p class="body-md text-muted leading-relaxed mb-6">Founded by M. Karun — a passionate believer in the power of handwritten correspondence — the League has grown from a small circle of pen-pals into a nation-wide confederation spanning 14 Indian states, with members abroad, bound not by geography but by the timeless art of letter writing.</p>
+                    <div class="flex gap-sm flex-wrap">
+                        <button class="btn btn-primary" onclick="navigate('history')">Our History</button>
+                        <button class="btn btn-secondary" onclick="navigate('team')">Meet the Team</button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-md">
+                    <div class="card text-center" style="border-top:4px solid var(--color-blue);"><div style="font-size:2.5rem;font-weight:800;color:var(--color-navy);">1995</div><div class="body-sm text-muted">Year Founded</div></div>
+                    <div class="card text-center" style="border-top:4px solid var(--color-gold);"><div style="font-size:2.5rem;font-weight:800;color:var(--color-navy);">30+</div><div class="body-sm text-muted">Years of Service</div></div>
+                    <div class="card text-center" style="border-top:4px solid var(--color-accent-magenta);"><div style="font-size:2.5rem;font-weight:800;color:var(--color-navy);">14</div><div class="body-sm text-muted">Indian States</div></div>
+                    <div class="card text-center" style="border-top:4px solid var(--color-blue);"><div style="font-size:2.5rem;font-weight:800;color:var(--color-navy);">80G</div><div class="body-sm text-muted">Certified Trust</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-navy">
+        <div class="container text-center" style="max-width:800px;margin:0 auto;">
+            <div class="section-tag" style="color:var(--color-gold);justify-content:center;margin-bottom:1.5rem;"><span class="material-symbols-outlined" style="font-size:14px">format_quote</span>Our Guiding Principles</div>
+            <blockquote class="headline-lg text-white italic mb-4">"Let us breathe friendship! Let us love our friends! Let us sow love, friendship, and humanity!"</blockquote>
+            <cite class="body-md text-gold" style="font-style:normal;">— M. Karun, Founder-President</cite>
+        </div>
+    </section>
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="headline-lg text-navy mb-8 text-center">Three Core Pillars</h2>
+            <div class="grid grid-cols-3 gap-lg">
+                <div class="card text-center card-hover" style="border-top:4px solid var(--color-blue);">
+                    <div style="width:64px;height:64px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;"><span class="material-symbols-outlined" style="font-size:32px">favorite</span></div>
+                    <h3 class="headline-sm text-navy mb-2">Love</h3>
+                    <p class="body-sm text-muted">Unconditional love that transcends boundaries of caste, creed, religion, and region — the foundation of IPL.</p>
+                </div>
+                <div class="card text-center card-hover" style="border-top:4px solid var(--color-gold);">
+                    <div style="width:64px;height:64px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;"><span class="material-symbols-outlined" style="font-size:32px">handshake</span></div>
+                    <h3 class="headline-sm text-navy mb-2">Friendship</h3>
+                    <p class="body-sm text-muted">True friendship built through handwritten letters — a bond stronger than geography, language, or time.</p>
+                </div>
+                <div class="card text-center card-hover" style="border-top:4px solid var(--color-accent-magenta);">
+                    <div style="width:64px;height:64px;border-radius:50%;background:var(--color-accent-magenta);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;"><span class="material-symbols-outlined" style="font-size:32px">volunteer_activism</span></div>
+                    <h3 class="headline-sm text-navy mb-2">Humanity</h3>
+                    <p class="body-sm text-muted">Serving communities through blood donation, student sponsorships, disaster relief, and hospice care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- ===== HISTORY PAGE ===== -->
+<section id="page-history" class="page-section">
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('about')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)">About</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">History</li></ul></div>
+    <section class="section bg-surface">
+        <div class="container">
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">history</span>30-Year Milestones</div><h1 class="section-title mb-3">History &amp; Legacy of IPL</h1><p class="section-desc">Three decades of friendship, correspondence, and humanitarian service across India.</p></div>
+            <div class="timeline">
+                <div class="timeline-item"><div class="timeline-marker">1995</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">Founding — March 12, 1995</h3><p class="body-sm text-muted">Indian Penpals' League founded in Mumbai, Chembur by M. Karun and a group of like-minded pen-pals. Registration #F23778 obtained. First Friends Day celebrated with 50 founding members.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">2000</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">National Expansion</h3><p class="body-sm text-muted">IPL chapters expanded to Tamil Nadu, Karnataka, and Kerala. First blood donation drive organized with 100+ units collected. Membership reached 300+ active correspondents.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">2005</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">Silver Decade</h3><p class="body-sm text-muted">10-year anniversary celebrated with a grand national convention. Student sponsorship programme launched sponsoring 50+ students. IPL bulletin began bilingual (Tamil &amp; English) publication.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">2010</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">Humanitarian Wings Formalized</h3><p class="body-sm text-muted">Four formal humanitarian wings established: Blood Donor Registry, Student Aid Programme, Hospice Letter-Writing Wing, and Disaster Relief Coordination. 80G certification obtained.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">2015</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">Pearl Anniversary</h3><p class="body-sm text-muted">20th anniversary celebrated with delegates from 14 states. Commemorative souvenir book published. Inner Wheel Club collaboration formalized for rural student outreach in Tiruvannamalai.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">2020</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">Resilience Through Pandemic</h3><p class="body-sm text-muted">IPL continued correspondence activities digitally during COVID-19. Relief packages and support provided to vulnerable members. Letter-writing kept the spirit of friendship alive.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">2025</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">Pearl Jubilee — 30th Anniversary</h3><p class="body-sm text-muted">Historic 30th year Pearl Jubilee celebration. Grand national convention with 500+ delegates. Pearl Jubilee commemorative hardbound book launched documenting 30 years of fellowship, philanthropy, and friendship.</p></div></div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- ===== PRESIDENT'S BLOG ===== -->
+<section id="page-presidents-blog" class="page-section">
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('about')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)">About</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">President's Blog</li></ul></div>
+    <section class="section bg-surface">
+        <div class="container" style="max-width:860px;">
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">edit</span>Founder-President's Blog</div><h1 class="section-title mb-3">IPL President's Blog</h1><p class="section-desc">Personal reflections, messages, and milestones from M. Karun, Founder-President of the Indian Penpals' League.</p></div>
+            <div class="card mb-6">
+                <div class="flex items-center gap-md mb-4">
+                    <div style="width:56px;height:56px;border-radius:50%;background:var(--color-navy);color:var(--color-gold);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.5rem;flex-shrink:0;">K</div>
+                    <div><h3 class="headline-sm text-navy">M. Karun</h3><span class="label-sm text-muted">Founder-President, Indian Penpals' League • Est. March 12, 1995</span></div>
+                </div>
+                <div class="badge badge-gold mb-4">Pearl Jubilee Message — 2025</div>
+                <h2 class="headline-md text-navy mb-4">30 Years of Friendship — A Personal Reflection</h2>
+                <p class="body-lg text-secondary leading-relaxed mb-4">When I penned my first letter as a pen-pal in the early 1990s, I never imagined it would one day become the seed of a movement. That modest exchange of thoughts — handwritten, heartfelt — blossomed into the Indian Penpals' League, an organization I have had the privilege to serve as Founder-President for three decades.</p>
+                <p class="body-md text-muted leading-relaxed mb-4">Thirty years ago, we began with a simple belief: that friendship transcends borders, languages, castes, and creeds. We believed that a handwritten letter carries a warmth that no digital message can replicate — it carries the writer's breath, their patience, their care. And through tens of thousands of such letters, we built something extraordinary: a confederation of friends.</p>
+                <blockquote class="body-lg italic text-navy mb-4" style="border-left:4px solid var(--color-gold);padding-left:1.5rem;">"Let us breathe friendship! Let us love our friends! Let us sow love, friendship, and humanity! Let us nurture and continue tirelessly, the journey of friendship..."</blockquote>
+                <p class="body-md text-muted leading-relaxed mb-4">Today, as we celebrate our Pearl Jubilee, I look back with immense gratitude — to every member who wrote a letter, attended a meet, donated blood, sponsored a student, or simply stayed faithful to our principles of Love, Friendship and Humanity. You are IPL.</p>
+                <p class="body-md text-muted leading-relaxed">Looking ahead, I invite the next generation to join us in keeping the art of correspondence alive. Write a letter. Make a friend. Change a life.</p>
+                <p class="body-md text-navy font-bold mt-4">With enduring friendship, M. Karun</p>
+            </div>
+            <div class="card">
+                <div class="badge badge-gold mb-4">Annual Friends Day Message — 2024</div>
+                <h2 class="headline-sm text-navy mb-3">Friends Day: Celebrating the Bond That Never Fades</h2>
+                <p class="body-md text-muted leading-relaxed mb-3">As we gather once again for our Annual Friends Day Convention, I am reminded of why we started this journey. Friendship is not merely a sentiment — it is a discipline, a commitment, a daily choice to remain connected despite distance, time, and the distractions of modern life.</p>
+                <p class="body-md text-muted leading-relaxed">To every delegate traveling from across India to be with us today — thank you. Your presence is a testament to the enduring power of pen-pal friendship. Let this day remind us: a letter written is a bridge built. Keep writing.</p>
+                <p class="body-md text-navy font-bold mt-4">With warmth, M. Karun</p>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- ===== TEAM PAGE ===== -->
+<section id="page-team" class="page-section">
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Our Team</li></ul></div>
+    <section class="section bg-surface">
+        <div class="container">
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">groups</span>Leadership &amp; Trustees</div><h1 class="section-title mb-3">Our Leadership Team</h1><p class="section-desc">Meet the dedicated trustees and office bearers who have served IPL with love and commitment.</p></div>
+            <div class="grid grid-cols-3 gap-lg">
+                <div class="card card-hover text-center">
+                    <div class="card-image-wrapper" style="height:240px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8ySxZPn7TBBgd-Af_EuZxw8sgFCOcHqmTzhEkBX6ymQyaaxXfM61wauY418Yz52mWuor8lPzkuivPfuuvTN2dv68kLiroR09-Rl7q5Nd6GXWdJmjVn3E-R8hKh1f2LNLHDUIBKQcTUpEyglJSt8UlZvJMogS3WZovJMDFe1-bMP34e_9Ys4IpFj104XJ6HXqxjzqP1yHRvsTgcpCZC3P4gkZoNIXlfya-YGuPAJeeXpeCqHvlwGuEg" alt="M. Karun"></div>
+                    <span class="body-sm text-blue font-bold mb-1 block">Founder-President</span>
+                    <h3 class="headline-sm text-navy mb-1">M. Karun</h3>
+                    <p class="body-sm text-muted mb-3">Chembur, Mumbai — 30+ years of dedicated leadership and pen-pal correspondence.</p>
+                    <span class="badge badge-gold">Founder</span>
+                </div>
+                <div class="card card-hover text-center">
+                    <div class="card-image-wrapper" style="height:240px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1wCLU9md_PNzEvRZH6bfNk9OV2_86Sfn2mm-KYRaZdKaIwM8BW48l2mAo8J7x-EuEjEZ60Wh-72LQzjGiw5067oDEBVw_d70gcHsZ583Yn3WgKXAAg4V0LT_m_CuGCQYKhkeVbbDHsWAojOsmCKLd2tyTjRHwnrJASK3irkCEfek5PKjZ7tytCaJhVKEBktrZlG6IgnXqum343YS2XrDjLmjWPgUZ-HamSJIBgbsc6X-6XyvdqImHmw" alt="Secretary General"></div>
+                    <span class="body-sm text-blue font-bold mb-1 block">Secretary General</span>
+                    <h3 class="headline-sm text-navy mb-1">R. Selvakumar</h3>
+                    <p class="body-sm text-muted mb-3">Tiruvannamalai, Tamil Nadu — Head of correspondence and member relations.</p>
+                    <span class="badge badge-blue">Office Bearer</span>
+                </div>
+                <div class="card card-hover text-center">
+                    <div class="card-image-wrapper" style="height:240px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyS5D_ufxVWiFMXC9mYbTHnx2ZYKPrHbQoBj2Cwq_1P4OITx33bstFKeZSTQygv7NTzwZ7Db9CdsgICJaRM840PXFqzhIV2My4ncX2GLjItcYUIsMNE3Day1ambTOTVRpihyKCjd6VCLI6LThUPs1pVjTnIh43u4qndcB93P7q4OCGFNQSNyCbBQNeI53Hnm1ZsDzHr1bR99QjXUBsld980XjYC25Py8lLTDvFRjtpzD01qW_DifzMA" alt="Treasurer"></div>
+                    <span class="body-sm text-blue font-bold mb-1 block">Treasurer &amp; Trustee</span>
+                    <h3 class="headline-sm text-navy mb-1">S. Vijayalakshmi</h3>
+                    <p class="body-sm text-muted mb-3">Mumbai — Manages trust finances, 80G compliance, and blood donation drives.</p>
+                    <span class="badge badge-gold">Trustee</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- ===== HUMANITARIAN SERVICES ===== -->
+<section id="page-humanitarian" class="page-section">
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Humanitarian Services</li></ul></div>
+    <section class="section bg-surface">
+        <div class="container">
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">volunteer_activism</span>Social Welfare Wings</div><h1 class="section-title mb-3">Humanitarian Services</h1><p class="section-desc">Four active welfare wings serving communities across India since 1995.</p></div>
+            <div class="grid grid-cols-2 gap-lg">
+                <div class="card service-card card-hover"><div style="width:52px;height:52px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span class="material-symbols-outlined">water_drop</span></div><h3 class="headline-sm text-navy mb-2">Blood Donor Registry</h3><p class="body-sm text-muted mb-4">IPL maintains a live registry of volunteer blood donors across Mumbai and Tamil Nadu, coordinating emergency donations to hospitals and individual patients in need.</p><span class="badge badge-blue">Active Wing</span></div>
+                <div class="card service-card gold-trim card-hover"><div style="width:52px;height:52px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span class="material-symbols-outlined">school</span></div><h3 class="headline-sm text-navy mb-2">Student Aid Programme</h3><p class="body-sm text-muted mb-4">IPL sponsors education kits, stationery, uniforms, and school fees for underprivileged students in rural Tamil Nadu villages through member contributions.</p><span class="badge badge-gold">Active Wing</span></div>
+                <div class="card service-card magenta-trim card-hover"><div style="width:52px;height:52px;border-radius:50%;background:var(--color-accent-magenta);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span class="material-symbols-outlined">edit_note</span></div><h3 class="headline-sm text-navy mb-2">Hospice Letter-Writing Wing</h3><p class="body-sm text-muted mb-4">Trained IPL member scribes visit hospitals and care homes to write letters on behalf of patients who cannot write themselves, connecting them with family and friends.</p><span class="badge badge-light" style="background:rgba(128,20,117,.1);color:var(--color-accent-magenta);">Active Wing</span></div>
+                <div class="card service-card card-hover"><div style="width:52px;height:52px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span class="material-symbols-outlined">crisis_alert</span></div><h3 class="headline-sm text-navy mb-2">Disaster Relief Coordination</h3><p class="body-sm text-muted mb-4">IPL coordinates relief efforts during natural disasters — distributing food, clothing, and medical supplies to affected families through member networks across India.</p><span class="badge badge-navy">Active Wing</span></div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- ===== NEWS & EVENTS ===== -->
+<section id="page-news-events" class="page-section">
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">News &amp; Events</li></ul></div>
+    <section class="section bg-surface">
+        <div class="container">
+            <div class="flex justify-between items-end gap-xl flex-wrap mb-8">
+                <div><div class="section-tag mb-2"><span class="material-symbols-outlined" style="font-size:14px">campaign</span>League Chronicle</div><h1 class="section-title mb-3">League Bulletins &amp; Current Events</h1><p class="section-desc">Authentic bilingual meeting records, conventions, and fellowship milestones.</p></div>
+            </div>
+            <div class="filter-tabs mb-8">
+                <button class="filter-btn active" data-filter="all"><span class="material-symbols-outlined" style="font-size:16px">grid_view</span>All Updates</button>
+                <button class="filter-btn" data-filter="news"><span class="material-symbols-outlined" style="font-size:16px">newspaper</span>News</button>
+                <button class="filter-btn" data-filter="events"><span class="material-symbols-outlined" style="font-size:16px">event</span>Events</button>
+                <button class="filter-btn" data-filter="meets"><span class="material-symbols-outlined" style="font-size:16px">handshake</span>Meets</button>
+                <button class="filter-btn" data-filter="announcements"><span class="material-symbols-outlined" style="font-size:16px">auto_stories</span>Announcements</button>
+            </div>
+            <div class="grid grid-cols-3 gap-lg" id="newsGrid">
+                <article class="card card-hover flex flex-col justify-between" data-category="meets">
+                    <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyS5D_ufxVWiFMXC9mYbTHnx2ZYKPrHbQoBj2Cwq_1P4OITx33bstFKeZSTQygv7NTzwZ7Db9CdsgICJaRM840PXFqzhIV2My4ncX2GLjItcYUIsMNE3Day1ambTOTVRpihyKCjd6VCLI6LThUPs1pVjTnIh43u4qndcB93P7q4OCGFNQSNyCbBQNeI53Hnm1ZsDzHr1bR99QjXUBsld980XjYC25Py8lLTDvFRjtpzD01qW_DifzMA" alt="Chembur Meet"><span class="news-card-date">Aug 25, 2024</span><span class="card-overlay-badge badge badge-gold">Fellowship Meet</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">மும்பை நலம் விசாரிப்பு</span><h2 class="headline-sm text-navy mb-2">அன்புடன் நலம் விசாரித்த சந்திப்பு (Fellowship Gathering)</h2><p class="body-sm text-muted leading-relaxed mb-4">Report on Chembur fellowship assembly led by Founder President M. Karun with correspondents from Tamil Nadu &amp; Mumbai.</p></div>
+                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Pres. M. Karun</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')">Read Report</button></div>
+                </article>
+                <article class="card card-hover flex flex-col justify-between" data-category="announcements">
+                    <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1wCLU9md_PNzEvRZH6bfNk9OV2_86Sfn2mm-KYRaZdKaIwM8BW48l2mAo8J7x-EuEjEZ60Wh-72LQzjGiw5067oDEBVw_d70gcHsZ583Yn3WgKXAAg4V0LT_m_CuGCQYKhkeVbbDHsWAojOsmCKLd2tyTjRHwnrJASK3irkCEfek5PKjZ7tytCaJhVKEBktrZlG6IgnXqum343YS2XrDjLmjWPgUZ-HamSJIBgbsc6X-6XyvdqImHmw" alt="Independence Day"><span class="news-card-date">Aug 15, 2024</span><span class="card-overlay-badge badge badge-gold">Bulletin</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">அதிகாரப்பூர்வ இதழ் வெளியீடு</span><h2 class="headline-sm text-navy mb-2">78th Independence Day Special Souvenir Bulletin</h2><p class="body-sm text-muted leading-relaxed mb-4">78th Independence Day Fellowship assembly and unveiling of the Special Souvenir Bulletin.</p></div>
+                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Dispatches</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')">Read Report</button></div>
+                </article>
+                <article class="card card-hover flex flex-col justify-between" data-category="news">
+                    <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8ySxZPn7TBBgd-Af_EuZxw8sgFCOcHqmTzhEkBX6ymQyaaxXfM61wauY418Yz52mWuor8lPzkuivPfuuvTN2dv68kLiroR09-Rl7q5Nd6GXWdJmjVn3E-R8hKh1f2LNLHDUIBKQcTUpEyglJSt8UlZvJMogS3WZovJMDFe1-bMP34e_9Ys4IpFj104XJ6HXqxjzqP1yHRvsTgcpCZC3P4gkZoNIXlfya-YGuPAJeeXpeCqHvlwGuEg" alt="Inner Wheel"><span class="news-card-date">Jul 28, 2024</span><span class="card-overlay-badge badge badge-gold">Felicitation</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">விருது &amp; பாராட்டு</span><h2 class="headline-sm text-navy mb-2">திருவண்ணாமலை மாவட்ட இன்னர் வீல் கிளப் பாராட்டு</h2><p class="body-sm text-muted leading-relaxed mb-4">Official recognition of educational patronage conferred upon IPL trustees.</p></div>
+                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Tiruvannamalai, TN</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')">Read Report</button></div>
+                </article>
+                <article class="card card-hover flex flex-col justify-between" data-category="events">
+                    <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuTESTo9goWuvhEftkW19PTB8hL74ZHzoZhL-6-U7x64BGxq_Tht9edR7jum5Qz1MD1IknwhoZFgaLFsYWONbs2v3rlCuJVd3EHWf8vDOn48wAdn4wMOseVrwsAiwrcjDLohoKiZWyjE4wOyWs9HYtxpAtOBn0w33Nj1K41gRksdUT0ZYaJN5N6kOFHwbpCrdto8lDTUC4e5ELHnDgW4vKAxhUBFchejBek4MxKPQqXTn6Tk-Q-59qw" alt="Friends Day"><span class="news-card-date">Annual Flagship</span><span class="card-overlay-badge badge badge-navy">Pan-India</span></div><span class="label-sm text-gold uppercase font-bold mb-1 block">National Convention</span><h2 class="headline-sm text-navy mb-2">Friends Day Annual National Convention &amp; Letter Exchange</h2><p class="body-sm text-muted leading-relaxed mb-4">Gathering of delegates from 14 Indian states with commemorative envelope release and penfriend awards.</p></div>
+                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">500+ Delegates</span><button class="btn btn-primary btn-sm" onclick="navigate('friends-day')">Event Details</button></div>
+                </article>
+                <article class="card card-hover flex flex-col justify-between col-span-2" data-category="announcements">
+                    <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Ev4UKCt22mpVBaxcOubMLtMRldqos_JRjmexuGKMv67niP-nFpTWSsZNncx1vExQYwHX2b230nfZvixRDQCUYAjFrzkUxOpM9-MBx3c5Zh_6vsGbJNEmCWrD6MzG5adGXRsJFyVbgmK7ZumCYQRqisUjwO_7mgDgIpM2ysClFd_mLAfXfxpHBpEjqJGYVD-DB8723gNK9pgqlS_auBmG5W8oy7lOZ3gE_6oI3DQQu5CKfmTlugkCA" alt="Pearl Jubilee"><span class="news-card-date">1995–2025</span><span class="card-overlay-badge badge badge-gold">Special Edition</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">Pearl Jubilee Milestone</span><h2 class="headline-sm text-navy mb-2">Pearl Jubilee 30th Year Commemorative Book Launch</h2><p class="body-sm text-muted leading-relaxed mb-4">An archival hardbound publication documenting three decades of written fellowship, philanthropic activities, and cross-cultural youth correspondence.</p></div>
+                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Dispatched to Members</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')">Read Summary</button></div>
+                </article>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- ===== EVENTS PAGE ===== -->
+<section id="page-events" class="page-section">
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('news-events')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)">News &amp; Events</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Events</li></ul></div>
+    <section class="section bg-surface">
+        <div class="container">
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">event</span>All Events</div><h1 class="section-title mb-3">IPL Events &amp; National Gatherings</h1><p class="section-desc">From the Friends Day Convention to state meets and cultural programmes — all IPL events across India.</p></div>
+            <div class="card mb-8" style="background:linear-gradient(135deg,#1a3a6b 0%,#0B1F3A 100%);border:1px solid rgba(245,197,73,.3);padding:2rem;color:#fff;">
+                <div class="flex flex-col" style="gap:1.5rem;">
+                    <div><span class="badge badge-gold mb-3 inline-flex"><span class="material-symbols-outlined" style="font-size:14px">star</span>Flagship Annual Event</span><h2 class="headline-lg text-white mb-2">Friends Day National Convention</h2><p style="color:rgba(255,255,255,.8);" class="body-md mb-4">IPL's most celebrated annual event — 500+ delegates from 14 states with commemorative envelope release and penfriend awards.</p><button class="btn btn-gold" onclick="navigate('friends-day')">Friends Day Page →</button></div>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-lg">
+                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuTESTo9goWuvhEftkW19PTB8hL74ZHzoZhL-6-U7x64BGxq_Tht9edR7jum5Qz1MD1IknwhoZFgaLFsYWONbs2v3rlCuJVd3EHWf8vDOn48wAdn4wMOseVrwsAiwrcjDLohoKiZWyjE4wOyWs9HYtxpAtOBn0w33Nj1K41gRksdUT0ZYaJN5N6kOFHwbpCrdto8lDTUC4e5ELHnDgW4vKAxhUBFchejBek4MxKPQqXTn6Tk-Q-59qw" alt="Friends Day"><span class="news-card-date">Annual</span><span class="card-overlay-badge badge badge-navy">National</span></div><h3 class="headline-sm text-navy mb-2">Friends Day Annual Convention</h3><p class="body-sm text-muted mb-4">500+ delegates from 14 states for IPL's flagship annual celebration.</p></div><button class="btn btn-primary btn-sm" onclick="navigate('friends-day')" style="align-self:flex-start;">Details</button></article>
+                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Ev4UKCt22mpVBaxcOubMLtMRldqos_JRjmexuGKMv67niP-nFpTWSsZNncx1vExQYwHX2b230nfZvixRDQCUYAjFrzkUxOpM9-MBx3c5Zh_6vsGbJNEmCWrD6MzG5adGXRsJFyVbgmK7ZumCYQRqisUjwO_7mgDgIpM2ysClFd_mLAfXfxpHBpEjqJGYVD-DB8723gNK9pgqlS_auBmG5W8oy7lOZ3gE_6oI3DQQu5CKfmTlugkCA" alt="Pearl Jubilee"><span class="news-card-date">2025</span><span class="card-overlay-badge badge badge-gold">30th Year</span></div><h3 class="headline-sm text-navy mb-2">Pearl Jubilee 30th Grand Celebration</h3><p class="body-sm text-muted mb-4">Commemorative book launch and grand reunion of founding members.</p></div><button class="btn btn-secondary btn-sm" onclick="navigate('events')" style="align-self:flex-start;">Details</button></article>
+                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1wCLU9md_PNzEvRZH6bfNk9OV2_86Sfn2mm-KYRaZdKaIwM8BW48l2mAo8J7x-EuEjEZ60Wh-72LQzjGiw5067oDEBVw_d70gcHsZ583Yn3WgKXAAg4V0LT_m_CuGCQYKhkeVbbDHsWAojOsmCKLd2tyTjRHwnrJASK3irkCEfek5PKjZ7tytCaJhVKEBktrZlG6IgnXqum343YS2XrDjLmjWPgUZ-HamSJIBgbsc6X-6XyvdqImHmw" alt="Independence Day"><span class="news-card-date">Aug 15, 2024</span><span class="card-overlay-badge badge badge-gold">Cultural</span></div><h3 class="headline-sm text-navy mb-2">78th Independence Day Programme</h3><p class="body-sm text-muted mb-4">Patriotic assembly with flag-hoisting and souvenir bulletin release.</p></div><button class="btn btn-secondary btn-sm" onclick="navigate('events')" style="align-self:flex-start;">Details</button></article>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- ===== FRIENDSHIP MEETS ===== -->
+<section id="page-friendship-meets" class="page-section">
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('news-events')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)">News &amp; Events</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Friendship Meets</li></ul></div>
+    <section class="section bg-surface">
+        <div class="container">
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">handshake</span>Annual Friendship Meets — நட்பு சந்திப்புகள்</div><h1 class="section-title mb-3">IPL Friendship Meets</h1><p class="section-desc">Since 1995, IPL has organized warm friendship meets across India — bringing together pen-pals who became lifelong friends.</p></div>
+            <div class="card mb-8" style="border-left:4px solid var(--color-gold);background:var(--color-navy);color:#fff;"><blockquote class="body-lg italic mb-2" style="color:rgba(255,255,255,.9);">"Let us breathe friendship! Let us love our friends! Let us sow love, friendship, and humanity!"</blockquote><cite class="label-sm text-gold">— M. Karun, Founder-President</cite></div>
+            <div class="grid grid-cols-3 gap-lg">
+                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyS5D_ufxVWiFMXC9mYbTHnx2ZYKPrHbQoBj2Cwq_1P4OITx33bstFKeZSTQygv7NTzwZ7Db9CdsgICJaRM840PXFqzhIV2My4ncX2GLjItcYUIsMNE3Day1ambTOTVRpihyKCjd6VCLI6LThUPs1pVjTnIh43u4qndcB93P7q4OCGFNQSNyCbBQNeI53Hnm1ZsDzHr1bR99QjXUBsld980XjYC25Py8lLTDvFRjtpzD01qW_DifzMA" alt="Chembur Meet"><span class="news-card-date">Aug 2024</span><span class="card-overlay-badge badge badge-gold">Fellowship</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">மும்பை நலம் விசாரிப்பு</span><h3 class="headline-sm text-navy mb-2">Chembur Fellowship Gathering</h3><p class="body-sm text-muted mb-4">Warmhearted gathering at Mumbai HQ led by Founder-President M. Karun.</p></div><div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Chembur, Mumbai</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')">Read Report</button></div></article>
+                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8ySxZPn7TBBgd-Af_EuZxw8sgFCOcHqmTzhEkBX6ymQyaaxXfM61wauY418Yz52mWuor8lPzkuivPfuuvTN2dv68kLiroR09-Rl7q5Nd6GXWdJmjVn3E-R8hKh1f2LNLHDUIBKQcTUpEyglJSt8UlZvJMogS3WZovJMDFe1-bMP34e_9Ys4IpFj104XJ6HXqxjzqP1yHRvsTgcpCZC3P4gkZoNIXlfya-YGuPAJeeXpeCqHvlwGuEg" alt="TN Meet"><span class="news-card-date">Jul 2024</span><span class="card-overlay-badge badge badge-gold">State Meet</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">திருவண்ணாமலை மாவட்ட கூட்டம்</span><h3 class="headline-sm text-navy mb-2">Tiruvannamalai District Friendship Meet</h3><p class="body-sm text-muted mb-4">District-level meet with Inner Wheel Club collaboration and felicitation.</p></div><div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Tiruvannamalai, TN</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')">Read Report</button></div></article>
+                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Ev4UKCt22mpVBaxcOubMLtMRldqos_JRjmexuGKMv67niP-nFpTWSsZNncx1vExQYwHX2b230nfZvixRDQCUYAjFrzkUxOpM9-MBx3c5Zh_6vsGbJNEmCWrD6MzG5adGXRsJFyVbgmK7ZumCYQRqisUjwO_7mgDgIpM2ysClFd_mLAfXfxpHBpEjqJGYVD-DB8723gNK9pgqlS_auBmG5W8oy7lOZ3gE_6oI3DQQu5CKfmTlugkCA" alt="Pearl Jubilee Reunion"><span class="news-card-date">2025</span><span class="card-overlay-badge badge badge-gold">Grand Reunion</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">Pearl Jubilee Grand Reunion</span><h3 class="headline-sm text-navy mb-2">30th Anniversary Grand Friendship Reunion</h3><p class="body-sm text-muted mb-4">Historic reunion of founding members and new generation pen-pals marking 30 years.</p></div><div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Mumbai, 2025</span><button class="btn btn-primary btn-sm" onclick="navigate('events')">Full Details</button></div></article>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- ===== FRIENDS DAY ===== -->
+<section id="page-friends-day" class="page-section">
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('events')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)">Events</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Friends Day</li></ul></div>
+    <section class="section" style="background:linear-gradient(135deg,#0B1F3A 0%,#1456A0 60%,#0B1F3A 100%);color:#fff;">
+        <div class="container text-center">
+            <div class="badge badge-gold mb-4 inline-flex"><span class="material-symbols-outlined" style="font-size:14px">favorite</span>IPL's Flagship Annual Celebration</div>
+            <h1 class="display-hero text-white mb-3">Friends Day</h1>
+            <p class="text-white mb-2" style="font-size:1.5rem;font-weight:600;letter-spacing:2px;opacity:.85;">நட்பு தினம்</p>
+            <p class="body-lg mb-8" style="color:rgba(255,255,255,.85);max-width:680px;margin:1rem auto 2rem;">Every year since 1995, IPL gathers pen-pals from across India for its most celebrated event — a day of joy, letters, awards, and renewed friendship pledges.</p>
+            <div class="flex flex-wrap gap-md" style="justify-content:center;"><span class="badge badge-gold" style="font-size:.9rem;padding:.5rem 1rem;"><span class="material-symbols-outlined" style="font-size:14px">people</span>500+ Delegates</span><span class="badge badge-gold" style="font-size:.9rem;padding:.5rem 1rem;"><span class="material-symbols-outlined" style="font-size:14px">public</span>14 States</span><span class="badge badge-gold" style="font-size:.9rem;padding:.5rem 1rem;"><span class="material-symbols-outlined" style="font-size:14px">calendar_month</span>Annual Since 1995</span></div>
+        </div>
+    </section>
+    <section class="section bg-white">
+        <div class="container">
+            <div class="grid grid-cols-2 gap-xl items-center">
+                <div><div class="badge badge-navy mb-3"><span class="material-symbols-outlined" style="font-size:14px">info</span>About Friends Day</div><h2 class="headline-xl text-navy mb-4">What is Friends Day?</h2><p class="body-lg text-secondary leading-relaxed mb-4">Friends Day (நட்பு தினம்) is IPL's flagship annual national convention — a grand gathering of pen-pals who became lifelong friends through the art of letter writing.</p><p class="body-md text-muted leading-relaxed">Each year, delegates from 14 Indian states travel to celebrate friendship, exchange letters, honor outstanding correspondents, and launch the year's commemorative envelope and souvenir bulletin.</p></div>
+                <div><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuTESTo9goWuvhEftkW19PTB8hL74ZHzoZhL-6-U7x64BGxq_Tht9edR7jum5Qz1MD1IknwhoZFgaLFsYWONbs2v3rlCuJVd3EHWf8vDOn48wAdn4wMOseVrwsAiwrcjDLohoKiZWyjE4wOyWs9HYtxpAtOBn0w33Nj1K41gRksdUT0ZYaJN5N6kOFHwbpCrdto8lDTUC4e5ELHnDgW4vKAxhUBFchejBek4MxKPQqXTn6Tk-Q-59qw" alt="Friends Day" style="width:100%;height:300px;object-fit:cover;border-radius:var(--radius-lg);"></div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-surface">
+        <div class="container">
+            <h2 class="headline-xl text-navy mb-8 text-center">What Happens at Friends Day?</h2>
+            <div class="grid grid-cols-3 gap-lg">
+                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">mail</span></div><h3 class="headline-sm text-navy mb-2">Letter Exchange</h3><p class="body-sm text-muted">Members exchange handwritten letters as a symbolic renewal of the pen-pal tradition.</p></div>
+                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">emoji_events</span></div><h3 class="headline-sm text-navy mb-2">Penfriend Awards</h3><p class="body-sm text-muted">Outstanding correspondents felicitated for dedication to letter writing and community service.</p></div>
+                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">local_post_office</span></div><h3 class="headline-sm text-navy mb-2">Commemorative Envelope</h3><p class="body-sm text-muted">A specially designed Friends Day commemorative envelope released and dispatched to all members.</p></div>
+                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">school</span></div><h3 class="headline-sm text-navy mb-2">Youth Literacy Drive</h3><p class="body-sm text-muted">New student members inducted and literacy pledge taken with student sponsorship announcements.</p></div>
+                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">auto_stories</span></div><h3 class="headline-sm text-navy mb-2">Souvenir Bulletin</h3><p class="body-sm text-muted">Bilingual Tamil &amp; English souvenir bulletin with member registries and social welfare reports released.</p></div>
+                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">volunteer_activism</span></div><h3 class="headline-sm text-navy mb-2">Humanitarian Announcements</h3><p class="body-sm text-muted">Blood donation targets, disaster relief pledges, and charitable undertakings formally announced.</p></div>
+            </div>
+            <div class="text-center mt-8"><button class="btn btn-primary btn-lg" onclick="navigate('join')">Join IPL &amp; Attend Friends Day</button></div>
+        </div>
+    </section>
+</section>
+
+<!-- ===== JOIN PAGE ===== -->
+<section id="page-join" class="page-section">
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Join Now</li></ul></div>
+    <section class="section bg-surface">
+        <div class="container" style="max-width:860px;">
+            <div class="section-header text-center"><div class="section-tag" style="justify-content:center;"><span class="material-symbols-outlined" style="font-size:14px">person_add</span>Membership Registration</div><h1 class="section-title mb-3">Join Indian Penpals' League</h1><p class="section-desc" style="margin:0 auto 2rem;">Become part of India's most cherished pen-pal network — 30 years of friendship, correspondence, and humanity.</p></div>
+            <div class="grid grid-cols-2 gap-xl">
+                <div>
+                    <h2 class="headline-md text-navy mb-4">Why Join IPL?</h2>
+                    <div class="flex flex-col gap-md">
+                        <div class="flex items-start gap-md"><div style="width:40px;height:40px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:20px">mail</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Pen-Pal Matching</h4><p class="body-sm text-muted">Get matched with like-minded correspondents across India and abroad.</p></div></div>
+                        <div class="flex items-start gap-md"><div style="width:40px;height:40px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:20px">celebration</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Friends Day Invitation</h4><p class="body-sm text-muted">Receive annual invitations to the Friends Day National Convention.</p></div></div>
+                        <div class="flex items-start gap-md"><div style="width:40px;height:40px;border-radius:50%;background:var(--color-accent-magenta);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:20px">auto_stories</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Bilingual Bulletin</h4><p class="body-sm text-muted">Receive IPL's bilingual Tamil &amp; English souvenir bulletins by post.</p></div></div>
+                        <div class="flex items-start gap-md"><div style="width:40px;height:40px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:20px">volunteer_activism</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Humanitarian Participation</h4><p class="body-sm text-muted">Contribute to blood donation drives, student aid, and disaster relief.</p></div></div>
+                    </div>
+                </div>
+                <div class="card" style="padding:2rem;">
+                    <h3 class="headline-sm text-navy mb-6">Membership Application</h3>
+                    <form id="joinForm" onsubmit="submitJoinForm(event)">
+                        <div class="form-group"><label class="form-label">Full Name <span class="required">*</span></label><input type="text" class="form-input" placeholder="Your full name" required></div>
+                        <div class="form-group"><label class="form-label">Email Address <span class="required">*</span></label><input type="email" class="form-input" placeholder="your@email.com" required></div>
+                        <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" placeholder="+91 98765 43210"></div>
+                        <div class="form-group"><label class="form-label">City / State <span class="required">*</span></label><input type="text" class="form-input" placeholder="e.g., Chennai, Tamil Nadu" required></div>
+                        <div class="form-group"><label class="form-label">Why do you want to join IPL?</label><textarea class="form-textarea" rows="3" placeholder="Tell us a little about yourself..."></textarea></div>
+                        <div class="form-group"><label class="form-checkbox-label"><input type="checkbox" required><span>I agree to uphold the principles of Love, Friendship, and Humanity as a member of IPL.</span></label></div>
+                        <button type="submit" class="btn btn-primary btn-full">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- ===== CONTACT PAGE ===== -->
+<section id="page-contact" class="page-section">
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Contact</li></ul></div>
+    <section class="section bg-surface">
+        <div class="container">
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">mail</span>Get In Touch</div><h1 class="section-title mb-3">Contact the IPL Secretariat</h1><p class="section-desc">Reach out to us for membership, events, donations, or any queries about our activities.</p></div>
+            <div class="grid grid-cols-2 gap-xl">
+                <div>
+                    <h2 class="headline-md text-navy mb-6">Secretariat Details</h2>
+                    <div class="flex flex-col gap-lg">
+                        <div class="card flex-row" style="flex-direction:row;gap:1rem;align-items:flex-start;padding:1.25rem;"><div style="width:44px;height:44px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined">location_on</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Office Address</h4><p class="body-sm text-muted">B-602, Raj Ekjyot Sukriti,<br>Opp. Fire Brigade, Chembur,<br>Mumbai 400071, Maharashtra, India.</p></div></div>
+                        <div class="card flex-row" style="flex-direction:row;gap:1rem;align-items:center;padding:1.25rem;"><div style="width:44px;height:44px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined">call</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Phone</h4><a href="tel:+919892035187" class="body-md text-blue">+91 9892035187</a></div></div>
+                        <div class="card flex-row" style="flex-direction:row;gap:1rem;align-items:center;padding:1.25rem;"><div style="width:44px;height:44px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined">mail</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Email</h4><a href="mailto:iplmumbai12395@gmail.com" class="body-md text-blue">iplmumbai12395@gmail.com</a></div></div>
+                    </div>
+                </div>
+                <div class="card" style="padding:2rem;">
+                    <h3 class="headline-sm text-navy mb-6">Send a Message</h3>
+                    <form id="contactForm" onsubmit="submitContactForm(event)">
+                        <div class="form-group"><label class="form-label">Your Name <span class="required">*</span></label><input type="text" class="form-input" placeholder="Full name" required></div>
+                        <div class="form-group"><label class="form-label">Email <span class="required">*</span></label><input type="email" class="form-input" placeholder="your@email.com" required></div>
+                        <div class="form-group"><label class="form-label">Subject <span class="required">*</span></label>
+                        <select class="form-select" required><option value="">Select a subject</option><option>General Inquiry</option><option>Membership</option><option>Events &amp; Meets</option><option>Donations &amp; Sponsorship</option><option>Archive Request</option><option>Other</option></select></div>
+                        <div class="form-group"><label class="form-label">Message <span class="required">*</span></label><textarea class="form-textarea" rows="4" placeholder="Your message..." required></textarea></div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+</main>
+
+<!-- SHARED FOOTER — Edit once, updates everywhere -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="flex items-center gap-sm mb-4">
+                    <img src="https://lh3.googleusercontent.com/aida/AEtjO1VR7vTVKN-3q2akI30rjGeKgF9wy9VeplQ-sIx8V7AhsXTtTPdUzXs4oZGVDeTG4pW52Fh1Klizlqk-jBx129AvSvacaXUxCcpV1Xf8nt_krIGaUKV3SoJSXiJIX8dzFJXtw6RvUpGt_ZICc9lVMtBzS98sF69riVGwX7fyPlCODnG1ptN98JrV3KxGrZ6PULcIewW2f-Bqonilz-hS5sTkCmOG0pppxcEyxkmRWr5P-sbDBA6oKaWlZyRm" alt="IPL" style="width:40px;height:40px;border-radius:50%;">
+                    <div><h3 class="headline-sm text-white leading-none" style="font-size:1rem;">INDIAN PENPALS' LEAGUE</h3><span class="label-sm text-gold">Estd. March 12, 1995 • Reg #F23778</span></div>
+                </div>
+                <p class="body-sm mb-4 leading-relaxed" style="color:var(--color-surface-dim);">A registered public social welfare trust upholding Love, Friendship, and Humanity across Indian states.</p>
+                <span class="badge badge-gold">80G Certified</span>
+            </div>
+            <div class="footer-col">
+                <h4>Explore IPL</h4>
+                <div class="footer-links">
+                    <span onclick="navigate('home')">Home</span>
+                    <span onclick="navigate('about')">About Us</span>
+                    <span onclick="navigate('history')">30-Year History</span>
+                    <span onclick="navigate('team')">Leadership Team</span>
+                    <span onclick="navigate('humanitarian')">Humanitarian Services</span>
+                    <span onclick="navigate('news-events')">News &amp; Events</span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Events &amp; Meets</h4>
+                <div class="footer-links">
+                    <span onclick="navigate('events')">All Events</span>
+                    <span onclick="navigate('friends-day')">Friends Day</span>
+                    <span onclick="navigate('friendship-meets')">Friendship Meets</span>
+                    <span onclick="navigate('join')">Membership Registration</span>
+                    <span onclick="navigate('contact')">Contact Secretariat</span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Secretariat Office</h4>
+                <p class="body-sm mb-3" style="color:var(--color-surface-dim);">B-602, Raj Ekjyot Sukriti, Opp. Fire Brigade, Chembur, Mumbai 400071, India.</p>
+                <div class="footer-links">
+                    <a href="tel:+919892035187" class="flex items-center gap-sm"><span class="material-symbols-outlined" style="font-size:14px;color:var(--color-gold);">call</span>+91 9892035187</a>
+                    <a href="mailto:iplmumbai12395@gmail.com" class="flex items-center gap-sm"><span class="material-symbols-outlined" style="font-size:14px;color:var(--color-gold);">mail</span>iplmumbai12395@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="footerYear">2025</span> Indian Penpals' League (IPL). All Rights Reserved. Reg #F23778.</p>
+            <span>Love • Friendship • Humanity</span>
+        </div>
+    </div>
+</footer>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast">
+    <span class="material-symbols-outlined" id="toastIcon">check_circle</span>
+    <div id="toastMsg">Done!</div>
+</div>
+
+<script>
+/* =====================================================================
+   INDIAN PENPALS' LEAGUE — Complete JavaScript SPA
+   Single-File | All Logic Embedded
+   ===================================================================== */
+
+// ─── ROUTER ────────────────────────────────────────────────────────────────
+const pages = ['home','about','history','presidents-blog','team','humanitarian','news-events','events','friendship-meets','friends-day','join','contact'];
+let currentPage = 'home';
+
+function navigate(pageId) {
+    // Hide all sections
+    document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+    // Show target
+    const target = document.getElementById('page-' + pageId);
+    if (target) {
+        target.classList.add('active');
+        currentPage = pageId;
+    }
+    // Update URL hash
+    history.pushState({page: pageId}, '', '#' + pageId);
+    // Scroll to top smoothly
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    // Update nav active states
+    updateNavActive(pageId);
+    // Re-init page-specific logic
+    setTimeout(() => {
+        initScrollReveal();
+        initCounterAnimation();
+        initFilterTabs();
+        initAccordion();
+    }, 50);
+    // Update page title
+    updateTitle(pageId);
+}
+
+function updateTitle(pageId) {
+    const titles = {
+        home: "Indian Penpals' League (IPL) | Love, Friendship & Humanity",
+        about: "About IPL | Indian Penpals' League",
+        history: "History & Milestones | Indian Penpals' League",
+        'presidents-blog': "President's Blog | Indian Penpals' League",
+        team: "Leadership Team | Indian Penpals' League",
+        humanitarian: "Humanitarian Services | Indian Penpals' League",
+        'news-events': "News & Events | Indian Penpals' League",
+        events: "Events | Indian Penpals' League",
+        'friendship-meets': "Friendship Meets | Indian Penpals' League",
+        'friends-day': "Friends Day | Indian Penpals' League",
+        join: "Join Now | Indian Penpals' League",
+        contact: "Contact | Indian Penpals' League"
+    };
+    document.title = titles[pageId] || "Indian Penpals' League";
+}
+
+function updateNavActive(pageId) {
+    const navButtons = document.querySelectorAll('.nav-link[data-page], .mobile-nav-link[data-page]');
+    navButtons.forEach(btn => {
+        btn.classList.remove('active');
+        const p = btn.getAttribute('data-page');
+        if (p === pageId || 
+            (p === 'about' && ['history','presidents-blog'].includes(pageId)) ||
+            (p === 'news-events' && ['events','friendship-meets','friends-day'].includes(pageId))) {
+            btn.classList.add('active');
+        }
+    });
+}
+
+// Handle hash-based routing on load + back/forward
+window.addEventListener('popstate', (e) => {
+    const hash = window.location.hash.replace('#','') || 'home';
+    const pageId = pages.includes(hash) ? hash : 'home';
+    document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+    const target = document.getElementById('page-' + pageId);
+    if (target) target.classList.add('active');
+    updateNavActive(pageId);
+    updateTitle(pageId);
+    currentPage = pageId;
+});
+
+// ─── INIT ON DOM READY ─────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+    // Route from hash
+    const hash = window.location.hash.replace('#','');
+    if (hash && pages.includes(hash)) navigate(hash);
+    else navigate('home');
+
+    initStickyHeader();
+    initMobileNav();
+    initMobileAccordion();
+    initBackToTop();
+    initDynamicYear();
+    initLanguageToggle();
+    initScrollReveal();
+    initCounterAnimation();
+    initFilterTabs();
+    initAccordion();
+});
+
+// ─── STICKY HEADER ─────────────────────────────────────────────────────────
+function initStickyHeader() {
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 20);
+    }, {passive: true});
+}
+
+// ─── MOBILE NAV ────────────────────────────────────────────────────────────
+function initMobileNav() {
+    const toggle = document.getElementById('mobileToggle');
+    const overlay = document.getElementById('drawerOverlay');
+    const closeBtn = document.getElementById('drawerClose');
+    toggle.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+}
+
+function openDrawer() {
+    document.getElementById('mobileDrawer').classList.add('open');
+    document.getElementById('drawerOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeDrawer() {
+    document.getElementById('mobileDrawer').classList.remove('open');
+    document.getElementById('drawerOverlay').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// ─── MOBILE ACCORDION ─────────────────────────────────────────────────────
+function initMobileAccordion() {
+    document.querySelectorAll('.mobile-accordion-toggle').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const sub = toggle.nextElementSibling;
+            const icon = toggle.querySelector('.accordion-icon');
+            const isOpen = sub && sub.classList.contains('open');
+            document.querySelectorAll('.mobile-sub-menu.open').forEach(m => { m.classList.remove('open'); m.style.maxHeight = null; });
+            document.querySelectorAll('.accordion-icon.rotated').forEach(i => i.classList.remove('rotated'));
+            if (!isOpen && sub) { sub.classList.add('open'); sub.style.maxHeight = sub.scrollHeight + 'px'; if (icon) icon.classList.add('rotated'); }
+        });
+    });
+}
+
+// ─── FAQ ACCORDION ────────────────────────────────────────────────────────
+function initAccordion() {
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            const group = item.parentElement;
+            const wasActive = item.classList.contains('active');
+            group.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+            if (!wasActive) item.classList.add('active');
+        });
+    });
+}
+
+// ─── FILTER TABS ─────────────────────────────────────────────────────────
+function initFilterTabs() {
+    document.querySelectorAll('.filter-tabs').forEach(tabGroup => {
+        const btns = tabGroup.querySelectorAll('.filter-btn');
+        // Find nearest card grid to this filter tabs
+        const section = tabGroup.closest('section') || tabGroup.closest('.page-section');
+        const cards = section ? section.querySelectorAll('[data-category]') : [];
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const cat = btn.getAttribute('data-filter');
+                cards.forEach(card => {
+                    card.style.display = (cat === 'all' || card.getAttribute('data-category') === cat) ? '' : 'none';
+                });
+            });
+        });
+    });
+}
+
+// ─── SCROLL REVEAL ────────────────────────────────────────────────────────
+function initScrollReveal() {
+    const els = document.querySelectorAll('.reveal:not(.revealed)');
+    if (!els.length || !('IntersectionObserver' in window)) return;
+    const obs = new IntersectionObserver((entries, o) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); o.unobserve(e.target); } });
+    }, {threshold: 0.15, rootMargin: '0px 0px -50px 0px'});
+    els.forEach(el => obs.observe(el));
+}
+
+// ─── COUNTER ANIMATION ───────────────────────────────────────────────────
+function initCounterAnimation() {
+    const counters = document.querySelectorAll('.stat-counter, .stat-number[data-target]');
+    if (!counters.length || !('IntersectionObserver' in window)) return;
+    const obs = new IntersectionObserver((entries, o) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const el = e.target;
+                const target = parseInt(el.getAttribute('data-target'), 10);
+                const suffix = el.getAttribute('data-suffix') || '';
+                if (!target) return;
+                let current = 0;
+                const steps = 60; const inc = target / steps;
+                const timer = setInterval(() => {
+                    current += inc;
+                    if (current >= target) { el.textContent = target.toLocaleString() + suffix; clearInterval(timer); }
+                    else el.textContent = Math.floor(current).toLocaleString() + suffix;
+                }, 25);
+                o.unobserve(el);
+            }
+        });
+    }, {threshold: 0.5});
+    counters.forEach(c => obs.observe(c));
+}
+
+// ─── BACK TO TOP ─────────────────────────────────────────────────────────
+function initBackToTop() {
+    const btn = document.createElement('button');
+    btn.className = 'back-to-top'; btn.setAttribute('aria-label', 'Back to top');
+    btn.innerHTML = '<span class="material-symbols-outlined">arrow_upward</span>';
+    document.body.appendChild(btn);
+    window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 350), {passive: true});
+    btn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+}
+
+// ─── DYNAMIC YEAR ────────────────────────────────────────────────────────
+function initDynamicYear() {
+    const y = new Date().getFullYear();
+    document.querySelectorAll('#footerYear, .current-year').forEach(el => el.textContent = y);
+}
+
+// ─── LANGUAGE TOGGLE ─────────────────────────────────────────────────────
+function initLanguageToggle() {
+    document.getElementById('langEN').addEventListener('click', () => {
+        document.getElementById('langEN').classList.add('active');
+        document.getElementById('langTA').classList.remove('active');
+        showToast('Switched to English interface', 'success');
+    });
+    document.getElementById('langTA').addEventListener('click', () => {
+        document.getElementById('langTA').classList.add('active');
+        document.getElementById('langEN').classList.remove('active');
+        showToast('தமிழ் மொழிபெயர்ப்பு விரைவிலேயே கிடைக்கும்', 'success');
+    });
+}
+
+// ─── TOAST ───────────────────────────────────────────────────────────────
+function showToast(msg, type = 'success') {
+    const toast = document.getElementById('toast');
+    const msgEl = document.getElementById('toastMsg');
+    const icon = document.getElementById('toastIcon');
+    msgEl.textContent = msg;
+    icon.textContent = type === 'error' ? 'error' : 'check_circle';
+    toast.style.borderLeftColor = type === 'error' ? 'var(--color-error)' : 'var(--color-gold)';
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
+}
+
+// ─── FORMS ───────────────────────────────────────────────────────────────
+function submitJoinForm(e) {
+    e.preventDefault();
+    showToast('Application submitted! We will contact you soon.', 'success');
+    e.target.reset();
+}
+function submitContactForm(e) {
+    e.preventDefault();
+    showToast('Message sent! We will respond within 2 business days.', 'success');
+    e.target.reset();
+}
+</script>
+</body>
+</html>

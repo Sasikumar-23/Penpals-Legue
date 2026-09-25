@@ -1,0 +1,167 @@
+/* ==========================================================================
+   Indian Penpals' League (IPL) - Mobile-First Responsive Stylesheet
+   Breakpoints: 360px, 375px, 390px, 414px, 768px, 834px, 1024px, 1280px, 1440px+
+   ========================================================================== */
+
+/* --- 1. BASE FLUID ADJUSTMENTS & CONTAINERS --- */
+@media (max-width: 1024px) {
+    :root {
+        --header-height: 100px;
+    }
+
+    .main-nav {
+        height: 64px;
+    }
+
+    .nav-menu {
+        display: none; /* Switch to mobile drawer */
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .grid-cols-12 {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .col-span-8, .col-span-7, .col-span-6, .col-span-5, .col-span-4, .col-span-3 {
+        grid-column: span 6 / span 6;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --space-2xl: 2.75rem;
+        --space-3xl: 3.5rem;
+        --header-height: 105px;
+    }
+
+    .top-bar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+    }
+
+    .top-bar-links {
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 0.25rem;
+    }
+
+    .grid-cols-2, .grid-cols-3, .grid-cols-4, .grid-cols-12 {
+        grid-template-columns: 1fr;
+    }
+
+    .col-span-12, .col-span-8, .col-span-7, .col-span-6, .col-span-5, .col-span-4, .col-span-3 {
+        grid-column: span 1 / span 1;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .timeline {
+        padding-left: 2rem;
+    }
+
+    .timeline-marker {
+        left: -2rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.75rem;
+    }
+
+    .filter-tabs {
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filter-btn {
+        white-space: nowrap;
+    }
+
+    .modal-dialog {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+/* --- 2. MOBILE FINE-TUNING (360px - 414px) --- */
+@media (max-width: 480px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .brand-title {
+        font-size: 0.95rem;
+    }
+
+    .brand-subtitle {
+        display: none;
+    }
+
+    .brand-logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .top-bar {
+        font-size: 0.75rem;
+        padding: 0.35rem 1rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .btn-group-mobile-stack {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .hero-banner {
+        padding: 2rem 0;
+    }
+
+    .display-hero {
+        font-size: 1.85rem;
+    }
+
+    .headline-lg {
+        font-size: 1.5rem;
+    }
+}
+
+/* --- 3. LARGE SCREENS & DESKTOPS (1280px - 1440px+) --- */
+@media (min-width: 1440px) {
+    :root {
+        --container-max-width: 1360px;
+    }
+
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .display-hero {
+        font-size: 3.5rem;
+    }
+}

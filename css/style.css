@@ -1,0 +1,367 @@
+/* ==========================================================================
+   Indian Penpals' League (IPL) - Global Design System & Core Stylesheet
+   Estd. March 12, 1995 • Reg #F23778 • 80G Certified Welfare Trust
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+/* --- 1. CSS VARIABLES & DESIGN TOKENS --- */
+:root {
+    /* Primary Colors */
+    --color-navy: #0B1F3A;
+    --color-navy-dark: #071527;
+    --color-navy-light: #172C4C;
+    --color-blue: #1456A0;
+    --color-blue-dark: #003F7C;
+    --color-blue-light: #225EA9;
+    --color-gold: #D4A72C;
+    --color-gold-dark: #503C00;
+    --color-gold-light: #F5C549;
+    --color-gold-pale: #FCF7EB;
+    --color-gold-badge: #FFDF98;
+    --color-accent-magenta: #801475;
+    
+    /* Neutrals & Surfaces */
+    --color-white: #FFFFFF;
+    --color-surface: #F6FAFF;
+    --color-surface-dim: #D6DADF;
+    --color-surface-bright: #F6FAFF;
+    --color-surface-low: #F0F4F9;
+    --color-surface-container: #EAEEF3;
+    --color-surface-high: #E4E9ED;
+    --color-surface-highest: #DFE3E8;
+    --color-light-blue: #F3F7FC;
+    --color-secondary-container: #C8DBFE;
+    
+    /* Text & Status */
+    --color-text-primary: #0B1F3A;
+    --color-text-secondary: #4B5D73;
+    --color-text-muted: #667085;
+    --color-text-on-dark: #F6FAFF;
+    --color-border: #E5EAF0;
+    --color-border-subtle: #E5EAF0;
+    --color-border-focus: #1456A0;
+    --color-error: #BA1A1A;
+    --color-error-container: #FFDAD6;
+    --color-success: #1E7E34;
+    --color-success-bg: #EAF7ED;
+    
+    /* Typography */
+    --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    /* Spacings */
+    --space-xs: 0.25rem;   /* 4px */
+    --space-sm: 0.5rem;    /* 8px */
+    --space-md: 1rem;      /* 16px */
+    --space-lg: 1.5rem;    /* 24px */
+    --space-xl: 2.5rem;    /* 40px */
+    --space-2xl: 4rem;     /* 64px */
+    --space-3xl: 6rem;     /* 96px */
+    
+    /* Borders & Radius */
+    --radius-sm: 0.25rem;  /* 4px */
+    --radius-md: 0.5rem;   /* 8px */
+    --radius-lg: 0.75rem;  /* 12px */
+    --radius-xl: 1rem;     /* 16px */
+    --radius-2xl: 1.5rem;  /* 24px */
+    --radius-full: 9999px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(11, 31, 58, 0.06), 0 1px 2px rgba(11, 31, 58, 0.04);
+    --shadow-md: 0 4px 12px -2px rgba(11, 31, 58, 0.08), 0 2px 6px -1px rgba(11, 31, 58, 0.04);
+    --shadow-lg: 0 12px 28px -4px rgba(11, 31, 58, 0.12), 0 4px 12px -2px rgba(11, 31, 58, 0.06);
+    --shadow-xl: 0 20px 40px -8px rgba(11, 31, 58, 0.18);
+    --shadow-glow-gold: 0 0 20px rgba(212, 167, 44, 0.25);
+    
+    /* Layout */
+    --container-max-width: 1280px;
+    --header-height: 112px;
+}
+
+/* --- 2. CSS RESET & BASE STYLES --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    background-color: var(--color-surface);
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* Material Symbols Integration */
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+}
+
+.icon-filled {
+    font-variation-settings: 'FILL' 1;
+}
+
+/* --- 3. TYPOGRAPHY --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1.25;
+}
+
+.display-hero {
+    font-size: clamp(2.25rem, 4vw + 1rem, 3.25rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.headline-lg {
+    font-size: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+}
+
+.headline-md {
+    font-size: clamp(1.35rem, 2vw + 0.5rem, 1.75rem);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.headline-sm {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.body-lg {
+    font-size: 1.125rem;
+    line-height: 1.65;
+}
+
+.body-md {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.body-sm {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.label-lg {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.label-md {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+}
+
+.label-sm {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+}
+
+.text-muted { color: var(--color-text-muted); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-primary { color: var(--color-blue); }
+.text-gold { color: var(--color-gold); }
+.text-magenta { color: var(--color-accent-magenta); }
+.text-navy { color: var(--color-navy); }
+.text-white { color: var(--color-white); }
+.text-error { color: var(--color-error); }
+
+/* --- 4. LAYOUT CONTAINERS & GRID SYSTEM --- */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.container-narrow {
+    max-width: 960px;
+}
+
+.container-fluid {
+    max-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.section {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+    position: relative;
+}
+
+.section-sm {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+}
+
+.section-lg {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+}
+
+.bg-surface { background-color: var(--color-surface); }
+.bg-white { background-color: var(--color-white); }
+.bg-surface-low { background-color: var(--color-surface-low); }
+.bg-navy { background-color: var(--color-navy); color: var(--color-white); }
+.bg-navy-dark { background-color: var(--color-navy-dark); color: var(--color-white); }
+.bg-blue { background-color: var(--color-blue); color: var(--color-white); }
+.bg-light-blue { background-color: var(--color-light-blue); }
+
+/* Flexbox Utilities */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-1 { flex: 1; }
+.shrink-0 { flex-shrink: 0; }
+.gap-xs { gap: var(--space-xs); }
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+.gap-xl { gap: var(--space-xl); }
+
+/* CSS Grid Utilities */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+
+/* Grid Spans */
+.col-span-12 { grid-column: span 12 / span 12; }
+.col-span-8 { grid-column: span 8 / span 8; }
+.col-span-7 { grid-column: span 7 / span 7; }
+.col-span-6 { grid-column: span 6 / span 6; }
+.col-span-5 { grid-column: span 5 / span 5; }
+.col-span-4 { grid-column: span 4 / span 4; }
+.col-span-3 { grid-column: span 3 / span 3; }
+
+/* --- 5. ACCESSIBILITY & UTILITIES --- */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 1rem;
+    background: var(--color-gold);
+    color: var(--color-navy);
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    z-index: 9999;
+    border-radius: var(--radius-md);
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 2px;
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.relative { position: relative; }
+.overflow-hidden { overflow: hidden; }
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-2xl { border-radius: var(--radius-2xl); }
+.rounded-full { border-radius: var(--radius-full); }
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.border { border: 1px solid var(--color-border); }
