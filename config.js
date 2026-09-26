@@ -31,9 +31,9 @@ const IPL_CONFIG = {
 
     // ── LOGO ──────────────────────────────────────────────────────
     logo: {
-        src:    "https://lh3.googleusercontent.com/aida/AEtjO1VR7vTVKN-3q2akI30rjGeKgF9wy9VeplQ-sIx8V7AhsXTtTPdUzXs4oZGVDeTG4pW52Fh1Klizlqk-jBx129AvSvacaXUxCcpV1Xf8nt_krIGaUKV3SoJSXiJIX8dzFJXtw6RvUpGt_ZICc9lVMtBzS98sF69riVGwX7fyPlCODnG1ptN98JrV3KxGrZ6PULcIewW2f-Bqonilz-hS5sTkCmOG0pppxcEyxkmRWr5P-sbDBA6oKaWlZyRm",
-        alt:    "IPL Emblem",
-        fallback: "https://placehold.co/88x88/0B1F3A/F5C549?text=IPL",
+        src:    "images/ipl-logo.png",
+        alt:    "Indian Penpals' League Emblem",
+        fallback: "images/ipl-logo.png",
     },
 
     // ── NAVIGATION MENU ───────────────────────────────────────────

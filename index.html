@@ -323,11 +323,11 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 <aside class="top-bar">
     <div class="top-bar-container">
         <div class="top-bar-info">
-            <span class="text-gold font-semibold">Est. March 12, 1995</span>
-            <span class="top-bar-divider">•</span><span>Reg #F23778</span>
+            <span class="text-gold font-semibold" data-i18n="stat_est">Est. March 12, 1995</span>
+            <span class="top-bar-divider">•</span><span data-i18n="stat_reg">Reg #F23778</span>
             <span class="top-bar-divider">•</span>
-            <span class="badge badge-gold">80G Certified Social Welfare Trust</span>
-            <span class="top-bar-divider">•</span><span>Chembur, Mumbai, India</span>
+            <span class="badge badge-gold" data-i18n="stat_cert">80G Certified Social Welfare Trust</span>
+            <span class="top-bar-divider">•</span><span data-i18n="stat_loc">Chembur, Mumbai, India</span>
         </div>
         <div class="top-bar-links">
             <a href="tel:+919892035187"><span class="material-symbols-outlined text-sm" style="font-size:14px">call</span>+91 9892035187</a>
@@ -341,37 +341,37 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 <header class="site-header" id="site-header">
     <div class="main-nav">
         <div class="brand-logo-wrapper" onclick="navigate('home')" role="link" tabindex="0" aria-label="IPL Home">
-            <img src="https://lh3.googleusercontent.com/aida/AEtjO1VR7vTVKN-3q2akI30rjGeKgF9wy9VeplQ-sIx8V7AhsXTtTPdUzXs4oZGVDeTG4pW52Fh1Klizlqk-jBx129AvSvacaXUxCcpV1Xf8nt_krIGaUKV3SoJSXiJIX8dzFJXtw6RvUpGt_ZICc9lVMtBzS98sF69riVGwX7fyPlCODnG1ptN98JrV3KxGrZ6PULcIewW2f-Bqonilz-hS5sTkCmOG0pppxcEyxkmRWr5P-sbDBA6oKaWlZyRm" alt="IPL Emblem" class="brand-logo" onerror="this.src='https://placehold.co/88x88/0B1F3A/F5C549?text=IPL'">
+            <img src="images/ipl-logo.png" alt="IPL Emblem" class="brand-logo" onerror="this.src='images/ipl-logo.png'">
             <div class="brand-text">
-                <span class="brand-title">INDIAN PENPALS' LEAGUE</span>
-                <span class="brand-subtitle">Love, Friendship &amp; Humanity • Estd. 1995</span>
+                <span class="brand-title" data-i18n="brand_title">INDIAN PENPALS' LEAGUE</span>
+                <span class="brand-subtitle" data-i18n="brand_sub">Love, Friendship &amp; Humanity • Estd. 1995</span>
             </div>
         </div>
         <nav class="nav-menu" aria-label="Primary Navigation">
-            <button class="nav-link" onclick="navigate('home')" data-page="home">Home</button>
+            <button class="nav-link" onclick="navigate('home')" data-page="home" data-i18n="nav_home">Home</button>
             <div class="nav-item nav-dropdown">
                 <button class="nav-link" data-page="about" onclick="navigate('about')">
-                    <span>About</span><span class="material-symbols-outlined dropdown-chevron">expand_more</span>
+                    <span data-i18n="nav_about">About</span><span class="material-symbols-outlined dropdown-chevron">expand_more</span>
                 </button>
                 <div class="nav-dropdown-menu">
-                    <button class="nav-dropdown-item" onclick="navigate('history')">History</button>
-                    <button class="nav-dropdown-item" onclick="navigate('presidents-blog')">IPL President's Blog</button>
+                    <button class="nav-dropdown-item" onclick="navigate('history')" data-i18n="nav_history">History</button>
+                    <button class="nav-dropdown-item" onclick="navigate('presidents-blog')" data-i18n="nav_presidents_blog">IPL President's Blog</button>
                 </div>
             </div>
-            <button class="nav-link" onclick="navigate('team')" data-page="team">Our Team</button>
-            <button class="nav-link" onclick="navigate('humanitarian')" data-page="humanitarian">Humanitarian Services</button>
+            <button class="nav-link" onclick="navigate('team')" data-page="team" data-i18n="nav_team">Our Team</button>
+            <button class="nav-link" onclick="navigate('humanitarian')" data-page="humanitarian" data-i18n="nav_humanitarian">Humanitarian Services</button>
             <div class="nav-item nav-dropdown">
                 <button class="nav-link" data-page="news-events" onclick="navigate('news-events')">
-                    <span>News &amp; Events</span><span class="material-symbols-outlined dropdown-chevron">expand_more</span>
+                    <span data-i18n="nav_news_events">News &amp; Events</span><span class="material-symbols-outlined dropdown-chevron">expand_more</span>
                 </button>
                 <div class="nav-dropdown-menu">
-                    <button class="nav-dropdown-item" onclick="navigate('news-events')">IPL News</button>
-                    <button class="nav-dropdown-item" onclick="navigate('events')">Events</button>
-                    <button class="nav-dropdown-item" onclick="navigate('friendship-meets')">Friendship Meets</button>
-                    <button class="nav-dropdown-item" onclick="navigate('friends-day')">Friends Day</button>
+                    <button class="nav-dropdown-item" onclick="navigate('news-events')" data-i18n="nav_ipl_news">IPL News</button>
+                    <button class="nav-dropdown-item" onclick="navigate('events')" data-i18n="nav_events">Events</button>
+                    <button class="nav-dropdown-item" onclick="navigate('friendship-meets')" data-i18n="nav_friendship_meets">Friendship Meets</button>
+                    <button class="nav-dropdown-item" onclick="navigate('friends-day')" data-i18n="nav_friends_day">Friends Day</button>
                 </div>
             </div>
-            <button class="nav-link" onclick="navigate('contact')" data-page="contact">Contact</button>
+            <button class="nav-link" onclick="navigate('contact')" data-page="contact" data-i18n="nav_contact">Contact</button>
         </nav>
         <div class="nav-actions">
             <div class="lang-switch">
@@ -379,7 +379,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
                 <button type="button" class="lang-btn" id="langTA">தமிழ்</button>
             </div>
             <button class="btn btn-primary btn-sm" onclick="navigate('join')">
-                <span class="dot-indicator"></span>Join Now
+                <span class="dot-indicator"></span><span data-i18n="nav_join">Join Now</span>
             </button>
             <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu">
                 <span class="material-symbols-outlined">menu</span>
@@ -392,34 +392,34 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 <div class="drawer-overlay" id="drawerOverlay"></div>
 <div class="mobile-nav-drawer" id="mobileDrawer">
     <div class="mobile-drawer-header">
-        <span class="brand-title">IPL Navigation</span>
+        <span class="brand-title" data-i18n="mobile_nav_title">IPL Navigation</span>
         <button class="btn-circle" id="drawerClose" style="background:var(--color-surface-container);display:flex;align-items:center;justify-content:center;"><span class="material-symbols-outlined">close</span></button>
     </div>
     <div class="mobile-nav-links">
-        <button class="mobile-nav-link" onclick="navigate('home');closeDrawer()"><span>Home</span><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
+        <button class="mobile-nav-link" onclick="navigate('home');closeDrawer()"><span data-i18n="nav_home">Home</span><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
         <div class="mobile-nav-accordion">
-            <button class="mobile-nav-link mobile-accordion-toggle"><span>About</span><span class="material-symbols-outlined accordion-icon" style="font-size:18px">expand_more</span></button>
+            <button class="mobile-nav-link mobile-accordion-toggle"><span data-i18n="nav_about">About</span><span class="material-symbols-outlined accordion-icon" style="font-size:18px">expand_more</span></button>
             <div class="mobile-sub-menu">
-                <button class="mobile-sub-link" onclick="navigate('about');closeDrawer()">About Us Overview</button>
-                <button class="mobile-sub-link" onclick="navigate('history');closeDrawer()">History &amp; Milestones</button>
-                <button class="mobile-sub-link" onclick="navigate('presidents-blog');closeDrawer()">IPL President's Blog</button>
+                <button class="mobile-sub-link" onclick="navigate('about');closeDrawer()" data-i18n="nav_about_overview">About Us Overview</button>
+                <button class="mobile-sub-link" onclick="navigate('history');closeDrawer()" data-i18n="nav_history_milestones">History &amp; Milestones</button>
+                <button class="mobile-sub-link" onclick="navigate('presidents-blog');closeDrawer()" data-i18n="nav_presidents_blog">IPL President's Blog</button>
             </div>
         </div>
-        <button class="mobile-nav-link" onclick="navigate('team');closeDrawer()"><span>Our Team</span><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
-        <button class="mobile-nav-link" onclick="navigate('humanitarian');closeDrawer()"><span>Humanitarian Services</span><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
+        <button class="mobile-nav-link" onclick="navigate('team');closeDrawer()"><span data-i18n="nav_team">Our Team</span><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
+        <button class="mobile-nav-link" onclick="navigate('humanitarian');closeDrawer()"><span data-i18n="nav_humanitarian">Humanitarian Services</span><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
         <div class="mobile-nav-accordion">
-            <button class="mobile-nav-link mobile-accordion-toggle"><span>News &amp; Events</span><span class="material-symbols-outlined accordion-icon" style="font-size:18px">expand_more</span></button>
+            <button class="mobile-nav-link mobile-accordion-toggle"><span data-i18n="nav_news_events">News &amp; Events</span><span class="material-symbols-outlined accordion-icon" style="font-size:18px">expand_more</span></button>
             <div class="mobile-sub-menu">
-                <button class="mobile-sub-link" onclick="navigate('news-events');closeDrawer()">IPL News</button>
-                <button class="mobile-sub-link" onclick="navigate('events');closeDrawer()">Events</button>
-                <button class="mobile-sub-link" onclick="navigate('friendship-meets');closeDrawer()">Friendship Meets</button>
-                <button class="mobile-sub-link" onclick="navigate('friends-day');closeDrawer()">Friends Day</button>
+                <button class="mobile-sub-link" onclick="navigate('news-events');closeDrawer()" data-i18n="nav_ipl_news">IPL News</button>
+                <button class="mobile-sub-link" onclick="navigate('events');closeDrawer()" data-i18n="nav_events">Events</button>
+                <button class="mobile-sub-link" onclick="navigate('friendship-meets');closeDrawer()" data-i18n="nav_friendship_meets">Friendship Meets</button>
+                <button class="mobile-sub-link" onclick="navigate('friends-day');closeDrawer()" data-i18n="nav_friends_day">Friends Day</button>
             </div>
         </div>
-        <button class="mobile-nav-link" onclick="navigate('contact');closeDrawer()"><span>Contact</span><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
+        <button class="mobile-nav-link" onclick="navigate('contact');closeDrawer()"><span data-i18n="nav_contact">Contact</span><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
     </div>
     <div class="mobile-drawer-cta">
-        <button class="btn btn-primary btn-block" onclick="navigate('join');closeDrawer()">Join Now</button>
+        <button class="btn btn-primary btn-block" onclick="navigate('join');closeDrawer()" data-i18n="nav_join">Join Now</button>
     </div>
 </div>
 
@@ -433,18 +433,18 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
             <div class="flex flex-col items-center text-center">
                 <div class="badge badge-gold mb-6" style="padding:.5rem 1.25rem;font-size:.9rem;">
                     <span class="material-symbols-outlined" style="font-size:16px">star</span>
-                    Established March 12, 1995 • 80G Certified
+                    <span data-i18n="hero_badge">Established March 12, 1995 • 80G Certified</span>
                 </div>
-                <h1 class="display-hero text-navy mb-4" style="font-size:clamp(2.5rem,6vw,5rem);letter-spacing:-.03em;">
+                <h1 class="display-hero text-navy mb-4" style="font-size:clamp(2.5rem,6vw,5rem);letter-spacing:-.03em;" data-i18n="hero_title">
                     INDIAN PENPALS' LEAGUE
                 </h1>
-                <p class="body-lg text-secondary mb-2">Love, Friendship &amp; Humanity</p>
-                <p class="body-md text-muted mb-8 max-w-3xl">A confederation of groups of friends in India and abroad, united since 1995 to uphold three basic principles — overcoming the barriers of caste, color, creed, religion, language and geography.</p>
+                <p class="body-lg text-secondary mb-2" data-i18n="hero_tagline">Love, Friendship &amp; Humanity</p>
+                <p class="body-md text-muted mb-8 max-w-3xl" data-i18n="hero_desc">A confederation of groups of friends in India and abroad, united since 1995 to uphold three basic principles — overcoming the barriers of caste, color, creed, religion, language and geography.</p>
                 <div class="flex flex-wrap gap-sm" style="justify-content:center;">
-                    <button class="btn btn-primary btn-lg" onclick="navigate('about')">About IPL</button>
-                    <button class="btn btn-secondary btn-lg" onclick="navigate('contact')">Contact Us</button>
-                    <button class="btn btn-secondary btn-lg" onclick="navigate('events')">Events</button>
-                    <button class="btn btn-secondary btn-lg" onclick="navigate('news-events')">IPL News</button>
+                    <button class="btn btn-primary btn-lg" onclick="navigate('about')" data-i18n="btn_about_ipl">About IPL</button>
+                    <button class="btn btn-secondary btn-lg" onclick="navigate('contact')" data-i18n="btn_contact_us">Contact Us</button>
+                    <button class="btn btn-secondary btn-lg" onclick="navigate('events')" data-i18n="btn_events">Events</button>
+                    <button class="btn btn-secondary btn-lg" onclick="navigate('news-events')" data-i18n="btn_ipl_news">IPL News</button>
                 </div>
             </div>
         </div>
@@ -455,23 +455,23 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
         <div class="container">
             <div class="flex flex-col" style="gap:4rem;">
                 <div style="max-width:600px;">
-                    <blockquote class="headline-md text-white mb-4 italic">"Let us breathe friendship! Let us love our friends! Let us sow love, friendship, and humanity! Let us nurture and continue tirelessly, the journey of friendship..."</blockquote>
-                    <cite class="body-md text-gold" style="font-style:normal;">— M. Karun, Founder-President</cite>
+                    <blockquote class="headline-md text-white mb-4 italic" data-i18n="founder_quote">"Let us breathe friendship! Let us love our friends! Let us sow love, friendship, and humanity! Let us nurture and continue tirelessly, the journey of friendship..."</blockquote>
+                    <cite class="body-md text-gold" style="font-style:normal;" data-i18n="founder_sign">— M. Karun, Founder-President</cite>
                 </div>
                 <div class="card" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);color:#fff;max-width:580px;align-self:flex-end;">
-                    <h2 class="headline-md text-white mb-4">Welcome to IPL</h2>
-                    <p style="color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:1.5rem;">The INDIAN PENPALS' LEAGUE (IPL) is a confederation of groups of friends in India and abroad. IPL had its inception in Mumbai on March 12, 1995, formed by like-minded pen-pals coming together to uphold three basic principles of Love, Friendship and Humanity.</p>
+                    <h2 class="headline-md text-white mb-4" data-i18n="welcome_title">Welcome to IPL</h2>
+                    <p style="color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:1.5rem;" data-i18n="welcome_desc">The INDIAN PENPALS' LEAGUE (IPL) is a confederation of groups of friends in India and abroad. IPL had its inception in Mumbai on March 12, 1995, formed by like-minded pen-pals coming together to uphold three basic principles of Love, Friendship and Humanity.</p>
                     <div class="grid grid-cols-2 gap-sm mb-6">
                         <div style="padding:1rem;background:rgba(255,255,255,.05);border-radius:var(--radius-md);border:1px solid rgba(255,255,255,.08);">
-                            <p style="font-size:.7rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Registration</p>
+                            <p style="font-size:.7rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;" data-i18n="reg_label">Registration</p>
                             <p style="font-family:monospace;font-weight:700;color:var(--color-gold-light);">#F23778</p>
                         </div>
                         <div style="padding:1rem;background:rgba(255,255,255,.05);border-radius:var(--radius-md);border:1px solid rgba(255,255,255,.08);">
-                            <p style="font-size:.7rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;">Tax Benefit</p>
-                            <p style="font-family:monospace;font-weight:700;color:var(--color-gold-light);">80G Certified</p>
+                            <p style="font-size:.7rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.25rem;" data-i18n="tax_label">Tax Benefit</p>
+                            <p style="font-family:monospace;font-weight:700;color:var(--color-gold-light);" data-i18n="tax_val">80G Certified</p>
                         </div>
                     </div>
-                    <button class="btn btn-gold" onclick="navigate('about')">Read More About Us →</button>
+                    <button class="btn btn-gold" onclick="navigate('about')" data-i18n="btn_read_more_about">Read More About Us →</button>
                 </div>
             </div>
         </div>
@@ -481,14 +481,14 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
     <section class="section bg-surface">
         <div class="container">
             <div class="section-header text-center">
-                <div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">insights</span>IPL by Numbers</div>
-                <h2 class="section-title">30 Years of Friendship &amp; Humanity</h2>
+                <div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">insights</span><span data-i18n="stats_tag">IPL by Numbers</span></div>
+                <h2 class="section-title" data-i18n="stats_title">30 Years of Friendship &amp; Humanity</h2>
             </div>
             <div class="grid grid-cols-4 gap-lg">
-                <div class="stat-box card reveal"><div class="stat-number" data-target="30" data-suffix="+">30+</div><div class="stat-label">Years of Service</div></div>
-                <div class="stat-box card reveal"><div class="stat-number" data-target="14" data-suffix="">14</div><div class="stat-label">Indian States</div></div>
-                <div class="stat-box card reveal"><div class="stat-number" data-target="500" data-suffix="+">500+</div><div class="stat-label">Convention Delegates</div></div>
-                <div class="stat-box card reveal"><div class="stat-number" data-target="1000" data-suffix="+">1000+</div><div class="stat-label">Active Members</div></div>
+                <div class="stat-box card reveal"><div class="stat-number" data-target="30" data-suffix="+">30+</div><div class="stat-label" data-i18n="stat_years">Years of Service</div></div>
+                <div class="stat-box card reveal"><div class="stat-number" data-target="14" data-suffix="">14</div><div class="stat-label" data-i18n="stat_states">Indian States</div></div>
+                <div class="stat-box card reveal"><div class="stat-number" data-target="500" data-suffix="+">500+</div><div class="stat-label" data-i18n="stat_delegates">Convention Delegates</div></div>
+                <div class="stat-box card reveal"><div class="stat-number" data-target="1000" data-suffix="+">1000+</div><div class="stat-label" data-i18n="stat_members">Active Members</div></div>
             </div>
         </div>
     </section>
@@ -497,27 +497,27 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
     <section class="section bg-white">
         <div class="container">
             <div class="flex justify-between items-end mb-8 flex-wrap gap-sm">
-                <div><h2 class="section-title">News &amp; Current Events</h2><p class="section-desc">Catch up with our latest events and news</p></div>
-                <button class="btn btn-secondary" onclick="navigate('events')">View All Events</button>
+                <div><h2 class="section-title" data-i18n="news_preview_title">News &amp; Current Events</h2><p class="section-desc" data-i18n="news_preview_desc">Catch up with our latest events and news</p></div>
+                <button class="btn btn-secondary" onclick="navigate('events')" data-i18n="btn_view_all_events">View All Events</button>
             </div>
             <div class="grid grid-cols-3 gap-lg">
                 <article class="card card-hover">
-                    <div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyS5D_ufxVWiFMXC9mYbTHnx2ZYKPrHbQoBj2Cwq_1P4OITx33bstFKeZSTQygv7NTzwZ7Db9CdsgICJaRM840PXFqzhIV2My4ncX2GLjItcYUIsMNE3Day1ambTOTVRpihyKCjd6VCLI6LThUPs1pVjTnIh43u4qndcB93P7q4OCGFNQSNyCbBQNeI53Hnm1ZsDzHr1bR99QjXUBsld980XjYC25Py8lLTDvFRjtpzD01qW_DifzMA" alt="Chembur Meet"><span class="news-card-date">Aug 25, 2024</span><span class="card-overlay-badge badge badge-gold">Fellowship</span></div>
+                    <div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyS5D_ufxVWiFMXC9mYbTHnx2ZYKPrHbQoBj2Cwq_1P4OITx33bstFKeZSTQygv7NTzwZ7Db9CdsgICJaRM840PXFqzhIV2My4ncX2GLjItcYUIsMNE3Day1ambTOTVRpihyKCjd6VCLI6LThUPs1pVjTnIh43u4qndcB93P7q4OCGFNQSNyCbBQNeI53Hnm1ZsDzHr1bR99QjXUBsld980XjYC25Py8lLTDvFRjtpzD01qW_DifzMA" alt="Chembur Meet"><span class="news-card-date">Aug 25, 2024</span><span class="card-overlay-badge badge badge-gold" data-i18n="badge_fellowship">Fellowship</span></div>
                     <span class="label-sm text-primary uppercase font-bold mb-1 block">மும்பை நலம் விசாரிப்பு</span>
-                    <h3 class="headline-sm text-navy mb-2">Chembur Fellowship Gathering</h3>
-                    <button class="btn btn-secondary btn-sm" onclick="navigate('news-events')" style="margin-top:auto;">Read Report</button>
+                    <h3 class="headline-sm text-navy mb-2" data-i18n="chembur_title">Chembur Fellowship Gathering</h3>
+                    <button class="btn btn-secondary btn-sm" onclick="navigate('news-events')" style="margin-top:auto;" data-i18n="btn_read_report">Read Report</button>
                 </article>
                 <article class="card card-hover">
-                    <div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuTESTo9goWuvhEftkW19PTB8hL74ZHzoZhL-6-U7x64BGxq_Tht9edR7jum5Qz1MD1IknwhoZFgaLFsYWONbs2v3rlCuJVd3EHWf8vDOn48wAdn4wMOseVrwsAiwrcjDLohoKiZWyjE4wOyWs9HYtxpAtOBn0w33Nj1K41gRksdUT0ZYaJN5N6kOFHwbpCrdto8lDTUC4e5ELHnDgW4vKAxhUBFchejBek4MxKPQqXTn6Tk-Q-59qw" alt="Friends Day"><span class="news-card-date">Annual</span><span class="card-overlay-badge badge badge-navy">Convention</span></div>
-                    <span class="label-sm text-gold uppercase font-bold mb-1 block">National Convention</span>
-                    <h3 class="headline-sm text-navy mb-2">Friends Day Annual Convention</h3>
-                    <button class="btn btn-primary btn-sm" onclick="navigate('friends-day')" style="margin-top:auto;">Event Details</button>
+                    <div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuTESTo9goWuvhEftkW19PTB8hL74ZHzoZhL-6-U7x64BGxq_Tht9edR7jum5Qz1MD1IknwhoZFgaLFsYWONbs2v3rlCuJVd3EHWf8vDOn48wAdn4wMOseVrwsAiwrcjDLohoKiZWyjE4wOyWs9HYtxpAtOBn0w33Nj1K41gRksdUT0ZYaJN5N6kOFHwbpCrdto8lDTUC4e5ELHnDgW4vKAxhUBFchejBek4MxKPQqXTn6Tk-Q-59qw" alt="Friends Day"><span class="news-card-date">Annual</span><span class="card-overlay-badge badge badge-navy" data-i18n="badge_convention">Convention</span></div>
+                    <span class="label-sm text-gold uppercase font-bold mb-1 block" data-i18n="friends_day_tag">National Convention</span>
+                    <h3 class="headline-sm text-navy mb-2" data-i18n="friends_day_title">Friends Day Annual Convention</h3>
+                    <button class="btn btn-primary btn-sm" onclick="navigate('friends-day')" style="margin-top:auto;" data-i18n="btn_event_details">Event Details</button>
                 </article>
                 <article class="card card-hover">
-                    <div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Ev4UKCt22mpVBaxcOubMLtMRldqos_JRjmexuGKMv67niP-nFpTWSsZNncx1vExQYwHX2b230nfZvixRDQCUYAjFrzkUxOpM9-MBx3c5Zh_6vsGbJNEmCWrD6MzG5adGXRsJFyVbgmK7ZumCYQRqisUjwO_7mgDgIpM2ysClFd_mLAfXfxpHBpEjqJGYVD-DB8723gNK9pgqlS_auBmG5W8oy7lOZ3gE_6oI3DQQu5CKfmTlugkCA" alt="Pearl Jubilee"><span class="news-card-date">1995–2025</span><span class="card-overlay-badge badge badge-gold">30th Year</span></div>
-                    <span class="label-sm text-primary uppercase font-bold mb-1 block">Pearl Jubilee</span>
-                    <h3 class="headline-sm text-navy mb-2">Pearl Jubilee Book Launch</h3>
-                    <button class="btn btn-secondary btn-sm" onclick="navigate('news-events')" style="margin-top:auto;">Read Summary</button>
+                    <div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Ev4UKCt22mpVBaxcOubMLtMRldqos_JRjmexuGKMv67niP-nFpTWSsZNncx1vExQYwHX2b230nfZvixRDQCUYAjFrzkUxOpM9-MBx3c5Zh_6vsGbJNEmCWrD6MzG5adGXRsJFyVbgmK7ZumCYQRqisUjwO_7mgDgIpM2ysClFd_mLAfXfxpHBpEjqJGYVD-DB8723gNK9pgqlS_auBmG5W8oy7lOZ3gE_6oI3DQQu5CKfmTlugkCA" alt="Pearl Jubilee"><span class="news-card-date">1995–2025</span><span class="card-overlay-badge badge badge-gold" data-i18n="badge_30th_year">30th Year</span></div>
+                    <span class="label-sm text-primary uppercase font-bold mb-1 block" data-i18n="jubilee_tag">Pearl Jubilee</span>
+                    <h3 class="headline-sm text-navy mb-2" data-i18n="jubilee_title">Pearl Jubilee Book Launch</h3>
+                    <button class="btn btn-secondary btn-sm" onclick="navigate('news-events')" style="margin-top:auto;" data-i18n="btn_read_summary">Read Summary</button>
                 </article>
             </div>
         </div>
@@ -528,8 +528,8 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
         <div class="container">
             <div class="card bg-navy text-center" style="max-width:800px;margin:0 auto;padding:3rem;">
                 <span class="material-symbols-outlined" style="font-size:3rem;color:var(--color-gold);display:block;margin-bottom:1.5rem;">favorite</span>
-                <blockquote class="headline-md text-white italic mb-4">"We feel what we are doing is just a drop in the ocean but the ocean would be less because of that missing drop"</blockquote>
-                <cite class="body-md text-gold" style="font-style:normal;">— Mother Teresa</cite>
+                <blockquote class="headline-md text-white italic mb-4" data-i18n="teresa_quote">"We feel what we are doing is just a drop in the ocean but the ocean would be less because of that missing drop"</blockquote>
+                <cite class="body-md text-gold" style="font-style:normal;" data-i18n="teresa_sign">— Mother Teresa</cite>
             </div>
         </div>
     </section>
@@ -537,54 +537,54 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 
 <!-- ===== ABOUT PAGE ===== -->
 <section id="page-about" class="page-section">
-    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">About IPL</li></ul></div>
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span><span data-i18n="nav_home">Home</span></button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active" data-i18n="nav_about">About IPL</li></ul></div>
     <section class="section bg-surface">
         <div class="container">
-            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">info</span>About the League</div><h1 class="section-title mb-3">About Indian Penpals' League</h1><p class="section-desc">A registered social welfare trust — 30 years of unbroken friendship, correspondence, and community service.</p></div>
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">info</span><span data-i18n="about_tag">About the League</span></div><h1 class="section-title mb-3" data-i18n="about_title">About Indian Penpals' League</h1><p class="section-desc" data-i18n="about_subtitle">A registered social welfare trust — 30 years of unbroken friendship, correspondence, and community service.</p></div>
             <div class="grid grid-cols-2 gap-xl items-center">
                 <div>
-                    <h2 class="headline-md text-navy mb-4">Our Story</h2>
-                    <p class="body-lg text-secondary leading-relaxed mb-4">The INDIAN PENPALS' LEAGUE (IPL) is a confederation of groups of friends in India and abroad. IPL had its inception in Mumbai on March 12, 1995, formed by like-minded pen-pals coming together to uphold three basic principles of Love, Friendship and Humanity, overcoming the barriers of caste, color, creed, religion, language and geographical bounds separating humankind.</p>
-                    <p class="body-md text-muted leading-relaxed mb-6">Founded by M. Karun — a passionate believer in the power of handwritten correspondence — the League has grown from a small circle of pen-pals into a nation-wide confederation spanning 14 Indian states, with members abroad, bound not by geography but by the timeless art of letter writing.</p>
+                    <h2 class="headline-md text-navy mb-4" data-i18n="our_story_title">Our Story</h2>
+                    <p class="body-lg text-secondary leading-relaxed mb-4" data-i18n="our_story_p1">The INDIAN PENPALS' LEAGUE (IPL) is a confederation of groups of friends in India and abroad. IPL had its inception in Mumbai on March 12, 1995, formed by like-minded pen-pals coming together to uphold three basic principles of Love, Friendship and Humanity, overcoming the barriers of caste, color, creed, religion, language and geographical bounds separating humankind.</p>
+                    <p class="body-md text-muted leading-relaxed mb-6" data-i18n="our_story_p2">Founded by M. Karun — a passionate believer in the power of handwritten correspondence — the League has grown from a small circle of pen-pals into a nation-wide confederation spanning 14 Indian states, with members abroad, bound not by geography but by the timeless art of letter writing.</p>
                     <div class="flex gap-sm flex-wrap">
-                        <button class="btn btn-primary" onclick="navigate('history')">Our History</button>
-                        <button class="btn btn-secondary" onclick="navigate('team')">Meet the Team</button>
+                        <button class="btn btn-primary" onclick="navigate('history')" data-i18n="btn_our_history">Our History</button>
+                        <button class="btn btn-secondary" onclick="navigate('team')" data-i18n="btn_meet_team">Meet the Team</button>
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-md">
-                    <div class="card text-center" style="border-top:4px solid var(--color-blue);"><div style="font-size:2.5rem;font-weight:800;color:var(--color-navy);">1995</div><div class="body-sm text-muted">Year Founded</div></div>
-                    <div class="card text-center" style="border-top:4px solid var(--color-gold);"><div style="font-size:2.5rem;font-weight:800;color:var(--color-navy);">30+</div><div class="body-sm text-muted">Years of Service</div></div>
-                    <div class="card text-center" style="border-top:4px solid var(--color-accent-magenta);"><div style="font-size:2.5rem;font-weight:800;color:var(--color-navy);">14</div><div class="body-sm text-muted">Indian States</div></div>
-                    <div class="card text-center" style="border-top:4px solid var(--color-blue);"><div style="font-size:2.5rem;font-weight:800;color:var(--color-navy);">80G</div><div class="body-sm text-muted">Certified Trust</div></div>
+                    <div class="card text-center" style="border-top:4px solid var(--color-blue);"><div style="font-size:2.5rem;font-weight:800;color:var(--color-navy);">1995</div><div class="body-sm text-muted" data-i18n="card_year_founded">Year Founded</div></div>
+                    <div class="card text-center" style="border-top:4px solid var(--color-gold);"><div style="font-size:2.5rem;font-weight:800;color:var(--color-navy);">30+</div><div class="body-sm text-muted" data-i18n="stat_years">Years of Service</div></div>
+                    <div class="card text-center" style="border-top:4px solid var(--color-accent-magenta);"><div style="font-size:2.5rem;font-weight:800;color:var(--color-navy);">14</div><div class="body-sm text-muted" data-i18n="stat_states">Indian States</div></div>
+                    <div class="card text-center" style="border-top:4px solid var(--color-blue);"><div style="font-size:2.5rem;font-weight:800;color:var(--color-navy);">80G</div><div class="body-sm text-muted" data-i18n="card_certified_trust">Certified Trust</div></div>
                 </div>
             </div>
         </div>
     </section>
     <section class="section bg-navy">
         <div class="container text-center" style="max-width:800px;margin:0 auto;">
-            <div class="section-tag" style="color:var(--color-gold);justify-content:center;margin-bottom:1.5rem;"><span class="material-symbols-outlined" style="font-size:14px">format_quote</span>Our Guiding Principles</div>
-            <blockquote class="headline-lg text-white italic mb-4">"Let us breathe friendship! Let us love our friends! Let us sow love, friendship, and humanity!"</blockquote>
-            <cite class="body-md text-gold" style="font-style:normal;">— M. Karun, Founder-President</cite>
+            <div class="section-tag" style="color:var(--color-gold);justify-content:center;margin-bottom:1.5rem;"><span class="material-symbols-outlined" style="font-size:14px">format_quote</span><span data-i18n="principles_tag">Our Guiding Principles</span></div>
+            <blockquote class="headline-lg text-white italic mb-4" data-i18n="founder_quote">"Let us breathe friendship! Let us love our friends! Let us sow love, friendship, and humanity!"</blockquote>
+            <cite class="body-md text-gold" style="font-style:normal;" data-i18n="founder_sign">— M. Karun, Founder-President</cite>
         </div>
     </section>
     <section class="section bg-white">
         <div class="container">
-            <h2 class="headline-lg text-navy mb-8 text-center">Three Core Pillars</h2>
+            <h2 class="headline-lg text-navy mb-8 text-center" data-i18n="three_pillars_title">Three Core Pillars</h2>
             <div class="grid grid-cols-3 gap-lg">
                 <div class="card text-center card-hover" style="border-top:4px solid var(--color-blue);">
                     <div style="width:64px;height:64px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;"><span class="material-symbols-outlined" style="font-size:32px">favorite</span></div>
-                    <h3 class="headline-sm text-navy mb-2">Love</h3>
-                    <p class="body-sm text-muted">Unconditional love that transcends boundaries of caste, creed, religion, and region — the foundation of IPL.</p>
+                    <h3 class="headline-sm text-navy mb-2" data-i18n="pillar_love_title">Love</h3>
+                    <p class="body-sm text-muted" data-i18n="pillar_love_desc">Unconditional love that transcends boundaries of caste, creed, religion, and region — the foundation of IPL.</p>
                 </div>
                 <div class="card text-center card-hover" style="border-top:4px solid var(--color-gold);">
                     <div style="width:64px;height:64px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;"><span class="material-symbols-outlined" style="font-size:32px">handshake</span></div>
-                    <h3 class="headline-sm text-navy mb-2">Friendship</h3>
-                    <p class="body-sm text-muted">True friendship built through handwritten letters — a bond stronger than geography, language, or time.</p>
+                    <h3 class="headline-sm text-navy mb-2" data-i18n="pillar_friendship_title">Friendship</h3>
+                    <p class="body-sm text-muted" data-i18n="pillar_friendship_desc">True friendship built through handwritten letters — a bond stronger than geography, language, or time.</p>
                 </div>
                 <div class="card text-center card-hover" style="border-top:4px solid var(--color-accent-magenta);">
                     <div style="width:64px;height:64px;border-radius:50%;background:var(--color-accent-magenta);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;"><span class="material-symbols-outlined" style="font-size:32px">volunteer_activism</span></div>
-                    <h3 class="headline-sm text-navy mb-2">Humanity</h3>
-                    <p class="body-sm text-muted">Serving communities through blood donation, student sponsorships, disaster relief, and hospice care.</p>
+                    <h3 class="headline-sm text-navy mb-2" data-i18n="pillar_humanity_title">Humanity</h3>
+                    <p class="body-sm text-muted" data-i18n="pillar_humanity_desc">Serving communities through blood donation, student sponsorships, disaster relief, and hospice care.</p>
                 </div>
             </div>
         </div>
@@ -593,18 +593,18 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 
 <!-- ===== HISTORY PAGE ===== -->
 <section id="page-history" class="page-section">
-    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('about')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)">About</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">History</li></ul></div>
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span><span data-i18n="nav_home">Home</span></button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('about')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)" data-i18n="nav_about">About</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active" data-i18n="nav_history">History</li></ul></div>
     <section class="section bg-surface">
         <div class="container">
-            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">history</span>30-Year Milestones</div><h1 class="section-title mb-3">History &amp; Legacy of IPL</h1><p class="section-desc">Three decades of friendship, correspondence, and humanitarian service across India.</p></div>
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">history</span><span data-i18n="history_tag">30-Year Milestones</span></div><h1 class="section-title mb-3" data-i18n="history_title">History &amp; Legacy of IPL</h1><p class="section-desc" data-i18n="history_desc">Three decades of friendship, correspondence, and humanitarian service across India.</p></div>
             <div class="timeline">
-                <div class="timeline-item"><div class="timeline-marker">1995</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">Founding — March 12, 1995</h3><p class="body-sm text-muted">Indian Penpals' League founded in Mumbai, Chembur by M. Karun and a group of like-minded pen-pals. Registration #F23778 obtained. First Friends Day celebrated with 50 founding members.</p></div></div>
-                <div class="timeline-item"><div class="timeline-marker">2000</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">National Expansion</h3><p class="body-sm text-muted">IPL chapters expanded to Tamil Nadu, Karnataka, and Kerala. First blood donation drive organized with 100+ units collected. Membership reached 300+ active correspondents.</p></div></div>
-                <div class="timeline-item"><div class="timeline-marker">2005</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">Silver Decade</h3><p class="body-sm text-muted">10-year anniversary celebrated with a grand national convention. Student sponsorship programme launched sponsoring 50+ students. IPL bulletin began bilingual (Tamil &amp; English) publication.</p></div></div>
-                <div class="timeline-item"><div class="timeline-marker">2010</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">Humanitarian Wings Formalized</h3><p class="body-sm text-muted">Four formal humanitarian wings established: Blood Donor Registry, Student Aid Programme, Hospice Letter-Writing Wing, and Disaster Relief Coordination. 80G certification obtained.</p></div></div>
-                <div class="timeline-item"><div class="timeline-marker">2015</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">Pearl Anniversary</h3><p class="body-sm text-muted">20th anniversary celebrated with delegates from 14 states. Commemorative souvenir book published. Inner Wheel Club collaboration formalized for rural student outreach in Tiruvannamalai.</p></div></div>
-                <div class="timeline-item"><div class="timeline-marker">2020</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">Resilience Through Pandemic</h3><p class="body-sm text-muted">IPL continued correspondence activities digitally during COVID-19. Relief packages and support provided to vulnerable members. Letter-writing kept the spirit of friendship alive.</p></div></div>
-                <div class="timeline-item"><div class="timeline-marker">2025</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2">Pearl Jubilee — 30th Anniversary</h3><p class="body-sm text-muted">Historic 30th year Pearl Jubilee celebration. Grand national convention with 500+ delegates. Pearl Jubilee commemorative hardbound book launched documenting 30 years of fellowship, philanthropy, and friendship.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">1995</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2" data-i18n="hist_1995_title">Founding — March 12, 1995</h3><p class="body-sm text-muted" data-i18n="hist_1995_desc">Indian Penpals' League founded in Mumbai, Chembur by M. Karun and a group of like-minded pen-pals. Registration #F23778 obtained. First Friends Day celebrated with 50 founding members.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">2000</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2" data-i18n="hist_2000_title">National Expansion</h3><p class="body-sm text-muted" data-i18n="hist_2000_desc">IPL chapters expanded to Tamil Nadu, Karnataka, and Kerala. First blood donation drive organized with 100+ units collected. Membership reached 300+ active correspondents.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">2005</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2" data-i18n="hist_2005_title">Silver Decade</h3><p class="body-sm text-muted" data-i18n="hist_2005_desc">10-year anniversary celebrated with a grand national convention. Student sponsorship programme launched sponsoring 50+ students. IPL bulletin began bilingual (Tamil &amp; English) publication.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">2010</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2" data-i18n="hist_2010_title">Humanitarian Wings Formalized</h3><p class="body-sm text-muted" data-i18n="hist_2010_desc">Four formal humanitarian wings established: Blood Donor Registry, Student Aid Programme, Hospice Letter-Writing Wing, and Disaster Relief Coordination. 80G certification obtained.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">2015</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2" data-i18n="hist_2015_title">Pearl Anniversary</h3><p class="body-sm text-muted" data-i18n="hist_2015_desc">20th anniversary celebrated with delegates from 14 states. Commemorative souvenir book published. Inner Wheel Club collaboration formalized for rural student outreach in Tiruvannamalai.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">2020</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2" data-i18n="hist_2020_title">Resilience Through Pandemic</h3><p class="body-sm text-muted" data-i18n="hist_2020_desc">IPL continued correspondence activities digitally during COVID-19. Relief packages and support provided to vulnerable members. Letter-writing kept the spirit of friendship alive.</p></div></div>
+                <div class="timeline-item"><div class="timeline-marker">2025</div><div class="timeline-content"><h3 class="headline-sm text-navy mb-2" data-i18n="hist_2025_title">Pearl Jubilee — 30th Anniversary</h3><p class="body-sm text-muted" data-i18n="hist_2025_desc">Historic 30th year Pearl Jubilee celebration. Grand national convention with 500+ delegates. Pearl Jubilee commemorative hardbound book launched documenting 30 years of fellowship, philanthropy, and friendship.</p></div></div>
             </div>
         </div>
     </section>
@@ -612,30 +612,30 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 
 <!-- ===== PRESIDENT'S BLOG ===== -->
 <section id="page-presidents-blog" class="page-section">
-    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('about')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)">About</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">President's Blog</li></ul></div>
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span><span data-i18n="nav_home">Home</span></button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('about')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)" data-i18n="nav_about">About</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active" data-i18n="nav_presidents_blog">President's Blog</li></ul></div>
     <section class="section bg-surface">
         <div class="container" style="max-width:860px;">
-            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">edit</span>Founder-President's Blog</div><h1 class="section-title mb-3">IPL President's Blog</h1><p class="section-desc">Personal reflections, messages, and milestones from M. Karun, Founder-President of the Indian Penpals' League.</p></div>
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">edit</span><span data-i18n="blog_tag">Founder-President's Blog</span></div><h1 class="section-title mb-3" data-i18n="blog_title">IPL President's Blog</h1><p class="section-desc" data-i18n="blog_desc">Personal reflections, messages, and milestones from M. Karun, Founder-President of the Indian Penpals' League.</p></div>
             <div class="card mb-6">
                 <div class="flex items-center gap-md mb-4">
                     <div style="width:56px;height:56px;border-radius:50%;background:var(--color-navy);color:var(--color-gold);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.5rem;flex-shrink:0;">K</div>
-                    <div><h3 class="headline-sm text-navy">M. Karun</h3><span class="label-sm text-muted">Founder-President, Indian Penpals' League • Est. March 12, 1995</span></div>
+                    <div><h3 class="headline-sm text-navy">M. Karun</h3><span class="label-sm text-muted" data-i18n="blog_author_title">Founder-President, Indian Penpals' League • Est. March 12, 1995</span></div>
                 </div>
-                <div class="badge badge-gold mb-4">Pearl Jubilee Message — 2025</div>
-                <h2 class="headline-md text-navy mb-4">30 Years of Friendship — A Personal Reflection</h2>
-                <p class="body-lg text-secondary leading-relaxed mb-4">When I penned my first letter as a pen-pal in the early 1990s, I never imagined it would one day become the seed of a movement. That modest exchange of thoughts — handwritten, heartfelt — blossomed into the Indian Penpals' League, an organization I have had the privilege to serve as Founder-President for three decades.</p>
-                <p class="body-md text-muted leading-relaxed mb-4">Thirty years ago, we began with a simple belief: that friendship transcends borders, languages, castes, and creeds. We believed that a handwritten letter carries a warmth that no digital message can replicate — it carries the writer's breath, their patience, their care. And through tens of thousands of such letters, we built something extraordinary: a confederation of friends.</p>
-                <blockquote class="body-lg italic text-navy mb-4" style="border-left:4px solid var(--color-gold);padding-left:1.5rem;">"Let us breathe friendship! Let us love our friends! Let us sow love, friendship, and humanity! Let us nurture and continue tirelessly, the journey of friendship..."</blockquote>
-                <p class="body-md text-muted leading-relaxed mb-4">Today, as we celebrate our Pearl Jubilee, I look back with immense gratitude — to every member who wrote a letter, attended a meet, donated blood, sponsored a student, or simply stayed faithful to our principles of Love, Friendship and Humanity. You are IPL.</p>
-                <p class="body-md text-muted leading-relaxed">Looking ahead, I invite the next generation to join us in keeping the art of correspondence alive. Write a letter. Make a friend. Change a life.</p>
-                <p class="body-md text-navy font-bold mt-4">With enduring friendship, M. Karun</p>
+                <div class="badge badge-gold mb-4" data-i18n="blog_msg1_badge">Pearl Jubilee Message — 2025</div>
+                <h2 class="headline-md text-navy mb-4" data-i18n="blog_msg1_title">30 Years of Friendship — A Personal Reflection</h2>
+                <p class="body-lg text-secondary leading-relaxed mb-4" data-i18n="blog_msg1_p1">When I penned my first letter as a pen-pal in the early 1990s, I never imagined it would one day become the seed of a movement. That modest exchange of thoughts — handwritten, heartfelt — blossomed into the Indian Penpals' League, an organization I have had the privilege to serve as Founder-President for three decades.</p>
+                <p class="body-md text-muted leading-relaxed mb-4" data-i18n="blog_msg1_p2">Thirty years ago, we began with a simple belief: that friendship transcends borders, languages, castes, and creeds. We believed that a handwritten letter carries a warmth that no digital message can replicate — it carries the writer's breath, their patience, their care. And through tens of thousands of such letters, we built something extraordinary: a confederation of friends.</p>
+                <blockquote class="body-lg italic text-navy mb-4" style="border-left:4px solid var(--color-gold);padding-left:1.5rem;" data-i18n="founder_quote">"Let us breathe friendship! Let us love our friends! Let us sow love, friendship, and humanity! Let us nurture and continue tirelessly, the journey of friendship..."</blockquote>
+                <p class="body-md text-muted leading-relaxed mb-4" data-i18n="blog_msg1_p3">Today, as we celebrate our Pearl Jubilee, I look back with immense gratitude — to every member who wrote a letter, attended a meet, donated blood, sponsored a student, or simply stayed faithful to our principles of Love, Friendship and Humanity. You are IPL.</p>
+                <p class="body-md text-muted leading-relaxed" data-i18n="blog_msg1_p4">Looking ahead, I invite the next generation to join us in keeping the art of correspondence alive. Write a letter. Make a friend. Change a life.</p>
+                <p class="body-md text-navy font-bold mt-4" data-i18n="blog_msg1_sign">With enduring friendship, M. Karun</p>
             </div>
             <div class="card">
-                <div class="badge badge-gold mb-4">Annual Friends Day Message — 2024</div>
-                <h2 class="headline-sm text-navy mb-3">Friends Day: Celebrating the Bond That Never Fades</h2>
-                <p class="body-md text-muted leading-relaxed mb-3">As we gather once again for our Annual Friends Day Convention, I am reminded of why we started this journey. Friendship is not merely a sentiment — it is a discipline, a commitment, a daily choice to remain connected despite distance, time, and the distractions of modern life.</p>
-                <p class="body-md text-muted leading-relaxed">To every delegate traveling from across India to be with us today — thank you. Your presence is a testament to the enduring power of pen-pal friendship. Let this day remind us: a letter written is a bridge built. Keep writing.</p>
-                <p class="body-md text-navy font-bold mt-4">With warmth, M. Karun</p>
+                <div class="badge badge-gold mb-4" data-i18n="blog_msg2_badge">Annual Friends Day Message — 2024</div>
+                <h2 class="headline-sm text-navy mb-3" data-i18n="blog_msg2_title">Friends Day: Celebrating the Bond That Never Fades</h2>
+                <p class="body-md text-muted leading-relaxed mb-3" data-i18n="blog_msg2_p1">As we gather once again for our Annual Friends Day Convention, I am reminded of why we started this journey. Friendship is not merely a sentiment — it is a discipline, a commitment, a daily choice to remain connected despite distance, time, and the distractions of modern life.</p>
+                <p class="body-md text-muted leading-relaxed" data-i18n="blog_msg2_p2">To every delegate traveling from across India to be with us today — thank you. Your presence is a testament to the enduring power of pen-pal friendship. Let this day remind us: a letter written is a bridge built. Keep writing.</p>
+                <p class="body-md text-navy font-bold mt-4" data-i18n="blog_msg2_sign">With warmth, M. Karun</p>
             </div>
         </div>
     </section>
@@ -643,31 +643,31 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 
 <!-- ===== TEAM PAGE ===== -->
 <section id="page-team" class="page-section">
-    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Our Team</li></ul></div>
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span><span data-i18n="nav_home">Home</span></button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active" data-i18n="nav_team">Our Team</li></ul></div>
     <section class="section bg-surface">
         <div class="container">
-            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">groups</span>Leadership &amp; Trustees</div><h1 class="section-title mb-3">Our Leadership Team</h1><p class="section-desc">Meet the dedicated trustees and office bearers who have served IPL with love and commitment.</p></div>
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">groups</span><span data-i18n="team_tag">Leadership &amp; Trustees</span></div><h1 class="section-title mb-3" data-i18n="team_title">Our Leadership Team</h1><p class="section-desc" data-i18n="team_desc">Meet the dedicated trustees and office bearers who have served IPL with love and commitment.</p></div>
             <div class="grid grid-cols-3 gap-lg">
                 <div class="card card-hover text-center">
                     <div class="card-image-wrapper" style="height:240px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8ySxZPn7TBBgd-Af_EuZxw8sgFCOcHqmTzhEkBX6ymQyaaxXfM61wauY418Yz52mWuor8lPzkuivPfuuvTN2dv68kLiroR09-Rl7q5Nd6GXWdJmjVn3E-R8hKh1f2LNLHDUIBKQcTUpEyglJSt8UlZvJMogS3WZovJMDFe1-bMP34e_9Ys4IpFj104XJ6HXqxjzqP1yHRvsTgcpCZC3P4gkZoNIXlfya-YGuPAJeeXpeCqHvlwGuEg" alt="M. Karun"></div>
-                    <span class="body-sm text-blue font-bold mb-1 block">Founder-President</span>
+                    <span class="body-sm text-blue font-bold mb-1 block" data-i18n="role_founder_pres">Founder-President</span>
                     <h3 class="headline-sm text-navy mb-1">M. Karun</h3>
-                    <p class="body-sm text-muted mb-3">Chembur, Mumbai — 30+ years of dedicated leadership and pen-pal correspondence.</p>
-                    <span class="badge badge-gold">Founder</span>
+                    <p class="body-sm text-muted mb-3" data-i18n="team_karun_bio">Chembur, Mumbai — 30+ years of dedicated leadership and pen-pal correspondence.</p>
+                    <span class="badge badge-gold" data-i18n="badge_founder">Founder</span>
                 </div>
                 <div class="card card-hover text-center">
                     <div class="card-image-wrapper" style="height:240px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1wCLU9md_PNzEvRZH6bfNk9OV2_86Sfn2mm-KYRaZdKaIwM8BW48l2mAo8J7x-EuEjEZ60Wh-72LQzjGiw5067oDEBVw_d70gcHsZ583Yn3WgKXAAg4V0LT_m_CuGCQYKhkeVbbDHsWAojOsmCKLd2tyTjRHwnrJASK3irkCEfek5PKjZ7tytCaJhVKEBktrZlG6IgnXqum343YS2XrDjLmjWPgUZ-HamSJIBgbsc6X-6XyvdqImHmw" alt="Secretary General"></div>
-                    <span class="body-sm text-blue font-bold mb-1 block">Secretary General</span>
+                    <span class="body-sm text-blue font-bold mb-1 block" data-i18n="role_sec_gen">Secretary General</span>
                     <h3 class="headline-sm text-navy mb-1">R. Selvakumar</h3>
-                    <p class="body-sm text-muted mb-3">Tiruvannamalai, Tamil Nadu — Head of correspondence and member relations.</p>
-                    <span class="badge badge-blue">Office Bearer</span>
+                    <p class="body-sm text-muted mb-3" data-i18n="team_selva_bio">Tiruvannamalai, Tamil Nadu — Head of correspondence and member relations.</p>
+                    <span class="badge badge-blue" data-i18n="badge_office_bearer">Office Bearer</span>
                 </div>
                 <div class="card card-hover text-center">
                     <div class="card-image-wrapper" style="height:240px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyS5D_ufxVWiFMXC9mYbTHnx2ZYKPrHbQoBj2Cwq_1P4OITx33bstFKeZSTQygv7NTzwZ7Db9CdsgICJaRM840PXFqzhIV2My4ncX2GLjItcYUIsMNE3Day1ambTOTVRpihyKCjd6VCLI6LThUPs1pVjTnIh43u4qndcB93P7q4OCGFNQSNyCbBQNeI53Hnm1ZsDzHr1bR99QjXUBsld980XjYC25Py8lLTDvFRjtpzD01qW_DifzMA" alt="Treasurer"></div>
-                    <span class="body-sm text-blue font-bold mb-1 block">Treasurer &amp; Trustee</span>
+                    <span class="body-sm text-blue font-bold mb-1 block" data-i18n="role_treasurer">Treasurer &amp; Trustee</span>
                     <h3 class="headline-sm text-navy mb-1">S. Vijayalakshmi</h3>
-                    <p class="body-sm text-muted mb-3">Mumbai — Manages trust finances, 80G compliance, and blood donation drives.</p>
-                    <span class="badge badge-gold">Trustee</span>
+                    <p class="body-sm text-muted mb-3" data-i18n="team_vijaya_bio">Mumbai — Manages trust finances, 80G compliance, and blood donation drives.</p>
+                    <span class="badge badge-gold" data-i18n="badge_trustee">Trustee</span>
                 </div>
             </div>
         </div>
@@ -676,15 +676,15 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 
 <!-- ===== HUMANITARIAN SERVICES ===== -->
 <section id="page-humanitarian" class="page-section">
-    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Humanitarian Services</li></ul></div>
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span><span data-i18n="nav_home">Home</span></button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active" data-i18n="nav_humanitarian">Humanitarian Services</li></ul></div>
     <section class="section bg-surface">
         <div class="container">
-            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">volunteer_activism</span>Social Welfare Wings</div><h1 class="section-title mb-3">Humanitarian Services</h1><p class="section-desc">Four active welfare wings serving communities across India since 1995.</p></div>
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">volunteer_activism</span><span data-i18n="humanitarian_tag">Social Welfare Wings</span></div><h1 class="section-title mb-3" data-i18n="humanitarian_title">Humanitarian Services</h1><p class="section-desc" data-i18n="humanitarian_desc">Four active welfare wings serving communities across India since 1995.</p></div>
             <div class="grid grid-cols-2 gap-lg">
-                <div class="card service-card card-hover"><div style="width:52px;height:52px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span class="material-symbols-outlined">water_drop</span></div><h3 class="headline-sm text-navy mb-2">Blood Donor Registry</h3><p class="body-sm text-muted mb-4">IPL maintains a live registry of volunteer blood donors across Mumbai and Tamil Nadu, coordinating emergency donations to hospitals and individual patients in need.</p><span class="badge badge-blue">Active Wing</span></div>
-                <div class="card service-card gold-trim card-hover"><div style="width:52px;height:52px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span class="material-symbols-outlined">school</span></div><h3 class="headline-sm text-navy mb-2">Student Aid Programme</h3><p class="body-sm text-muted mb-4">IPL sponsors education kits, stationery, uniforms, and school fees for underprivileged students in rural Tamil Nadu villages through member contributions.</p><span class="badge badge-gold">Active Wing</span></div>
-                <div class="card service-card magenta-trim card-hover"><div style="width:52px;height:52px;border-radius:50%;background:var(--color-accent-magenta);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span class="material-symbols-outlined">edit_note</span></div><h3 class="headline-sm text-navy mb-2">Hospice Letter-Writing Wing</h3><p class="body-sm text-muted mb-4">Trained IPL member scribes visit hospitals and care homes to write letters on behalf of patients who cannot write themselves, connecting them with family and friends.</p><span class="badge badge-light" style="background:rgba(128,20,117,.1);color:var(--color-accent-magenta);">Active Wing</span></div>
-                <div class="card service-card card-hover"><div style="width:52px;height:52px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span class="material-symbols-outlined">crisis_alert</span></div><h3 class="headline-sm text-navy mb-2">Disaster Relief Coordination</h3><p class="body-sm text-muted mb-4">IPL coordinates relief efforts during natural disasters — distributing food, clothing, and medical supplies to affected families through member networks across India.</p><span class="badge badge-navy">Active Wing</span></div>
+                <div class="card service-card card-hover"><div style="width:52px;height:52px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span class="material-symbols-outlined">water_drop</span></div><h3 class="headline-sm text-navy mb-2" data-i18n="wing_blood_title">Blood Donor Registry</h3><p class="body-sm text-muted mb-4" data-i18n="wing_blood_desc">IPL maintains a live registry of volunteer blood donors across Mumbai and Tamil Nadu, coordinating emergency donations to hospitals and individual patients in need.</p><span class="badge badge-blue" data-i18n="badge_active_wing">Active Wing</span></div>
+                <div class="card service-card gold-trim card-hover"><div style="width:52px;height:52px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span class="material-symbols-outlined">school</span></div><h3 class="headline-sm text-navy mb-2" data-i18n="wing_student_title">Student Aid Programme</h3><p class="body-sm text-muted mb-4" data-i18n="wing_student_desc">IPL sponsors education kits, stationery, uniforms, and school fees for underprivileged students in rural Tamil Nadu villages through member contributions.</p><span class="badge badge-gold" data-i18n="badge_active_wing">Active Wing</span></div>
+                <div class="card service-card magenta-trim card-hover"><div style="width:52px;height:52px;border-radius:50%;background:var(--color-accent-magenta);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span class="material-symbols-outlined">edit_note</span></div><h3 class="headline-sm text-navy mb-2" data-i18n="wing_hospice_title">Hospice Letter-Writing Wing</h3><p class="body-sm text-muted mb-4" data-i18n="wing_hospice_desc">Trained IPL member scribes visit hospitals and care homes to write letters on behalf of patients who cannot write themselves, connecting them with family and friends.</p><span class="badge badge-light" style="background:rgba(128,20,117,.1);color:var(--color-accent-magenta);" data-i18n="badge_active_wing">Active Wing</span></div>
+                <div class="card service-card card-hover"><div style="width:52px;height:52px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;"><span class="material-symbols-outlined">crisis_alert</span></div><h3 class="headline-sm text-navy mb-2" data-i18n="wing_disaster_title">Disaster Relief Coordination</h3><p class="body-sm text-muted mb-4" data-i18n="wing_disaster_desc">IPL coordinates relief efforts during natural disasters — distributing food, clothing, and medical supplies to affected families through member networks across India.</p><span class="badge badge-navy" data-i18n="badge_active_wing">Active Wing</span></div>
             </div>
         </div>
     </section>
@@ -692,39 +692,39 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 
 <!-- ===== NEWS & EVENTS ===== -->
 <section id="page-news-events" class="page-section">
-    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">News &amp; Events</li></ul></div>
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span><span data-i18n="nav_home">Home</span></button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active" data-i18n="nav_news_events">News &amp; Events</li></ul></div>
     <section class="section bg-surface">
         <div class="container">
             <div class="flex justify-between items-end gap-xl flex-wrap mb-8">
-                <div><div class="section-tag mb-2"><span class="material-symbols-outlined" style="font-size:14px">campaign</span>League Chronicle</div><h1 class="section-title mb-3">League Bulletins &amp; Current Events</h1><p class="section-desc">Authentic bilingual meeting records, conventions, and fellowship milestones.</p></div>
+                <div><div class="section-tag mb-2"><span class="material-symbols-outlined" style="font-size:14px">campaign</span><span data-i18n="news_events_tag">League Chronicle</span></div><h1 class="section-title mb-3" data-i18n="news_events_title">League Bulletins &amp; Current Events</h1><p class="section-desc" data-i18n="news_events_desc">Authentic bilingual meeting records, conventions, and fellowship milestones.</p></div>
             </div>
             <div class="filter-tabs mb-8">
-                <button class="filter-btn active" data-filter="all"><span class="material-symbols-outlined" style="font-size:16px">grid_view</span>All Updates</button>
-                <button class="filter-btn" data-filter="news"><span class="material-symbols-outlined" style="font-size:16px">newspaper</span>News</button>
-                <button class="filter-btn" data-filter="events"><span class="material-symbols-outlined" style="font-size:16px">event</span>Events</button>
-                <button class="filter-btn" data-filter="meets"><span class="material-symbols-outlined" style="font-size:16px">handshake</span>Meets</button>
-                <button class="filter-btn" data-filter="announcements"><span class="material-symbols-outlined" style="font-size:16px">auto_stories</span>Announcements</button>
+                <button class="filter-btn active" data-filter="all"><span class="material-symbols-outlined" style="font-size:16px">grid_view</span><span data-i18n="tab_all">All Updates</span></button>
+                <button class="filter-btn" data-filter="news"><span class="material-symbols-outlined" style="font-size:16px">newspaper</span><span data-i18n="tab_news">News</span></button>
+                <button class="filter-btn" data-filter="events"><span class="material-symbols-outlined" style="font-size:16px">event</span><span data-i18n="tab_events">Events</span></button>
+                <button class="filter-btn" data-filter="meets"><span class="material-symbols-outlined" style="font-size:16px">handshake</span><span data-i18n="tab_meets">Meets</span></button>
+                <button class="filter-btn" data-filter="announcements"><span class="material-symbols-outlined" style="font-size:16px">auto_stories</span><span data-i18n="tab_announcements">Announcements</span></button>
             </div>
             <div class="grid grid-cols-3 gap-lg" id="newsGrid">
                 <article class="card card-hover flex flex-col justify-between" data-category="meets">
-                    <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyS5D_ufxVWiFMXC9mYbTHnx2ZYKPrHbQoBj2Cwq_1P4OITx33bstFKeZSTQygv7NTzwZ7Db9CdsgICJaRM840PXFqzhIV2My4ncX2GLjItcYUIsMNE3Day1ambTOTVRpihyKCjd6VCLI6LThUPs1pVjTnIh43u4qndcB93P7q4OCGFNQSNyCbBQNeI53Hnm1ZsDzHr1bR99QjXUBsld980XjYC25Py8lLTDvFRjtpzD01qW_DifzMA" alt="Chembur Meet"><span class="news-card-date">Aug 25, 2024</span><span class="card-overlay-badge badge badge-gold">Fellowship Meet</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">மும்பை நலம் விசாரிப்பு</span><h2 class="headline-sm text-navy mb-2">அன்புடன் நலம் விசாரித்த சந்திப்பு (Fellowship Gathering)</h2><p class="body-sm text-muted leading-relaxed mb-4">Report on Chembur fellowship assembly led by Founder President M. Karun with correspondents from Tamil Nadu &amp; Mumbai.</p></div>
-                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Pres. M. Karun</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')">Read Report</button></div>
+                    <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyS5D_ufxVWiFMXC9mYbTHnx2ZYKPrHbQoBj2Cwq_1P4OITx33bstFKeZSTQygv7NTzwZ7Db9CdsgICJaRM840PXFqzhIV2My4ncX2GLjItcYUIsMNE3Day1ambTOTVRpihyKCjd6VCLI6LThUPs1pVjTnIh43u4qndcB93P7q4OCGFNQSNyCbBQNeI53Hnm1ZsDzHr1bR99QjXUBsld980XjYC25Py8lLTDvFRjtpzD01qW_DifzMA" alt="Chembur Meet"><span class="news-card-date">Aug 25, 2024</span><span class="card-overlay-badge badge badge-gold" data-i18n="badge_fellowship">Fellowship Meet</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">மும்பை நலம் விசாரிப்பு</span><h2 class="headline-sm text-navy mb-2" data-i18n="chembur_title">அன்புடன் நலம் விசாரித்த சந்திப்பு (Fellowship Gathering)</h2><p class="body-sm text-muted leading-relaxed mb-4">Report on Chembur fellowship assembly led by Founder President M. Karun with correspondents from Tamil Nadu &amp; Mumbai.</p></div>
+                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Pres. M. Karun</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')" data-i18n="btn_read_report">Read Report</button></div>
                 </article>
                 <article class="card card-hover flex flex-col justify-between" data-category="announcements">
                     <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1wCLU9md_PNzEvRZH6bfNk9OV2_86Sfn2mm-KYRaZdKaIwM8BW48l2mAo8J7x-EuEjEZ60Wh-72LQzjGiw5067oDEBVw_d70gcHsZ583Yn3WgKXAAg4V0LT_m_CuGCQYKhkeVbbDHsWAojOsmCKLd2tyTjRHwnrJASK3irkCEfek5PKjZ7tytCaJhVKEBktrZlG6IgnXqum343YS2XrDjLmjWPgUZ-HamSJIBgbsc6X-6XyvdqImHmw" alt="Independence Day"><span class="news-card-date">Aug 15, 2024</span><span class="card-overlay-badge badge badge-gold">Bulletin</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">அதிகாரப்பூர்வ இதழ் வெளியீடு</span><h2 class="headline-sm text-navy mb-2">78th Independence Day Special Souvenir Bulletin</h2><p class="body-sm text-muted leading-relaxed mb-4">78th Independence Day Fellowship assembly and unveiling of the Special Souvenir Bulletin.</p></div>
-                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Dispatches</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')">Read Report</button></div>
+                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Dispatches</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')" data-i18n="btn_read_report">Read Report</button></div>
                 </article>
                 <article class="card card-hover flex flex-col justify-between" data-category="news">
                     <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8ySxZPn7TBBgd-Af_EuZxw8sgFCOcHqmTzhEkBX6ymQyaaxXfM61wauY418Yz52mWuor8lPzkuivPfuuvTN2dv68kLiroR09-Rl7q5Nd6GXWdJmjVn3E-R8hKh1f2LNLHDUIBKQcTUpEyglJSt8UlZvJMogS3WZovJMDFe1-bMP34e_9Ys4IpFj104XJ6HXqxjzqP1yHRvsTgcpCZC3P4gkZoNIXlfya-YGuPAJeeXpeCqHvlwGuEg" alt="Inner Wheel"><span class="news-card-date">Jul 28, 2024</span><span class="card-overlay-badge badge badge-gold">Felicitation</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">விருது &amp; பாராட்டு</span><h2 class="headline-sm text-navy mb-2">திருவண்ணாமலை மாவட்ட இன்னர் வீல் கிளப் பாராட்டு</h2><p class="body-sm text-muted leading-relaxed mb-4">Official recognition of educational patronage conferred upon IPL trustees.</p></div>
-                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Tiruvannamalai, TN</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')">Read Report</button></div>
+                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Tiruvannamalai, TN</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')" data-i18n="btn_read_report">Read Report</button></div>
                 </article>
                 <article class="card card-hover flex flex-col justify-between" data-category="events">
-                    <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuTESTo9goWuvhEftkW19PTB8hL74ZHzoZhL-6-U7x64BGxq_Tht9edR7jum5Qz1MD1IknwhoZFgaLFsYWONbs2v3rlCuJVd3EHWf8vDOn48wAdn4wMOseVrwsAiwrcjDLohoKiZWyjE4wOyWs9HYtxpAtOBn0w33Nj1K41gRksdUT0ZYaJN5N6kOFHwbpCrdto8lDTUC4e5ELHnDgW4vKAxhUBFchejBek4MxKPQqXTn6Tk-Q-59qw" alt="Friends Day"><span class="news-card-date">Annual Flagship</span><span class="card-overlay-badge badge badge-navy">Pan-India</span></div><span class="label-sm text-gold uppercase font-bold mb-1 block">National Convention</span><h2 class="headline-sm text-navy mb-2">Friends Day Annual National Convention &amp; Letter Exchange</h2><p class="body-sm text-muted leading-relaxed mb-4">Gathering of delegates from 14 Indian states with commemorative envelope release and penfriend awards.</p></div>
-                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">500+ Delegates</span><button class="btn btn-primary btn-sm" onclick="navigate('friends-day')">Event Details</button></div>
+                    <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuTESTo9goWuvhEftkW19PTB8hL74ZHzoZhL-6-U7x64BGxq_Tht9edR7jum5Qz1MD1IknwhoZFgaLFsYWONbs2v3rlCuJVd3EHWf8vDOn48wAdn4wMOseVrwsAiwrcjDLohoKiZWyjE4wOyWs9HYtxpAtOBn0w33Nj1K41gRksdUT0ZYaJN5N6kOFHwbpCrdto8lDTUC4e5ELHnDgW4vKAxhUBFchejBek4MxKPQqXTn6Tk-Q-59qw" alt="Friends Day"><span class="news-card-date">Annual Flagship</span><span class="card-overlay-badge badge badge-navy" data-i18n="badge_convention">Pan-India</span></div><span class="label-sm text-gold uppercase font-bold mb-1 block" data-i18n="friends_day_tag">National Convention</span><h2 class="headline-sm text-navy mb-2" data-i18n="friends_day_title">Friends Day Annual National Convention &amp; Letter Exchange</h2><p class="body-sm text-muted leading-relaxed mb-4" data-i18n="friends_day_nat_desc">Gathering of delegates from 14 Indian states with commemorative envelope release and penfriend awards.</p></div>
+                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">500+ Delegates</span><button class="btn btn-primary btn-sm" onclick="navigate('friends-day')" data-i18n="btn_event_details">Event Details</button></div>
                 </article>
                 <article class="card card-hover flex flex-col justify-between col-span-2" data-category="announcements">
-                    <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Ev4UKCt22mpVBaxcOubMLtMRldqos_JRjmexuGKMv67niP-nFpTWSsZNncx1vExQYwHX2b230nfZvixRDQCUYAjFrzkUxOpM9-MBx3c5Zh_6vsGbJNEmCWrD6MzG5adGXRsJFyVbgmK7ZumCYQRqisUjwO_7mgDgIpM2ysClFd_mLAfXfxpHBpEjqJGYVD-DB8723gNK9pgqlS_auBmG5W8oy7lOZ3gE_6oI3DQQu5CKfmTlugkCA" alt="Pearl Jubilee"><span class="news-card-date">1995–2025</span><span class="card-overlay-badge badge badge-gold">Special Edition</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">Pearl Jubilee Milestone</span><h2 class="headline-sm text-navy mb-2">Pearl Jubilee 30th Year Commemorative Book Launch</h2><p class="body-sm text-muted leading-relaxed mb-4">An archival hardbound publication documenting three decades of written fellowship, philanthropic activities, and cross-cultural youth correspondence.</p></div>
-                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Dispatched to Members</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')">Read Summary</button></div>
+                    <div><div class="card-image-wrapper" style="height:190px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Ev4UKCt22mpVBaxcOubMLtMRldqos_JRjmexuGKMv67niP-nFpTWSsZNncx1vExQYwHX2b230nfZvixRDQCUYAjFrzkUxOpM9-MBx3c5Zh_6vsGbJNEmCWrD6MzG5adGXRsJFyVbgmK7ZumCYQRqisUjwO_7mgDgIpM2ysClFd_mLAfXfxpHBpEjqJGYVD-DB8723gNK9pgqlS_auBmG5W8oy7lOZ3gE_6oI3DQQu5CKfmTlugkCA" alt="Pearl Jubilee"><span class="news-card-date">1995–2025</span><span class="card-overlay-badge badge badge-gold" data-i18n="badge_30th_year">Special Edition</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block" data-i18n="jubilee_tag">Pearl Jubilee Milestone</span><h2 class="headline-sm text-navy mb-2" data-i18n="jubilee_title">Pearl Jubilee 30th Year Commemorative Book Launch</h2><p class="body-sm text-muted leading-relaxed mb-4">An archival hardbound publication documenting three decades of written fellowship, philanthropic activities, and cross-cultural youth correspondence.</p></div>
+                    <div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Dispatched to Members</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')" data-i18n="btn_read_summary">Read Summary</button></div>
                 </article>
             </div>
         </div>
@@ -733,19 +733,19 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 
 <!-- ===== EVENTS PAGE ===== -->
 <section id="page-events" class="page-section">
-    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('news-events')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)">News &amp; Events</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Events</li></ul></div>
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span><span data-i18n="nav_home">Home</span></button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('news-events')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)" data-i18n="nav_news_events">News &amp; Events</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active" data-i18n="nav_events">Events</li></ul></div>
     <section class="section bg-surface">
         <div class="container">
-            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">event</span>All Events</div><h1 class="section-title mb-3">IPL Events &amp; National Gatherings</h1><p class="section-desc">From the Friends Day Convention to state meets and cultural programmes — all IPL events across India.</p></div>
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">event</span><span data-i18n="events_tag">All Events</span></div><h1 class="section-title mb-3" data-i18n="events_title">IPL Events &amp; National Gatherings</h1><p class="section-desc" data-i18n="events_desc">From the Friends Day Convention to state meets and cultural programmes — all IPL events across India.</p></div>
             <div class="card mb-8" style="background:linear-gradient(135deg,#1a3a6b 0%,#0B1F3A 100%);border:1px solid rgba(245,197,73,.3);padding:2rem;color:#fff;">
                 <div class="flex flex-col" style="gap:1.5rem;">
-                    <div><span class="badge badge-gold mb-3 inline-flex"><span class="material-symbols-outlined" style="font-size:14px">star</span>Flagship Annual Event</span><h2 class="headline-lg text-white mb-2">Friends Day National Convention</h2><p style="color:rgba(255,255,255,.8);" class="body-md mb-4">IPL's most celebrated annual event — 500+ delegates from 14 states with commemorative envelope release and penfriend awards.</p><button class="btn btn-gold" onclick="navigate('friends-day')">Friends Day Page →</button></div>
+                    <div><span class="badge badge-gold mb-3 inline-flex"><span class="material-symbols-outlined" style="font-size:14px">star</span><span data-i18n="flagship_event_badge">Flagship Annual Event</span></span><h2 class="headline-lg text-white mb-2" data-i18n="friends_day_nat_title">Friends Day National Convention</h2><p style="color:rgba(255,255,255,.8);" class="body-md mb-4" data-i18n="friends_day_nat_desc">IPL's most celebrated annual event — 500+ delegates from 14 states with commemorative envelope release and penfriend awards.</p><button class="btn btn-gold" onclick="navigate('friends-day')" data-i18n="btn_friends_day_page">Friends Day Page →</button></div>
                 </div>
             </div>
             <div class="grid grid-cols-3 gap-lg">
-                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuTESTo9goWuvhEftkW19PTB8hL74ZHzoZhL-6-U7x64BGxq_Tht9edR7jum5Qz1MD1IknwhoZFgaLFsYWONbs2v3rlCuJVd3EHWf8vDOn48wAdn4wMOseVrwsAiwrcjDLohoKiZWyjE4wOyWs9HYtxpAtOBn0w33Nj1K41gRksdUT0ZYaJN5N6kOFHwbpCrdto8lDTUC4e5ELHnDgW4vKAxhUBFchejBek4MxKPQqXTn6Tk-Q-59qw" alt="Friends Day"><span class="news-card-date">Annual</span><span class="card-overlay-badge badge badge-navy">National</span></div><h3 class="headline-sm text-navy mb-2">Friends Day Annual Convention</h3><p class="body-sm text-muted mb-4">500+ delegates from 14 states for IPL's flagship annual celebration.</p></div><button class="btn btn-primary btn-sm" onclick="navigate('friends-day')" style="align-self:flex-start;">Details</button></article>
-                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Ev4UKCt22mpVBaxcOubMLtMRldqos_JRjmexuGKMv67niP-nFpTWSsZNncx1vExQYwHX2b230nfZvixRDQCUYAjFrzkUxOpM9-MBx3c5Zh_6vsGbJNEmCWrD6MzG5adGXRsJFyVbgmK7ZumCYQRqisUjwO_7mgDgIpM2ysClFd_mLAfXfxpHBpEjqJGYVD-DB8723gNK9pgqlS_auBmG5W8oy7lOZ3gE_6oI3DQQu5CKfmTlugkCA" alt="Pearl Jubilee"><span class="news-card-date">2025</span><span class="card-overlay-badge badge badge-gold">30th Year</span></div><h3 class="headline-sm text-navy mb-2">Pearl Jubilee 30th Grand Celebration</h3><p class="body-sm text-muted mb-4">Commemorative book launch and grand reunion of founding members.</p></div><button class="btn btn-secondary btn-sm" onclick="navigate('events')" style="align-self:flex-start;">Details</button></article>
-                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1wCLU9md_PNzEvRZH6bfNk9OV2_86Sfn2mm-KYRaZdKaIwM8BW48l2mAo8J7x-EuEjEZ60Wh-72LQzjGiw5067oDEBVw_d70gcHsZ583Yn3WgKXAAg4V0LT_m_CuGCQYKhkeVbbDHsWAojOsmCKLd2tyTjRHwnrJASK3irkCEfek5PKjZ7tytCaJhVKEBktrZlG6IgnXqum343YS2XrDjLmjWPgUZ-HamSJIBgbsc6X-6XyvdqImHmw" alt="Independence Day"><span class="news-card-date">Aug 15, 2024</span><span class="card-overlay-badge badge badge-gold">Cultural</span></div><h3 class="headline-sm text-navy mb-2">78th Independence Day Programme</h3><p class="body-sm text-muted mb-4">Patriotic assembly with flag-hoisting and souvenir bulletin release.</p></div><button class="btn btn-secondary btn-sm" onclick="navigate('events')" style="align-self:flex-start;">Details</button></article>
+                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuTESTo9goWuvhEftkW19PTB8hL74ZHzoZhL-6-U7x64BGxq_Tht9edR7jum5Qz1MD1IknwhoZFgaLFsYWONbs2v3rlCuJVd3EHWf8vDOn48wAdn4wMOseVrwsAiwrcjDLohoKiZWyjE4wOyWs9HYtxpAtOBn0w33Nj1K41gRksdUT0ZYaJN5N6kOFHwbpCrdto8lDTUC4e5ELHnDgW4vKAxhUBFchejBek4MxKPQqXTn6Tk-Q-59qw" alt="Friends Day"><span class="news-card-date">Annual</span><span class="card-overlay-badge badge badge-navy" data-i18n="badge_convention">National</span></div><h3 class="headline-sm text-navy mb-2" data-i18n="friends_day_title">Friends Day Annual Convention</h3><p class="body-sm text-muted mb-4" data-i18n="friends_day_nat_desc">500+ delegates from 14 states for IPL's flagship annual celebration.</p></div><button class="btn btn-primary btn-sm" onclick="navigate('friends-day')" style="align-self:flex-start;" data-i18n="btn_event_details">Details</button></article>
+                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Ev4UKCt22mpVBaxcOubMLtMRldqos_JRjmexuGKMv67niP-nFpTWSsZNncx1vExQYwHX2b230nfZvixRDQCUYAjFrzkUxOpM9-MBx3c5Zh_6vsGbJNEmCWrD6MzG5adGXRsJFyVbgmK7ZumCYQRqisUjwO_7mgDgIpM2ysClFd_mLAfXfxpHBpEjqJGYVD-DB8723gNK9pgqlS_auBmG5W8oy7lOZ3gE_6oI3DQQu5CKfmTlugkCA" alt="Pearl Jubilee"><span class="news-card-date">2025</span><span class="card-overlay-badge badge badge-gold" data-i18n="badge_30th_year">30th Year</span></div><h3 class="headline-sm text-navy mb-2" data-i18n="jubilee_title">Pearl Jubilee 30th Grand Celebration</h3><p class="body-sm text-muted mb-4">Commemorative book launch and grand reunion of founding members.</p></div><button class="btn btn-secondary btn-sm" onclick="navigate('events')" style="align-self:flex-start;" data-i18n="btn_event_details">Details</button></article>
+                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1wCLU9md_PNzEvRZH6bfNk9OV2_86Sfn2mm-KYRaZdKaIwM8BW48l2mAo8J7x-EuEjEZ60Wh-72LQzjGiw5067oDEBVw_d70gcHsZ583Yn3WgKXAAg4V0LT_m_CuGCQYKhkeVbbDHsWAojOsmCKLd2tyTjRHwnrJASK3irkCEfek5PKjZ7tytCaJhVKEBktrZlG6IgnXqum343YS2XrDjLmjWPgUZ-HamSJIBgbsc6X-6XyvdqImHmw" alt="Independence Day"><span class="news-card-date">Aug 15, 2024</span><span class="card-overlay-badge badge badge-gold">Cultural</span></div><h3 class="headline-sm text-navy mb-2">78th Independence Day Programme</h3><p class="body-sm text-muted mb-4">Patriotic assembly with flag-hoisting and souvenir bulletin release.</p></div><button class="btn btn-secondary btn-sm" onclick="navigate('events')" style="align-self:flex-start;" data-i18n="btn_event_details">Details</button></article>
             </div>
         </div>
     </section>
@@ -753,15 +753,15 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 
 <!-- ===== FRIENDSHIP MEETS ===== -->
 <section id="page-friendship-meets" class="page-section">
-    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('news-events')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)">News &amp; Events</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Friendship Meets</li></ul></div>
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span><span data-i18n="nav_home">Home</span></button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('news-events')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)" data-i18n="nav_news_events">News &amp; Events</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active" data-i18n="nav_friendship_meets">Friendship Meets</li></ul></div>
     <section class="section bg-surface">
         <div class="container">
-            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">handshake</span>Annual Friendship Meets — நட்பு சந்திப்புகள்</div><h1 class="section-title mb-3">IPL Friendship Meets</h1><p class="section-desc">Since 1995, IPL has organized warm friendship meets across India — bringing together pen-pals who became lifelong friends.</p></div>
-            <div class="card mb-8" style="border-left:4px solid var(--color-gold);background:var(--color-navy);color:#fff;"><blockquote class="body-lg italic mb-2" style="color:rgba(255,255,255,.9);">"Let us breathe friendship! Let us love our friends! Let us sow love, friendship, and humanity!"</blockquote><cite class="label-sm text-gold">— M. Karun, Founder-President</cite></div>
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">handshake</span><span data-i18n="meets_tag">Annual Friendship Meets — நட்பு சந்திப்புகள்</span></div><h1 class="section-title mb-3" data-i18n="meets_title">IPL Friendship Meets</h1><p class="section-desc" data-i18n="meets_desc">Since 1995, IPL has organized warm friendship meets across India — bringing together pen-pals who became lifelong friends.</p></div>
+            <div class="card mb-8" style="border-left:4px solid var(--color-gold);background:var(--color-navy);color:#fff;"><blockquote class="body-lg italic mb-2" style="color:rgba(255,255,255,.9);" data-i18n="founder_quote">"Let us breathe friendship! Let us love our friends! Let us sow love, friendship, and humanity!"</blockquote><cite class="label-sm text-gold" data-i18n="founder_sign">— M. Karun, Founder-President</cite></div>
             <div class="grid grid-cols-3 gap-lg">
-                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyS5D_ufxVWiFMXC9mYbTHnx2ZYKPrHbQoBj2Cwq_1P4OITx33bstFKeZSTQygv7NTzwZ7Db9CdsgICJaRM840PXFqzhIV2My4ncX2GLjItcYUIsMNE3Day1ambTOTVRpihyKCjd6VCLI6LThUPs1pVjTnIh43u4qndcB93P7q4OCGFNQSNyCbBQNeI53Hnm1ZsDzHr1bR99QjXUBsld980XjYC25Py8lLTDvFRjtpzD01qW_DifzMA" alt="Chembur Meet"><span class="news-card-date">Aug 2024</span><span class="card-overlay-badge badge badge-gold">Fellowship</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">மும்பை நலம் விசாரிப்பு</span><h3 class="headline-sm text-navy mb-2">Chembur Fellowship Gathering</h3><p class="body-sm text-muted mb-4">Warmhearted gathering at Mumbai HQ led by Founder-President M. Karun.</p></div><div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Chembur, Mumbai</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')">Read Report</button></div></article>
-                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8ySxZPn7TBBgd-Af_EuZxw8sgFCOcHqmTzhEkBX6ymQyaaxXfM61wauY418Yz52mWuor8lPzkuivPfuuvTN2dv68kLiroR09-Rl7q5Nd6GXWdJmjVn3E-R8hKh1f2LNLHDUIBKQcTUpEyglJSt8UlZvJMogS3WZovJMDFe1-bMP34e_9Ys4IpFj104XJ6HXqxjzqP1yHRvsTgcpCZC3P4gkZoNIXlfya-YGuPAJeeXpeCqHvlwGuEg" alt="TN Meet"><span class="news-card-date">Jul 2024</span><span class="card-overlay-badge badge badge-gold">State Meet</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">திருவண்ணாமலை மாவட்ட கூட்டம்</span><h3 class="headline-sm text-navy mb-2">Tiruvannamalai District Friendship Meet</h3><p class="body-sm text-muted mb-4">District-level meet with Inner Wheel Club collaboration and felicitation.</p></div><div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Tiruvannamalai, TN</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')">Read Report</button></div></article>
-                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Ev4UKCt22mpVBaxcOubMLtMRldqos_JRjmexuGKMv67niP-nFpTWSsZNncx1vExQYwHX2b230nfZvixRDQCUYAjFrzkUxOpM9-MBx3c5Zh_6vsGbJNEmCWrD6MzG5adGXRsJFyVbgmK7ZumCYQRqisUjwO_7mgDgIpM2ysClFd_mLAfXfxpHBpEjqJGYVD-DB8723gNK9pgqlS_auBmG5W8oy7lOZ3gE_6oI3DQQu5CKfmTlugkCA" alt="Pearl Jubilee Reunion"><span class="news-card-date">2025</span><span class="card-overlay-badge badge badge-gold">Grand Reunion</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">Pearl Jubilee Grand Reunion</span><h3 class="headline-sm text-navy mb-2">30th Anniversary Grand Friendship Reunion</h3><p class="body-sm text-muted mb-4">Historic reunion of founding members and new generation pen-pals marking 30 years.</p></div><div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Mumbai, 2025</span><button class="btn btn-primary btn-sm" onclick="navigate('events')">Full Details</button></div></article>
+                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeyS5D_ufxVWiFMXC9mYbTHnx2ZYKPrHbQoBj2Cwq_1P4OITx33bstFKeZSTQygv7NTzwZ7Db9CdsgICJaRM840PXFqzhIV2My4ncX2GLjItcYUIsMNE3Day1ambTOTVRpihyKCjd6VCLI6LThUPs1pVjTnIh43u4qndcB93P7q4OCGFNQSNyCbBQNeI53Hnm1ZsDzHr1bR99QjXUBsld980XjYC25Py8lLTDvFRjtpzD01qW_DifzMA" alt="Chembur Meet"><span class="news-card-date">Aug 2024</span><span class="card-overlay-badge badge badge-gold" data-i18n="badge_fellowship">Fellowship</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block" data-i18n="chembur_tag">மும்பை நலம் விசாரிப்பு</span><h3 class="headline-sm text-navy mb-2" data-i18n="chembur_title">Chembur Fellowship Gathering</h3><p class="body-sm text-muted mb-4">Warmhearted gathering at Mumbai HQ led by Founder-President M. Karun.</p></div><div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Chembur, Mumbai</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')" data-i18n="btn_read_report">Read Report</button></div></article>
+                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8ySxZPn7TBBgd-Af_EuZxw8sgFCOcHqmTzhEkBX6ymQyaaxXfM61wauY418Yz52mWuor8lPzkuivPfuuvTN2dv68kLiroR09-Rl7q5Nd6GXWdJmjVn3E-R8hKh1f2LNLHDUIBKQcTUpEyglJSt8UlZvJMogS3WZovJMDFe1-bMP34e_9Ys4IpFj104XJ6HXqxjzqP1yHRvsTgcpCZC3P4gkZoNIXlfya-YGuPAJeeXpeCqHvlwGuEg" alt="TN Meet"><span class="news-card-date">Jul 2024</span><span class="card-overlay-badge badge badge-gold">State Meet</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">திருவண்ணாமலை மாவட்ட கூட்டம்</span><h3 class="headline-sm text-navy mb-2">Tiruvannamalai District Friendship Meet</h3><p class="body-sm text-muted mb-4">District-level meet with Inner Wheel Club collaboration and felicitation.</p></div><div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Tiruvannamalai, TN</span><button class="btn btn-secondary btn-sm" onclick="navigate('news-events')" data-i18n="btn_read_report">Read Report</button></div></article>
+                <article class="card card-hover flex flex-col justify-between"><div><div class="card-image-wrapper" style="height:180px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Ev4UKCt22mpVBaxcOubMLtMRldqos_JRjmexuGKMv67niP-nFpTWSsZNncx1vExQYwHX2b230nfZvixRDQCUYAjFrzkUxOpM9-MBx3c5Zh_6vsGbJNEmCWrD6MzG5adGXRsJFyVbgmK7ZumCYQRqisUjwO_7mgDgIpM2ysClFd_mLAfXfxpHBpEjqJGYVD-DB8723gNK9pgqlS_auBmG5W8oy7lOZ3gE_6oI3DQQu5CKfmTlugkCA" alt="Pearl Jubilee Reunion"><span class="news-card-date">2025</span><span class="card-overlay-badge badge badge-gold" data-i18n="badge_30th_year">Grand Reunion</span></div><span class="label-sm text-primary uppercase font-bold mb-1 block">Pearl Jubilee Grand Reunion</span><h3 class="headline-sm text-navy mb-2" data-i18n="jubilee_title">30th Anniversary Grand Friendship Reunion</h3><p class="body-sm text-muted mb-4">Historic reunion of founding members and new generation pen-pals marking 30 years.</p></div><div class="flex justify-between items-center pt-3 border-t"><span class="body-sm text-muted">Mumbai, 2025</span><button class="btn btn-primary btn-sm" onclick="navigate('events')" data-i18n="btn_event_details">Full Details</button></div></article>
             </div>
         </div>
     </section>
@@ -769,66 +769,66 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 
 <!-- ===== FRIENDS DAY ===== -->
 <section id="page-friends-day" class="page-section">
-    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('events')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)">Events</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Friends Day</li></ul></div>
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span><span data-i18n="nav_home">Home</span></button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item"><button onclick="navigate('events')" style="background:none;border:none;cursor:pointer;color:var(--color-text-secondary)" data-i18n="nav_events">Events</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active" data-i18n="nav_friends_day">Friends Day</li></ul></div>
     <section class="section" style="background:linear-gradient(135deg,#0B1F3A 0%,#1456A0 60%,#0B1F3A 100%);color:#fff;">
         <div class="container text-center">
-            <div class="badge badge-gold mb-4 inline-flex"><span class="material-symbols-outlined" style="font-size:14px">favorite</span>IPL's Flagship Annual Celebration</div>
-            <h1 class="display-hero text-white mb-3">Friends Day</h1>
-            <p class="text-white mb-2" style="font-size:1.5rem;font-weight:600;letter-spacing:2px;opacity:.85;">நட்பு தினம்</p>
-            <p class="body-lg mb-8" style="color:rgba(255,255,255,.85);max-width:680px;margin:1rem auto 2rem;">Every year since 1995, IPL gathers pen-pals from across India for its most celebrated event — a day of joy, letters, awards, and renewed friendship pledges.</p>
-            <div class="flex flex-wrap gap-md" style="justify-content:center;"><span class="badge badge-gold" style="font-size:.9rem;padding:.5rem 1rem;"><span class="material-symbols-outlined" style="font-size:14px">people</span>500+ Delegates</span><span class="badge badge-gold" style="font-size:.9rem;padding:.5rem 1rem;"><span class="material-symbols-outlined" style="font-size:14px">public</span>14 States</span><span class="badge badge-gold" style="font-size:.9rem;padding:.5rem 1rem;"><span class="material-symbols-outlined" style="font-size:14px">calendar_month</span>Annual Since 1995</span></div>
+            <div class="badge badge-gold mb-4 inline-flex"><span class="material-symbols-outlined" style="font-size:14px">favorite</span><span data-i18n="fd_badge">IPL's Flagship Annual Celebration</span></div>
+            <h1 class="display-hero text-white mb-3" data-i18n="fd_hero_title">Friends Day</h1>
+            <p class="text-white mb-2" style="font-size:1.5rem;font-weight:600;letter-spacing:2px;opacity:.85;" data-i18n="fd_hero_tamil">நட்பு தினம்</p>
+            <p class="body-lg mb-8" style="color:rgba(255,255,255,.85);max-width:680px;margin:1rem auto 2rem;" data-i18n="fd_hero_desc">Every year since 1995, IPL gathers pen-pals from across India for its most celebrated event — a day of joy, letters, awards, and renewed friendship pledges.</p>
+            <div class="flex flex-wrap gap-md" style="justify-content:center;"><span class="badge badge-gold" style="font-size:.9rem;padding:.5rem 1rem;"><span class="material-symbols-outlined" style="font-size:14px">people</span><span data-i18n="stat_delegates">500+ Delegates</span></span><span class="badge badge-gold" style="font-size:.9rem;padding:.5rem 1rem;"><span class="material-symbols-outlined" style="font-size:14px">public</span><span data-i18n="stat_states">14 States</span></span><span class="badge badge-gold" style="font-size:.9rem;padding:.5rem 1rem;"><span class="material-symbols-outlined" style="font-size:14px">calendar_month</span><span data-i18n="stat_est">Annual Since 1995</span></span></div>
         </div>
     </section>
     <section class="section bg-white">
         <div class="container">
             <div class="grid grid-cols-2 gap-xl items-center">
-                <div><div class="badge badge-navy mb-3"><span class="material-symbols-outlined" style="font-size:14px">info</span>About Friends Day</div><h2 class="headline-xl text-navy mb-4">What is Friends Day?</h2><p class="body-lg text-secondary leading-relaxed mb-4">Friends Day (நட்பு தினம்) is IPL's flagship annual national convention — a grand gathering of pen-pals who became lifelong friends through the art of letter writing.</p><p class="body-md text-muted leading-relaxed">Each year, delegates from 14 Indian states travel to celebrate friendship, exchange letters, honor outstanding correspondents, and launch the year's commemorative envelope and souvenir bulletin.</p></div>
+                <div><div class="badge badge-navy mb-3"><span class="material-symbols-outlined" style="font-size:14px">info</span><span data-i18n="nav_about">About Friends Day</span></div><h2 class="headline-xl text-navy mb-4" data-i18n="fd_about_title">What is Friends Day?</h2><p class="body-lg text-secondary leading-relaxed mb-4" data-i18n="fd_about_p1">Friends Day (நட்பு தினம்) is IPL's flagship annual national convention — a grand gathering of pen-pals who became lifelong friends through the art of letter writing.</p><p class="body-md text-muted leading-relaxed" data-i18n="fd_about_p2">Each year, delegates from 14 Indian states travel to celebrate friendship, exchange letters, honor outstanding correspondents, and launch the year's commemorative envelope and souvenir bulletin.</p></div>
                 <div><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuTESTo9goWuvhEftkW19PTB8hL74ZHzoZhL-6-U7x64BGxq_Tht9edR7jum5Qz1MD1IknwhoZFgaLFsYWONbs2v3rlCuJVd3EHWf8vDOn48wAdn4wMOseVrwsAiwrcjDLohoKiZWyjE4wOyWs9HYtxpAtOBn0w33Nj1K41gRksdUT0ZYaJN5N6kOFHwbpCrdto8lDTUC4e5ELHnDgW4vKAxhUBFchejBek4MxKPQqXTn6Tk-Q-59qw" alt="Friends Day" style="width:100%;height:300px;object-fit:cover;border-radius:var(--radius-lg);"></div>
             </div>
         </div>
     </section>
     <section class="section bg-surface">
         <div class="container">
-            <h2 class="headline-xl text-navy mb-8 text-center">What Happens at Friends Day?</h2>
+            <h2 class="headline-xl text-navy mb-8 text-center" data-i18n="fd_activities_title">What Happens at Friends Day?</h2>
             <div class="grid grid-cols-3 gap-lg">
-                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">mail</span></div><h3 class="headline-sm text-navy mb-2">Letter Exchange</h3><p class="body-sm text-muted">Members exchange handwritten letters as a symbolic renewal of the pen-pal tradition.</p></div>
-                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">emoji_events</span></div><h3 class="headline-sm text-navy mb-2">Penfriend Awards</h3><p class="body-sm text-muted">Outstanding correspondents felicitated for dedication to letter writing and community service.</p></div>
-                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">local_post_office</span></div><h3 class="headline-sm text-navy mb-2">Commemorative Envelope</h3><p class="body-sm text-muted">A specially designed Friends Day commemorative envelope released and dispatched to all members.</p></div>
-                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">school</span></div><h3 class="headline-sm text-navy mb-2">Youth Literacy Drive</h3><p class="body-sm text-muted">New student members inducted and literacy pledge taken with student sponsorship announcements.</p></div>
-                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">auto_stories</span></div><h3 class="headline-sm text-navy mb-2">Souvenir Bulletin</h3><p class="body-sm text-muted">Bilingual Tamil &amp; English souvenir bulletin with member registries and social welfare reports released.</p></div>
-                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">volunteer_activism</span></div><h3 class="headline-sm text-navy mb-2">Humanitarian Announcements</h3><p class="body-sm text-muted">Blood donation targets, disaster relief pledges, and charitable undertakings formally announced.</p></div>
+                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">mail</span></div><h3 class="headline-sm text-navy mb-2" data-i18n="act_letter_title">Letter Exchange</h3><p class="body-sm text-muted" data-i18n="act_letter_desc">Members exchange handwritten letters as a symbolic renewal of the pen-pal tradition.</p></div>
+                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">emoji_events</span></div><h3 class="headline-sm text-navy mb-2" data-i18n="act_awards_title">Penfriend Awards</h3><p class="body-sm text-muted" data-i18n="act_awards_desc">Outstanding correspondents felicitated for dedication to letter writing and community service.</p></div>
+                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">local_post_office</span></div><h3 class="headline-sm text-navy mb-2" data-i18n="act_envelope_title">Commemorative Envelope</h3><p class="body-sm text-muted" data-i18n="act_envelope_desc">A specially designed Friends Day commemorative envelope released and dispatched to all members.</p></div>
+                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">school</span></div><h3 class="headline-sm text-navy mb-2" data-i18n="act_literacy_title">Youth Literacy Drive</h3><p class="body-sm text-muted" data-i18n="act_literacy_desc">New student members inducted and literacy pledge taken with student sponsorship announcements.</p></div>
+                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">auto_stories</span></div><h3 class="headline-sm text-navy mb-2" data-i18n="act_bulletin_title">Souvenir Bulletin</h3><p class="body-sm text-muted" data-i18n="act_bulletin_desc">Bilingual Tamil &amp; English souvenir bulletin with member registries and social welfare reports released.</p></div>
+                <div class="card card-hover text-center"><div style="width:60px;height:60px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><span class="material-symbols-outlined">volunteer_activism</span></div><h3 class="headline-sm text-navy mb-2" data-i18n="act_humanitarian_title">Humanitarian Announcements</h3><p class="body-sm text-muted" data-i18n="act_humanitarian_desc">Blood donation targets, disaster relief pledges, and charitable undertakings formally announced.</p></div>
             </div>
-            <div class="text-center mt-8"><button class="btn btn-primary btn-lg" onclick="navigate('join')">Join IPL &amp; Attend Friends Day</button></div>
+            <div class="text-center mt-8"><button class="btn btn-primary btn-lg" onclick="navigate('join')" data-i18n="btn_join_attend_fd">Join IPL &amp; Attend Friends Day</button></div>
         </div>
     </section>
 </section>
 
 <!-- ===== JOIN PAGE ===== -->
 <section id="page-join" class="page-section">
-    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Join Now</li></ul></div>
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span><span data-i18n="nav_home">Home</span></button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active" data-i18n="nav_join">Join Now</li></ul></div>
     <section class="section bg-surface">
         <div class="container" style="max-width:860px;">
-            <div class="section-header text-center"><div class="section-tag" style="justify-content:center;"><span class="material-symbols-outlined" style="font-size:14px">person_add</span>Membership Registration</div><h1 class="section-title mb-3">Join Indian Penpals' League</h1><p class="section-desc" style="margin:0 auto 2rem;">Become part of India's most cherished pen-pal network — 30 years of friendship, correspondence, and humanity.</p></div>
+            <div class="section-header text-center"><div class="section-tag" style="justify-content:center;"><span class="material-symbols-outlined" style="font-size:14px">person_add</span><span data-i18n="join_tag">Membership Registration</span></div><h1 class="section-title mb-3" data-i18n="join_title">Join Indian Penpals' League</h1><p class="section-desc" style="margin:0 auto 2rem;" data-i18n="join_desc">Become part of India's most cherished pen-pal network — 30 years of friendship, correspondence, and humanity.</p></div>
             <div class="grid grid-cols-2 gap-xl">
                 <div>
-                    <h2 class="headline-md text-navy mb-4">Why Join IPL?</h2>
+                    <h2 class="headline-md text-navy mb-4" data-i18n="why_join_title">Why Join IPL?</h2>
                     <div class="flex flex-col gap-md">
-                        <div class="flex items-start gap-md"><div style="width:40px;height:40px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:20px">mail</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Pen-Pal Matching</h4><p class="body-sm text-muted">Get matched with like-minded correspondents across India and abroad.</p></div></div>
-                        <div class="flex items-start gap-md"><div style="width:40px;height:40px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:20px">celebration</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Friends Day Invitation</h4><p class="body-sm text-muted">Receive annual invitations to the Friends Day National Convention.</p></div></div>
-                        <div class="flex items-start gap-md"><div style="width:40px;height:40px;border-radius:50%;background:var(--color-accent-magenta);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:20px">auto_stories</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Bilingual Bulletin</h4><p class="body-sm text-muted">Receive IPL's bilingual Tamil &amp; English souvenir bulletins by post.</p></div></div>
-                        <div class="flex items-start gap-md"><div style="width:40px;height:40px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:20px">volunteer_activism</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Humanitarian Participation</h4><p class="body-sm text-muted">Contribute to blood donation drives, student aid, and disaster relief.</p></div></div>
+                        <div class="flex items-start gap-md"><div style="width:40px;height:40px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:20px">mail</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;" data-i18n="why_match_title">Pen-Pal Matching</h4><p class="body-sm text-muted" data-i18n="why_match_desc">Get matched with like-minded correspondents across India and abroad.</p></div></div>
+                        <div class="flex items-start gap-md"><div style="width:40px;height:40px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:20px">celebration</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;" data-i18n="why_invite_title">Friends Day Invitation</h4><p class="body-sm text-muted" data-i18n="why_invite_desc">Receive annual invitations to the Friends Day National Convention.</p></div></div>
+                        <div class="flex items-start gap-md"><div style="width:40px;height:40px;border-radius:50%;background:var(--color-accent-magenta);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:20px">auto_stories</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;" data-i18n="why_bulletin_title">Bilingual Bulletin</h4><p class="body-sm text-muted" data-i18n="why_bulletin_desc">Receive IPL's bilingual Tamil &amp; English souvenir bulletins by post.</p></div></div>
+                        <div class="flex items-start gap-md"><div style="width:40px;height:40px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:20px">volunteer_activism</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;" data-i18n="why_humanitarian_title">Humanitarian Participation</h4><p class="body-sm text-muted" data-i18n="why_humanitarian_desc">Contribute to blood donation drives, student aid, and disaster relief.</p></div></div>
                     </div>
                 </div>
                 <div class="card" style="padding:2rem;">
-                    <h3 class="headline-sm text-navy mb-6">Membership Application</h3>
+                    <h3 class="headline-sm text-navy mb-6" data-i18n="form_join_title">Membership Application</h3>
                     <form id="joinForm" onsubmit="submitJoinForm(event)">
-                        <div class="form-group"><label class="form-label">Full Name <span class="required">*</span></label><input type="text" class="form-input" placeholder="Your full name" required></div>
-                        <div class="form-group"><label class="form-label">Email Address <span class="required">*</span></label><input type="email" class="form-input" placeholder="your@email.com" required></div>
-                        <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" placeholder="+91 98765 43210"></div>
-                        <div class="form-group"><label class="form-label">City / State <span class="required">*</span></label><input type="text" class="form-input" placeholder="e.g., Chennai, Tamil Nadu" required></div>
-                        <div class="form-group"><label class="form-label">Why do you want to join IPL?</label><textarea class="form-textarea" rows="3" placeholder="Tell us a little about yourself..."></textarea></div>
-                        <div class="form-group"><label class="form-checkbox-label"><input type="checkbox" required><span>I agree to uphold the principles of Love, Friendship, and Humanity as a member of IPL.</span></label></div>
-                        <button type="submit" class="btn btn-primary btn-full">Submit Application</button>
+                        <div class="form-group"><label class="form-label"><span data-i18n="label_fullname">Full Name</span> <span class="required">*</span></label><input type="text" class="form-input" placeholder="Your full name" data-i18n-ph="ph_fullname" required></div>
+                        <div class="form-group"><label class="form-label"><span data-i18n="label_email">Email Address</span> <span class="required">*</span></label><input type="email" class="form-input" placeholder="your@email.com" data-i18n-ph="ph_email" required></div>
+                        <div class="form-group"><label class="form-label"><span data-i18n="label_phone">Phone Number</span></label><input type="tel" class="form-input" placeholder="+91 98765 43210" data-i18n-ph="ph_phone"></div>
+                        <div class="form-group"><label class="form-label"><span data-i18n="label_city_state">City / State</span> <span class="required">*</span></label><input type="text" class="form-input" placeholder="e.g., Chennai, Tamil Nadu" data-i18n-ph="ph_city_state" required></div>
+                        <div class="form-group"><label class="form-label" data-i18n="label_why_join">Why do you want to join IPL?</label><textarea class="form-textarea" rows="3" placeholder="Tell us a little about yourself..." data-i18n-ph="ph_why_join"></textarea></div>
+                        <div class="form-group"><label class="form-checkbox-label"><input type="checkbox" required><span data-i18n="label_terms">I agree to uphold the principles of Love, Friendship, and Humanity as a member of IPL.</span></label></div>
+                        <button type="submit" class="btn btn-primary btn-full" data-i18n="btn_submit_app">Submit Application</button>
                     </form>
                 </div>
             </div>
@@ -838,28 +838,28 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 
 <!-- ===== CONTACT PAGE ===== -->
 <section id="page-contact" class="page-section">
-    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span>Home</button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active">Contact</li></ul></div>
+    <div class="breadcrumb-bar"><ul class="breadcrumb-list"><li class="breadcrumb-item"><button onclick="navigate('home')" style="background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.25rem;color:var(--color-text-secondary)"><span class="material-symbols-outlined" style="font-size:16px">home</span><span data-i18n="nav_home">Home</span></button></li><li class="breadcrumb-separator">/</li><li class="breadcrumb-item active" data-i18n="nav_contact">Contact</li></ul></div>
     <section class="section bg-surface">
         <div class="container">
-            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">mail</span>Get In Touch</div><h1 class="section-title mb-3">Contact the IPL Secretariat</h1><p class="section-desc">Reach out to us for membership, events, donations, or any queries about our activities.</p></div>
+            <div class="section-header"><div class="section-tag"><span class="material-symbols-outlined" style="font-size:14px">mail</span><span data-i18n="contact_tag">Get In Touch</span></div><h1 class="section-title mb-3" data-i18n="contact_title">Contact the IPL Secretariat</h1><p class="section-desc" data-i18n="contact_desc">Reach out to us for membership, events, donations, or any queries about our activities.</p></div>
             <div class="grid grid-cols-2 gap-xl">
                 <div>
-                    <h2 class="headline-md text-navy mb-6">Secretariat Details</h2>
+                    <h2 class="headline-md text-navy mb-6" data-i18n="secretariat_title">Secretariat Details</h2>
                     <div class="flex flex-col gap-lg">
-                        <div class="card flex-row" style="flex-direction:row;gap:1rem;align-items:flex-start;padding:1.25rem;"><div style="width:44px;height:44px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined">location_on</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Office Address</h4><p class="body-sm text-muted">B-602, Raj Ekjyot Sukriti,<br>Opp. Fire Brigade, Chembur,<br>Mumbai 400071, Maharashtra, India.</p></div></div>
-                        <div class="card flex-row" style="flex-direction:row;gap:1rem;align-items:center;padding:1.25rem;"><div style="width:44px;height:44px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined">call</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Phone</h4><a href="tel:+919892035187" class="body-md text-blue">+91 9892035187</a></div></div>
-                        <div class="card flex-row" style="flex-direction:row;gap:1rem;align-items:center;padding:1.25rem;"><div style="width:44px;height:44px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined">mail</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;">Email</h4><a href="mailto:iplmumbai12395@gmail.com" class="body-md text-blue">iplmumbai12395@gmail.com</a></div></div>
+                        <div class="card flex-row" style="flex-direction:row;gap:1rem;align-items:flex-start;padding:1.25rem;"><div style="width:44px;height:44px;border-radius:50%;background:var(--color-navy);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined">location_on</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;" data-i18n="address_label">Office Address</h4><p class="body-sm text-muted">B-602, Raj Ekjyot Sukriti,<br>Opp. Fire Brigade, Chembur,<br>Mumbai 400071, Maharashtra, India.</p></div></div>
+                        <div class="card flex-row" style="flex-direction:row;gap:1rem;align-items:center;padding:1.25rem;"><div style="width:44px;height:44px;border-radius:50%;background:var(--color-gold);color:var(--color-navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined">call</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;" data-i18n="phone_label">Phone</h4><a href="tel:+919892035187" class="body-md text-blue">+91 9892035187</a></div></div>
+                        <div class="card flex-row" style="flex-direction:row;gap:1rem;align-items:center;padding:1.25rem;"><div style="width:44px;height:44px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span class="material-symbols-outlined">mail</span></div><div><h4 class="headline-sm text-navy mb-1" style="font-size:1rem;" data-i18n="email_label">Email</h4><a href="mailto:iplmumbai12395@gmail.com" class="body-md text-blue">iplmumbai12395@gmail.com</a></div></div>
                     </div>
                 </div>
                 <div class="card" style="padding:2rem;">
-                    <h3 class="headline-sm text-navy mb-6">Send a Message</h3>
+                    <h3 class="headline-sm text-navy mb-6" data-i18n="form_contact_title">Send a Message</h3>
                     <form id="contactForm" onsubmit="submitContactForm(event)">
-                        <div class="form-group"><label class="form-label">Your Name <span class="required">*</span></label><input type="text" class="form-input" placeholder="Full name" required></div>
-                        <div class="form-group"><label class="form-label">Email <span class="required">*</span></label><input type="email" class="form-input" placeholder="your@email.com" required></div>
-                        <div class="form-group"><label class="form-label">Subject <span class="required">*</span></label>
-                        <select class="form-select" required><option value="">Select a subject</option><option>General Inquiry</option><option>Membership</option><option>Events &amp; Meets</option><option>Donations &amp; Sponsorship</option><option>Archive Request</option><option>Other</option></select></div>
-                        <div class="form-group"><label class="form-label">Message <span class="required">*</span></label><textarea class="form-textarea" rows="4" placeholder="Your message..." required></textarea></div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        <div class="form-group"><label class="form-label"><span data-i18n="label_fullname">Your Name</span> <span class="required">*</span></label><input type="text" class="form-input" placeholder="Full name" data-i18n-ph="ph_fullname" required></div>
+                        <div class="form-group"><label class="form-label"><span data-i18n="label_email">Email</span> <span class="required">*</span></label><input type="email" class="form-input" placeholder="your@email.com" data-i18n-ph="ph_email" required></div>
+                        <div class="form-group"><label class="form-label"><span data-i18n="label_subject">Subject</span> <span class="required">*</span></label>
+                        <select class="form-select" required><option value="" data-i18n="opt_select_subject">Select a subject</option><option data-i18n="opt_general">General Inquiry</option><option data-i18n="opt_membership">Membership</option><option data-i18n="opt_events">Events &amp; Meets</option><option data-i18n="opt_donations">Donations &amp; Sponsorship</option><option data-i18n="opt_archive">Archive Request</option><option data-i18n="opt_other">Other</option></select></div>
+                        <div class="form-group"><label class="form-label"><span data-i18n="label_message">Message</span> <span class="required">*</span></label><textarea class="form-textarea" rows="4" placeholder="Your message..." data-i18n-ph="ph_message" required></textarea></div>
+                        <button type="submit" class="btn btn-primary btn-full" data-i18n="btn_send_message">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -875,35 +875,35 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
         <div class="footer-grid">
             <div class="footer-col">
                 <div class="flex items-center gap-sm mb-4">
-                    <img src="https://lh3.googleusercontent.com/aida/AEtjO1VR7vTVKN-3q2akI30rjGeKgF9wy9VeplQ-sIx8V7AhsXTtTPdUzXs4oZGVDeTG4pW52Fh1Klizlqk-jBx129AvSvacaXUxCcpV1Xf8nt_krIGaUKV3SoJSXiJIX8dzFJXtw6RvUpGt_ZICc9lVMtBzS98sF69riVGwX7fyPlCODnG1ptN98JrV3KxGrZ6PULcIewW2f-Bqonilz-hS5sTkCmOG0pppxcEyxkmRWr5P-sbDBA6oKaWlZyRm" alt="IPL" style="width:40px;height:40px;border-radius:50%;">
-                    <div><h3 class="headline-sm text-white leading-none" style="font-size:1rem;">INDIAN PENPALS' LEAGUE</h3><span class="label-sm text-gold">Estd. March 12, 1995 • Reg #F23778</span></div>
+                    <img src="images/ipl-logo.png" alt="IPL Emblem" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.2);" onerror="this.src='images/ipl-logo.png'">
+                    <div><h3 class="headline-sm text-white leading-none" style="font-size:1rem;" data-i18n="brand_title">INDIAN PENPALS' LEAGUE</h3><span class="label-sm text-gold" data-i18n="stat_est">Estd. March 12, 1995 • Reg #F23778</span></div>
                 </div>
-                <p class="body-sm mb-4 leading-relaxed" style="color:var(--color-surface-dim);">A registered public social welfare trust upholding Love, Friendship, and Humanity across Indian states.</p>
-                <span class="badge badge-gold">80G Certified</span>
+                <p class="body-sm mb-4 leading-relaxed" style="color:var(--color-surface-dim);" data-i18n="footer_desc">A registered public social welfare trust upholding Love, Friendship, and Humanity across Indian states.</p>
+                <span class="badge badge-gold" data-i18n="stat_cert">80G Certified</span>
             </div>
             <div class="footer-col">
-                <h4>Explore IPL</h4>
+                <h4 data-i18n="footer_explore">Explore IPL</h4>
                 <div class="footer-links">
-                    <span onclick="navigate('home')">Home</span>
-                    <span onclick="navigate('about')">About Us</span>
-                    <span onclick="navigate('history')">30-Year History</span>
-                    <span onclick="navigate('team')">Leadership Team</span>
-                    <span onclick="navigate('humanitarian')">Humanitarian Services</span>
-                    <span onclick="navigate('news-events')">News &amp; Events</span>
+                    <span onclick="navigate('home')" data-i18n="nav_home">Home</span>
+                    <span onclick="navigate('about')" data-i18n="nav_about">About Us</span>
+                    <span onclick="navigate('history')" data-i18n="nav_history_milestones">30-Year History</span>
+                    <span onclick="navigate('team')" data-i18n="nav_team">Leadership Team</span>
+                    <span onclick="navigate('humanitarian')" data-i18n="nav_humanitarian">Humanitarian Services</span>
+                    <span onclick="navigate('news-events')" data-i18n="nav_news_events">News &amp; Events</span>
                 </div>
             </div>
             <div class="footer-col">
-                <h4>Events &amp; Meets</h4>
+                <h4 data-i18n="footer_events_meets">Events &amp; Meets</h4>
                 <div class="footer-links">
-                    <span onclick="navigate('events')">All Events</span>
-                    <span onclick="navigate('friends-day')">Friends Day</span>
-                    <span onclick="navigate('friendship-meets')">Friendship Meets</span>
-                    <span onclick="navigate('join')">Membership Registration</span>
-                    <span onclick="navigate('contact')">Contact Secretariat</span>
+                    <span onclick="navigate('events')" data-i18n="nav_events">All Events</span>
+                    <span onclick="navigate('friends-day')" data-i18n="nav_friends_day">Friends Day</span>
+                    <span onclick="navigate('friendship-meets')" data-i18n="nav_friendship_meets">Friendship Meets</span>
+                    <span onclick="navigate('join')" data-i18n="join_tag">Membership Registration</span>
+                    <span onclick="navigate('contact')" data-i18n="nav_contact">Contact Secretariat</span>
                 </div>
             </div>
             <div class="footer-col">
-                <h4>Secretariat Office</h4>
+                <h4 data-i18n="footer_secretariat">Secretariat Office</h4>
                 <p class="body-sm mb-3" style="color:var(--color-surface-dim);">B-602, Raj Ekjyot Sukriti, Opp. Fire Brigade, Chembur, Mumbai 400071, India.</p>
                 <div class="footer-links">
                     <a href="tel:+919892035187" class="flex items-center gap-sm"><span class="material-symbols-outlined" style="font-size:14px;color:var(--color-gold);">call</span>+91 9892035187</a>
@@ -912,8 +912,8 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="footerYear">2025</span> Indian Penpals' League (IPL). All Rights Reserved. Reg #F23778.</p>
-            <span>Love • Friendship • Humanity</span>
+            <p>&copy; <span id="footerYear">2025</span> <span data-i18n="footer_rights">Indian Penpals' League (IPL). All Rights Reserved. Reg #F23778.</span></p>
+            <span data-i18n="footer_motto">Love • Friendship • Humanity</span>
         </div>
     </div>
 </footer>
@@ -924,6 +924,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
     <div id="toastMsg">Done!</div>
 </div>
 
+<script src="js/translations.js"></script>
 <script>
 /* =====================================================================
    INDIAN PENPALS' LEAGUE — Complete JavaScript SPA
@@ -1153,16 +1154,24 @@ function initDynamicYear() {
 
 // ─── LANGUAGE TOGGLE ─────────────────────────────────────────────────────
 function initLanguageToggle() {
-    document.getElementById('langEN').addEventListener('click', () => {
-        document.getElementById('langEN').classList.add('active');
-        document.getElementById('langTA').classList.remove('active');
-        showToast('Switched to English interface', 'success');
-    });
-    document.getElementById('langTA').addEventListener('click', () => {
-        document.getElementById('langTA').classList.add('active');
-        document.getElementById('langEN').classList.remove('active');
-        showToast('தமிழ் மொழிபெயர்ப்பு விரைவிலேயே கிடைக்கும்', 'success');
-    });
+    const savedLang = localStorage.getItem('ipl_language') || 'en';
+    if (typeof setSiteLanguage === 'function') {
+        setSiteLanguage(savedLang);
+    }
+    const btnEN = document.getElementById('langEN');
+    const btnTA = document.getElementById('langTA');
+    if (btnEN) {
+        btnEN.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (typeof toggleLanguage === 'function') toggleLanguage('en');
+        });
+    }
+    if (btnTA) {
+        btnTA.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (typeof toggleLanguage === 'function') toggleLanguage('ta');
+        });
+    }
 }
 
 // ─── TOAST ───────────────────────────────────────────────────────────────
@@ -1170,8 +1179,9 @@ function showToast(msg, type = 'success') {
     const toast = document.getElementById('toast');
     const msgEl = document.getElementById('toastMsg');
     const icon = document.getElementById('toastIcon');
+    if (!toast || !msgEl) return;
     msgEl.textContent = msg;
-    icon.textContent = type === 'error' ? 'error' : 'check_circle';
+    if (icon) icon.textContent = type === 'error' ? 'error' : 'check_circle';
     toast.style.borderLeftColor = type === 'error' ? 'var(--color-error)' : 'var(--color-gold)';
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 4000);
@@ -1180,12 +1190,16 @@ function showToast(msg, type = 'success') {
 // ─── FORMS ───────────────────────────────────────────────────────────────
 function submitJoinForm(e) {
     e.preventDefault();
-    showToast('Application submitted! We will contact you soon.', 'success');
+    const isTA = (localStorage.getItem('ipl_language') === 'ta');
+    const msg = isTA ? 'உங்கள் உறுப்பினர் விண்ணப்பம் பெறப்பட்டது! விரைவில் தொடர்பு கொள்வோம்.' : 'Application submitted! We will contact you soon.';
+    showToast(msg, 'success');
     e.target.reset();
 }
 function submitContactForm(e) {
     e.preventDefault();
-    showToast('Message sent! We will respond within 2 business days.', 'success');
+    const isTA = (localStorage.getItem('ipl_language') === 'ta');
+    const msg = isTA ? 'உங்கள் செய்தி அனுப்பப்பட்டது! 2 வேலை நாட்களில் பதிலளிப்போம்.' : 'Message sent! We will respond within 2 business days.';
+    showToast(msg, 'success');
     e.target.reset();
 }
 </script>

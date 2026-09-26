@@ -85,16 +85,19 @@ window.getQueryParam = function(param) {
  * Language Selector Toggle
  */
 function initLanguageToggle() {
-    const langBtns = document.querySelectorAll('.lang-btn');
+    const savedLang = localStorage.getItem('ipl_language') || 'en';
+    if (typeof setSiteLanguage === 'function') {
+        setSiteLanguage(savedLang);
+    }
+
+    const langBtns = document.querySelectorAll('.lang-btn, #langEN, #langTA');
     langBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            langBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const selected = btn.textContent.trim();
-            if (selected === 'தமிழ்') {
-                showToast('தமிழ் மொழிபெயர்ப்பு விரைவிலேயே முழுமையாக கிடைக்கும் (Tamil version active)', 'success');
-            } else {
-                showToast('Switched to English interface', 'success');
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const text = btn.textContent.trim();
+            const targetLang = (text === 'தமிழ்' || btn.id === 'langTA') ? 'ta' : 'en';
+            if (typeof toggleLanguage === 'function') {
+                toggleLanguage(targetLang);
             }
         });
     });
