@@ -6,11 +6,12 @@
     <title>Indian Penpals' League (IPL) | Love, Friendship &amp; Humanity</title>
     <meta name="description" content="Indian Penpals' League (IPL) — a confederation of friends united since 1995 to uphold Love, Friendship and Humanity. Reg #F23778. 80G Certified.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 <style>
 /* =====================================================================
-   INDIAN PENPALS' LEAGUE — Complete Design System
+   INDIAN PENPALS' LEAGUE — Complete Design System & Animations
    Single-File SPA | All CSS Embedded
    ===================================================================== */
 
@@ -30,8 +31,8 @@
     --color-text-muted: #667085; --color-text-on-dark: #F6FAFF;
     --color-border: #E5EAF0; --color-border-focus: #1456A0;
     --color-error: #BA1A1A; --color-success: #1E7E34;
-    --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
-    --font-body: 'Inter', system-ui, sans-serif;
+    --font-heading: 'Plus Jakarta Sans', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
+    --font-body: 'Inter', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
     --space-xs:.25rem; --space-sm:.5rem; --space-md:1rem;
     --space-lg:1.5rem; --space-xl:2.5rem; --space-2xl:4rem; --space-3xl:6rem;
     --radius-sm:.25rem; --radius-md:.5rem; --radius-lg:.75rem;
@@ -40,7 +41,7 @@
     --shadow-md:0 4px 12px -2px rgba(11,31,58,.08),0 2px 6px -1px rgba(11,31,58,.04);
     --shadow-lg:0 12px 28px -4px rgba(11,31,58,.12),0 4px 12px -2px rgba(11,31,58,.06);
     --shadow-xl:0 20px 40px -8px rgba(11,31,58,.18);
-    --container-max-width:1280px; --header-height:112px;
+    --container-max-width:1280px;
 }
 
 /* --- RESET --- */
@@ -56,9 +57,9 @@ ul,ol{list-style:none}
 
 /* --- TYPOGRAPHY --- */
 h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--color-text-primary);line-height:1.25}
-.display-hero{font-size:clamp(2.25rem,4vw + 1rem,3.25rem);font-weight:800;line-height:1.15;letter-spacing:-.02em}
-.headline-xl{font-size:clamp(1.9rem,3vw + .5rem,2.75rem);font-weight:700;line-height:1.2;letter-spacing:-.015em}
-.headline-lg{font-size:clamp(1.75rem,3vw + .5rem,2.5rem);font-weight:700;line-height:1.2;letter-spacing:-.015em}
+.display-hero{font-size:clamp(2.25rem,4.5vw + .5rem,4rem);font-weight:800;line-height:1.2;letter-spacing:-.01em;text-wrap:balance}
+.headline-xl{font-size:clamp(1.9rem,3vw + .5rem,2.75rem);font-weight:700;line-height:1.2;letter-spacing:-.01em}
+.headline-lg{font-size:clamp(1.75rem,3vw + .5rem,2.5rem);font-weight:700;line-height:1.2;letter-spacing:-.01em}
 .headline-md{font-size:clamp(1.35rem,2vw + .5rem,1.75rem);font-weight:600;line-height:1.3}
 .headline-sm{font-size:1.25rem;font-weight:600;line-height:1.4}
 .body-lg{font-size:1.125rem;line-height:1.65}
@@ -105,39 +106,43 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 .skip-link:focus{top:1rem}
 :focus-visible{outline:2px solid var(--color-blue);outline-offset:2px}
 
+/* --- STICKY HEADER WRAPPER --- */
+.site-header-wrapper{position:sticky;top:0;left:0;right:0;z-index:1000;background:#fff;box-shadow:0 2px 12px rgba(11,31,58,.06);transition:box-shadow .3s ease;width:100%}
+.site-header-wrapper.scrolled{box-shadow:0 4px 24px rgba(11,31,58,.12)}
+
 /* --- TOP BAR --- */
-.top-bar{background:var(--color-navy);color:#fff;padding:.375rem 1.5rem;font-size:.8125rem;border-bottom:1px solid rgba(255,255,255,.08)}
-.top-bar-container{max-width:var(--container-max-width);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1rem}
-.top-bar-info{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+.top-bar{background:var(--color-navy);color:#fff;padding:.35rem 1.25rem;font-size:.8125rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.top-bar-container{max-width:var(--container-max-width);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.4rem 1rem}
+.top-bar-info{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
 .top-bar-divider{color:rgba(255,255,255,.3)}
-.top-bar-links{display:flex;align-items:center;gap:1rem}
+.top-bar-links{display:flex;align-items:center;gap:.875rem}
 .top-bar-links a{display:inline-flex;align-items:center;gap:.25rem;color:#fff;transition:color .2s}
 .top-bar-links a:hover{color:var(--color-gold-light)}
 
 /* --- HEADER & NAV --- */
-.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:1px solid var(--color-border);box-shadow:0 2px 10px rgba(11,31,58,.05);transition:all .3s ease}
-.site-header.scrolled{box-shadow:0 4px 20px rgba(11,31,58,.12)}
-.main-nav{height:72px;display:flex;align-items:center;justify-content:space-between;max-width:var(--container-max-width);margin:0 auto;padding:0 1.5rem}
-.brand-logo-wrapper{display:flex;align-items:center;gap:.875rem;cursor:pointer}
-.brand-logo{width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(11,31,58,.15);border:2px solid var(--color-border);background:#fff}
-.brand-text{display:flex;flex-direction:column}
-.brand-title{font-family:var(--font-heading);font-size:1.125rem;font-weight:800;color:var(--color-navy);letter-spacing:-.01em;line-height:1.15}
-.brand-subtitle{font-size:.6875rem;font-weight:500;color:var(--color-text-muted);letter-spacing:.02em}
-.nav-menu{display:flex;align-items:center;gap:.5rem}
+.site-header{background:#fff;border-bottom:1px solid var(--color-border)}
+.main-nav{height:70px;display:flex;align-items:center;justify-content:space-between;max-width:var(--container-max-width);margin:0 auto;padding:0 1.25rem;gap:.75rem}
+.brand-logo-wrapper{display:flex;align-items:center;gap:.75rem;cursor:pointer;flex-shrink:0;min-width:max-content;text-decoration:none;transition:transform .2s ease}
+.brand-logo-wrapper:hover{transform:scale(1.02)}
+.brand-logo{width:48px;height:48px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(11,31,58,.15);border:2px solid var(--color-gold);background:#fff;flex-shrink:0}
+.brand-text{display:flex;flex-direction:column;justify-content:center}
+.brand-title{font-family:var(--font-heading);font-size:clamp(0.95rem,1.15vw,1.125rem);font-weight:800;color:var(--color-navy);letter-spacing:-.01em;line-height:1.2;white-space:nowrap}
+.brand-subtitle{font-size:.6875rem;font-weight:500;color:var(--color-text-muted);letter-spacing:.01em;white-space:nowrap}
+.nav-menu{display:flex;align-items:center;gap:.2rem;flex-shrink:1;flex-wrap:nowrap}
 .nav-item{position:relative;display:inline-flex;align-items:center}
-.nav-link{font-size:.95rem;font-weight:600;color:var(--color-text-secondary);padding:.55rem 1rem;border-radius:10px;display:inline-flex;align-items:center;gap:.35rem;transition:all .2s ease;cursor:pointer;text-decoration:none;line-height:1.2;border-bottom:3px solid transparent;background:none;border-top:none;border-left:none;border-right:none}
-.nav-link:hover,.nav-dropdown:hover>.nav-link,.nav-link.active{color:var(--color-blue);font-weight:700;background:rgba(20,86,160,.08);border-bottom:3px solid var(--color-blue);border-radius:10px 10px 4px 4px}
+.nav-link{font-size:.875rem;font-weight:600;color:var(--color-text-secondary);padding:.5rem .65rem;border-radius:8px;display:inline-flex;align-items:center;gap:.25rem;transition:all .2s cubic-bezier(.16,1,.3,1);cursor:pointer;text-decoration:none;line-height:1.2;border-bottom:3px solid transparent;background:none;border-top:none;border-left:none;border-right:none;white-space:nowrap}
+.nav-link:hover,.nav-dropdown:hover>.nav-link,.nav-link.active{color:var(--color-blue);font-weight:700;background:rgba(20,86,160,.08);border-bottom:3px solid var(--color-blue);border-radius:8px 8px 4px 4px}
 .nav-link .dropdown-chevron{font-size:1.15rem;transition:transform .25s cubic-bezier(.16,1,.3,1);color:var(--color-text-muted)}
 .nav-dropdown:hover .dropdown-chevron{transform:rotate(180deg);color:var(--color-blue)}
 .nav-dropdown-menu{position:absolute;top:calc(100% + 6px);left:0;min-width:220px;background:#fff;border-radius:14px;box-shadow:0 12px 32px rgba(11,31,58,.14),0 2px 6px rgba(0,0,0,.04);border:1px solid var(--color-border);padding:.5rem;display:flex;flex-direction:column;gap:.25rem;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s ease,transform .2s cubic-bezier(.16,1,.3,1),visibility .2s;z-index:1100}
 .nav-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:12px}
 .nav-dropdown:hover .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
-.nav-dropdown-item{font-size:.9375rem;font-weight:600;color:var(--color-text-primary);padding:.65rem 1rem;border-radius:8px;transition:all .18s ease;display:flex;align-items:center;cursor:pointer;text-decoration:none;line-height:1.3}
+.nav-dropdown-item{font-size:.9rem;font-weight:600;color:var(--color-text-primary);padding:.6rem .875rem;border-radius:8px;transition:all .18s ease;display:flex;align-items:center;cursor:pointer;text-decoration:none;line-height:1.3;white-space:nowrap}
 .nav-dropdown-item:hover{background:var(--color-surface-low);color:var(--color-blue)}
 .nav-dropdown-item.active{background:rgba(20,86,160,.08);color:var(--color-blue);font-weight:700}
-.nav-actions{display:flex;align-items:center;gap:.75rem}
+.nav-actions{display:flex;align-items:center;gap:.625rem;flex-shrink:0}
 .lang-switch{display:flex;align-items:center;background:var(--color-surface-container);border-radius:var(--radius-md);padding:2px;border:1px solid var(--color-border)}
-.lang-btn{padding:.25rem .625rem;font-size:.75rem;font-weight:600;border-radius:calc(var(--radius-md) - 2px);color:var(--color-text-secondary);transition:all .2s ease}
+.lang-btn{padding:.25rem .625rem;font-size:.75rem;font-weight:700;border-radius:calc(var(--radius-md) - 2px);color:var(--color-text-secondary);transition:all .2s ease}
 .lang-btn.active{background:#fff;color:var(--color-navy);box-shadow:0 1px 3px rgba(0,0,0,.1)}
 .dot-indicator{width:6px;height:6px;border-radius:50%;background:var(--color-gold-light);display:inline-block;margin-right:.35rem}
 .mobile-menu-toggle{display:none;background:none;border:none;font-size:1.75rem;color:var(--color-navy);padding:.375rem;cursor:pointer}
@@ -148,41 +153,43 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 .mobile-drawer-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--color-border);padding-bottom:1rem}
 .mobile-nav-links{display:flex;flex-direction:column;gap:.5rem}
 .mobile-nav-link{font-size:1rem;font-weight:600;color:var(--color-text-primary);padding:.75rem .875rem;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:none;border:none;width:100%;text-align:left;cursor:pointer;transition:all .2s ease}
-.mobile-nav-link:hover,.mobile-nav-link.active{background:var(--color-surface-low);color:#801475}
+.mobile-nav-link:hover,.mobile-nav-link.active{background:var(--color-surface-low);color:var(--color-blue)}
 .mobile-nav-accordion{display:flex;flex-direction:column}
 .mobile-accordion-toggle .accordion-icon{transition:transform .25s ease}
 .accordion-icon.rotated{transform:rotate(180deg)}
 .mobile-sub-menu{display:flex;flex-direction:column;gap:.25rem;padding:0;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}
 .mobile-sub-menu.open{max-height:400px;padding:.25rem 0 .5rem 1.25rem}
 .mobile-sub-link{font-size:.9375rem;font-weight:500;color:var(--color-text-secondary);padding:.5rem .75rem;border-radius:var(--radius-sm);text-decoration:none;transition:all .15s ease;cursor:pointer;display:block}
-.mobile-sub-link:hover,.mobile-sub-link.active{color:#801475;background:var(--color-surface-low);font-weight:600}
+.mobile-sub-link:hover,.mobile-sub-link.active{color:var(--color-blue);background:var(--color-surface-low);font-weight:600}
 .mobile-drawer-cta{margin-top:1rem;padding-top:1rem;border-top:1px solid var(--color-border)}
 .drawer-overlay{position:fixed;inset:0;background:rgba(11,31,58,.5);backdrop-filter:blur(2px);z-index:1000;opacity:0;pointer-events:none;transition:opacity .3s ease}
 .drawer-overlay.active{opacity:1;pointer-events:auto}
 
 /* --- MAIN CONTENT AREA --- */
-.main-content{margin-top:calc(var(--header-height) - 10px);flex:1}
+.main-content{margin-top:0;flex:1}
 
-/* --- SPA PAGE SECTIONS --- */
+/* --- SPA PAGE SECTIONS & ANIMATIONS --- */
 .page-section{display:none}
-.page-section.active{display:block}
+.page-section.active{display:block;animation:pageFadeIn .4s cubic-bezier(0.16,1,0.3,1) forwards}
+@keyframes pageFadeIn{0%{opacity:0;transform:translateY(12px)}100%{opacity:1;transform:translateY(0)}}
 
 /* --- BREADCRUMB --- */
 .breadcrumb-bar{background:var(--color-surface-low);padding:.75rem 1.5rem;border-bottom:1px solid var(--color-border)}
 .breadcrumb-list{display:flex;align-items:center;gap:.5rem;max-width:var(--container-max-width);margin:0 auto;font-size:.875rem;color:var(--color-text-muted);flex-wrap:wrap}
-.breadcrumb-item a{color:var(--color-text-secondary);display:inline-flex;align-items:center;gap:.25rem;cursor:pointer}
-.breadcrumb-item a:hover,.breadcrumb-item.active{color:var(--color-blue);font-weight:600}
+.breadcrumb-item a,.breadcrumb-item button{color:var(--color-text-secondary);display:inline-flex;align-items:center;gap:.25rem;cursor:pointer}
+.breadcrumb-item a:hover,.breadcrumb-item button:hover,.breadcrumb-item.active{color:var(--color-blue);font-weight:600}
 .breadcrumb-separator{color:var(--color-surface-dim)}
 
 /* --- BUTTONS --- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--font-body);font-weight:600;font-size:.9375rem;padding:.625rem 1.375rem;border-radius:var(--radius-md);transition:all .25s cubic-bezier(.16,1,.3,1);text-align:center;white-space:nowrap;line-height:1.4;cursor:pointer;border:none}
-.btn:active{transform:scale(.98)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--font-body);font-weight:600;font-size:.9375rem;padding:.625rem 1.375rem;border-radius:var(--radius-md);transition:all .25s cubic-bezier(.16,1,.3,1);text-align:center;white-space:nowrap;line-height:1.4;cursor:pointer;border:none;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
 .btn-primary{background:var(--color-blue);color:#fff;box-shadow:0 2px 8px rgba(20,86,160,.25)}
-.btn-primary:hover{background:var(--color-blue-dark);box-shadow:0 4px 14px rgba(20,86,160,.35);color:#fff}
+.btn-primary:hover{background:var(--color-blue-dark);box-shadow:0 6px 18px rgba(20,86,160,.35);color:#fff}
 .btn-secondary{background:var(--color-surface-container);color:var(--color-navy);border:1px solid var(--color-border)}
-.btn-secondary:hover{background:var(--color-surface-high);color:var(--color-navy)}
+.btn-secondary:hover{background:var(--color-surface-high);color:var(--color-navy);box-shadow:0 4px 12px rgba(11,31,58,.08)}
 .btn-gold{background:var(--color-gold);color:var(--color-navy);font-weight:700;box-shadow:0 2px 8px rgba(212,167,44,.25)}
-.btn-gold:hover{background:var(--color-gold-light);color:var(--color-navy)}
+.btn-gold:hover{background:var(--color-gold-light);color:var(--color-navy);box-shadow:0 6px 18px rgba(212,167,44,.35)}
 .btn-outline-white{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6)}
 .btn-outline-white:hover{background:#fff;color:var(--color-navy)}
 .btn-sm{padding:.375rem .875rem;font-size:.8125rem;border-radius:var(--radius-sm)}
@@ -198,11 +205,11 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 .badge-blue{background:var(--color-secondary-container);color:var(--color-blue-dark)}
 .badge-light{background:var(--color-surface-container);color:var(--color-text-secondary)}
 
-/* --- CARDS --- */
-.card{background:#fff;border-radius:var(--radius-xl);border:1px solid var(--color-border);padding:1.75rem;box-shadow:var(--shadow-sm);transition:all .3s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column}
-.card-hover:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:rgba(20,86,160,.2)}
+/* --- CARDS & HOVER EFFECTS --- */
+.card{background:#fff;border-radius:var(--radius-xl);border:1px solid var(--color-border);padding:1.75rem;box-shadow:var(--shadow-sm);transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s cubic-bezier(.16,1,.3,1),border-color .3s ease;display:flex;flex-direction:column}
+.card-hover:hover{transform:translateY(-6px);box-shadow:0 16px 32px -4px rgba(11,31,58,.12),0 4px 12px -2px rgba(11,31,58,.06);border-color:rgba(20,86,160,.25)}
 .card-image-wrapper{position:relative;border-radius:var(--radius-lg);overflow:hidden;margin-bottom:1.25rem;background:var(--color-surface-container)}
-.card-image-wrapper img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card-image-wrapper img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.16,1,.3,1)}
 .card:hover .card-image-wrapper img{transform:scale(1.04)}
 .card-overlay-badge{position:absolute;top:.75rem;left:.75rem;z-index:2}
 .news-card-date{position:absolute;top:.75rem;right:.75rem;background:rgba(11,31,58,.85);backdrop-filter:blur(4px);color:#fff;padding:.25rem .625rem;border-radius:var(--radius-sm);font-size:.75rem;font-weight:600}
@@ -218,6 +225,8 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 
 /* --- HERO BANNERS --- */
 .hero-banner{position:relative;background:linear-gradient(180deg,var(--color-surface-low) 0%,var(--color-surface) 50%,#fff 100%);padding:var(--space-2xl) 0;overflow:hidden}
+.hero-banner .badge-gold{animation:badgePulse 3s ease-in-out infinite}
+@keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(212,167,44,.35)}50%{box-shadow:0 0 0 8px rgba(212,167,44,0)}}
 .quote-banner{background:var(--color-navy);color:#fff;padding:var(--space-2xl) 0;position:relative;overflow:hidden;box-shadow:var(--shadow-xl)}
 
 /* --- TIMELINE --- */
@@ -261,29 +270,32 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 .toast.show{transform:translateY(0);opacity:1}
 
 /* --- FOOTER --- */
-.site-footer{background:var(--color-navy);color:var(--color-text-on-dark);padding-top:var(--space-3xl);margin-top:auto}
-.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.2fr;gap:2.5rem;padding-bottom:var(--space-2xl);border-bottom:1px solid rgba(255,255,255,.1)}
-.footer-col h4{font-size:1rem;font-weight:700;color:#fff;margin-bottom:1.25rem;letter-spacing:.02em}
-.footer-links{display:flex;flex-direction:column;gap:.625rem}
-.footer-links a,.footer-links span[onclick]{color:var(--color-surface-dim);font-size:.9375rem;transition:color .2s ease;cursor:pointer;display:inline-block}
-.footer-links a:hover,.footer-links span[onclick]:hover{color:var(--color-gold-light)}
-.footer-bottom{padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.8125rem;color:rgba(255,255,255,.6)}
+.site-footer{background:var(--color-navy);color:#fff;padding:var(--space-3xl) 0 var(--space-xl);position:relative}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:2.5rem;margin-bottom:var(--space-2xl)}
+.footer-col h4{color:#fff;font-size:1rem;margin-bottom:1.25rem;font-weight:700}
+.footer-links{display:flex;flex-direction:column;gap:.75rem}
+.footer-links span,.footer-links a{color:rgba(255,255,255,.75);font-size:.875rem;transition:color .2s;cursor:pointer}
+.footer-links span:hover,.footer-links a:hover{color:var(--color-gold-light)}
+.footer-bottom{padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.8125rem;color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.1)}
 
 /* --- BACK TO TOP --- */
 .back-to-top{position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;border-radius:50%;background:var(--color-blue);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);z-index:900;opacity:0;visibility:hidden;transform:translateY(20px);transition:all .3s ease;cursor:pointer;border:none}
 .back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
 .back-to-top:hover{background:var(--color-navy);transform:translateY(-3px)}
 
-/* --- RESPONSIVE --- */
-@media (max-width:1024px){
-    :root{--header-height:100px}
-    .main-nav{height:64px}
+/* --- SCROLL REVEAL --- */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1);will-change:opacity,transform}
+.reveal.revealed{opacity:1;transform:translateY(0)}
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+@media (max-width:1180px){
     .nav-menu{display:none}
     .mobile-menu-toggle{display:block}
+    .main-nav{height:64px}
     .footer-grid{grid-template-columns:repeat(2,1fr);gap:2rem}
 }
 @media (max-width:768px){
-    :root{--space-2xl:2.75rem;--space-3xl:3.5rem;--header-height:105px}
+    :root{--space-2xl:2.5rem;--space-3xl:3.5rem}
     .top-bar-container{flex-direction:column;align-items:flex-start;gap:.35rem}
     .grid-cols-2,.grid-cols-3,.grid-cols-4{grid-template-columns:1fr}
     .footer-grid{grid-template-columns:1fr}
@@ -293,9 +305,9 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 }
 @media (max-width:480px){
     .container{padding:0 1rem}
-    .brand-title{font-size:.95rem}
+    .brand-title{font-size:.9rem}
     .brand-subtitle{display:none}
-    .brand-logo{width:38px;height:38px}
+    .brand-logo{width:40px;height:40px}
     .top-bar{font-size:.75rem;padding:.35rem 1rem}
     .display-hero{font-size:1.85rem}
     .headline-lg{font-size:1.5rem}
@@ -303,90 +315,81 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
 @media (min-width:1440px){
     :root{--container-max-width:1360px}
     .container{padding:0 2rem}
-    .display-hero{font-size:3.5rem}
+    .display-hero{font-size:3.75rem}
 }
-
-/* --- PAGE TRANSITIONS --- */
-.page-section{animation:none}
-.page-section.active{animation:fadeIn .3s ease}
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-
-/* --- SCROLL REVEAL --- */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s cubic-bezier(.16,1,.3,1)}
-.reveal.revealed{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
-<a href="#" class="skip-link" onclick="navigate('home')">Skip to main content</a>
-
-<!-- TOP STATUTORY BAR -->
-<aside class="top-bar">
-    <div class="top-bar-container">
-        <div class="top-bar-info">
-            <span class="text-gold font-semibold" data-i18n="stat_est">Est. March 12, 1995</span>
-            <span class="top-bar-divider">•</span><span data-i18n="stat_reg">Reg #F23778</span>
-            <span class="top-bar-divider">•</span>
-            <span class="badge badge-gold" data-i18n="stat_cert">80G Certified Social Welfare Trust</span>
-            <span class="top-bar-divider">•</span><span data-i18n="stat_loc">Chembur, Mumbai, India</span>
-        </div>
-        <div class="top-bar-links">
-            <a href="tel:+919892035187"><span class="material-symbols-outlined text-sm" style="font-size:14px">call</span>+91 9892035187</a>
-            <span class="top-bar-divider">•</span>
-            <a href="mailto:iplmumbai12395@gmail.com"><span class="material-symbols-outlined" style="font-size:14px">mail</span>iplmumbai12395@gmail.com</a>
-        </div>
-    </div>
-</aside>
-
-<!-- SHARED HEADER — Edit once, updates everywhere -->
-<header class="site-header" id="site-header">
-    <div class="main-nav">
-        <div class="brand-logo-wrapper" onclick="navigate('home')" role="link" tabindex="0" aria-label="IPL Home">
-            <img src="images/ipl-logo.png" alt="IPL Emblem" class="brand-logo" onerror="this.src='images/ipl-logo.png'">
-            <div class="brand-text">
-                <span class="brand-title" data-i18n="brand_title">INDIAN PENPALS' LEAGUE</span>
-                <span class="brand-subtitle" data-i18n="brand_sub">Love, Friendship &amp; Humanity • Estd. 1995</span>
+<a href="#" class="skip-link" onclick="navigate('home')">Skip to main content</a><!-- TOP STATUTORY BAR + HEADER WRAPPER -->
+<div class="site-header-wrapper" id="siteHeaderWrapper">
+    <aside class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-info">
+                <span class="text-gold font-semibold" data-i18n="stat_est">Est. March 12, 1995</span>
+                <span class="top-bar-divider">•</span><span data-i18n="stat_reg">Reg #F23778</span>
+                <span class="top-bar-divider">•</span>
+                <span class="badge badge-gold" data-i18n="stat_cert">80G Certified Social Welfare Trust</span>
+                <span class="top-bar-divider">•</span><span data-i18n="stat_loc">Chembur, Mumbai, India</span>
+            </div>
+            <div class="top-bar-links">
+                <a href="tel:+919892035187"><span class="material-symbols-outlined text-sm" style="font-size:14px">call</span>+91 9892035187</a>
+                <span class="top-bar-divider">•</span>
+                <a href="mailto:iplmumbai12395@gmail.com"><span class="material-symbols-outlined" style="font-size:14px">mail</span>iplmumbai12395@gmail.com</a>
             </div>
         </div>
-        <nav class="nav-menu" aria-label="Primary Navigation">
-            <button class="nav-link" onclick="navigate('home')" data-page="home" data-i18n="nav_home">Home</button>
-            <div class="nav-item nav-dropdown">
-                <button class="nav-link" data-page="about" onclick="navigate('about')">
-                    <span data-i18n="nav_about">About</span><span class="material-symbols-outlined dropdown-chevron">expand_more</span>
-                </button>
-                <div class="nav-dropdown-menu">
-                    <button class="nav-dropdown-item" onclick="navigate('history')" data-i18n="nav_history">History</button>
-                    <button class="nav-dropdown-item" onclick="navigate('presidents-blog')" data-i18n="nav_presidents_blog">IPL President's Blog</button>
+    </aside>
+
+    <!-- SHARED HEADER -->
+    <header class="site-header" id="site-header">
+        <div class="main-nav">
+            <div class="brand-logo-wrapper" onclick="navigate('home')" role="link" tabindex="0" aria-label="IPL Home">
+                <img src="images/ipl-logo.png" alt="IPL Emblem" class="brand-logo" onerror="this.src='images/ipl-logo.png'">
+                <div class="brand-text">
+                    <span class="brand-title" data-i18n="brand_title">INDIAN PENPALS' LEAGUE</span>
+                    <span class="brand-subtitle" data-i18n="brand_sub">Love, Friendship &amp; Humanity • Estd. 1995</span>
                 </div>
             </div>
-            <button class="nav-link" onclick="navigate('team')" data-page="team" data-i18n="nav_team">Our Team</button>
-            <button class="nav-link" onclick="navigate('humanitarian')" data-page="humanitarian" data-i18n="nav_humanitarian">Humanitarian Services</button>
-            <div class="nav-item nav-dropdown">
-                <button class="nav-link" data-page="news-events" onclick="navigate('news-events')">
-                    <span data-i18n="nav_news_events">News &amp; Events</span><span class="material-symbols-outlined dropdown-chevron">expand_more</span>
-                </button>
-                <div class="nav-dropdown-menu">
-                    <button class="nav-dropdown-item" onclick="navigate('news-events')" data-i18n="nav_ipl_news">IPL News</button>
-                    <button class="nav-dropdown-item" onclick="navigate('events')" data-i18n="nav_events">Events</button>
-                    <button class="nav-dropdown-item" onclick="navigate('friendship-meets')" data-i18n="nav_friendship_meets">Friendship Meets</button>
-                    <button class="nav-dropdown-item" onclick="navigate('friends-day')" data-i18n="nav_friends_day">Friends Day</button>
+            <nav class="nav-menu" aria-label="Primary Navigation">
+                <button class="nav-link" onclick="navigate('home')" data-page="home" data-i18n="nav_home">Home</button>
+                <div class="nav-item nav-dropdown">
+                    <button class="nav-link" data-page="about" onclick="navigate('about')">
+                        <span data-i18n="nav_about">About</span><span class="material-symbols-outlined dropdown-chevron">expand_more</span>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <button class="nav-dropdown-item" onclick="navigate('history')" data-i18n="nav_history">History</button>
+                        <button class="nav-dropdown-item" onclick="navigate('presidents-blog')" data-i18n="nav_presidents_blog">IPL President's Blog</button>
+                    </div>
                 </div>
+                <button class="nav-link" onclick="navigate('team')" data-page="team" data-i18n="nav_team">Our Team</button>
+                <button class="nav-link" onclick="navigate('humanitarian')" data-page="humanitarian" data-i18n="nav_humanitarian">Humanitarian Services</button>
+                <div class="nav-item nav-dropdown">
+                    <button class="nav-link" data-page="news-events" onclick="navigate('news-events')">
+                        <span data-i18n="nav_news_events">News &amp; Events</span><span class="material-symbols-outlined dropdown-chevron">expand_more</span>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <button class="nav-dropdown-item" onclick="navigate('news-events')" data-i18n="nav_ipl_news">IPL News</button>
+                        <button class="nav-dropdown-item" onclick="navigate('events')" data-i18n="nav_events">Events</button>
+                        <button class="nav-dropdown-item" onclick="navigate('friendship-meets')" data-i18n="nav_friendship_meets">Friendship Meets</button>
+                        <button class="nav-dropdown-item" onclick="navigate('friends-day')" data-i18n="nav_friends_day">Friends Day</button>
+                    </div>
+                </div>
+                <button class="nav-link" onclick="navigate('contact')" data-page="contact" data-i18n="nav_contact">Contact</button>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-switch">
+                    <button type="button" class="lang-btn active" id="langEN">EN</button>
+                    <button type="button" class="lang-btn" id="langTA">தமிழ்</button>
+                </div>
+                <button class="btn btn-primary btn-sm" onclick="navigate('join')">
+                    <span class="dot-indicator"></span><span data-i18n="nav_join">Join Now</span>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
             </div>
-            <button class="nav-link" onclick="navigate('contact')" data-page="contact" data-i18n="nav_contact">Contact</button>
-        </nav>
-        <div class="nav-actions">
-            <div class="lang-switch">
-                <button type="button" class="lang-btn active" id="langEN">EN</button>
-                <button type="button" class="lang-btn" id="langTA">தமிழ்</button>
-            </div>
-            <button class="btn btn-primary btn-sm" onclick="navigate('join')">
-                <span class="dot-indicator"></span><span data-i18n="nav_join">Join Now</span>
-            </button>
-            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Open menu">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
         </div>
-    </div>
-</header>
+    </header>
+</div>
 
 <!-- MOBILE DRAWER -->
 <div class="drawer-overlay" id="drawerOverlay"></div>
@@ -435,12 +438,12 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--co
                     <span class="material-symbols-outlined" style="font-size:16px">star</span>
                     <span data-i18n="hero_badge">Established March 12, 1995 • 80G Certified</span>
                 </div>
-                <h1 class="display-hero text-navy mb-4" style="font-size:clamp(2.5rem,6vw,5rem);letter-spacing:-.03em;" data-i18n="hero_title">
+                <h1 class="display-hero text-navy mb-4" data-i18n="hero_title">
                     INDIAN PENPALS' LEAGUE
                 </h1>
                 <p class="body-lg text-secondary mb-2" data-i18n="hero_tagline">Love, Friendship &amp; Humanity</p>
                 <p class="body-md text-muted mb-8 max-w-3xl" data-i18n="hero_desc">A confederation of groups of friends in India and abroad, united since 1995 to uphold three basic principles — overcoming the barriers of caste, color, creed, religion, language and geography.</p>
-                <div class="flex flex-wrap gap-sm" style="justify-content:center;">
+                <div class="flex flex-wrap gap-sm justify-center">
                     <button class="btn btn-primary btn-lg" onclick="navigate('about')" data-i18n="btn_about_ipl">About IPL</button>
                     <button class="btn btn-secondary btn-lg" onclick="navigate('contact')" data-i18n="btn_contact_us">Contact Us</button>
                     <button class="btn btn-secondary btn-lg" onclick="navigate('events')" data-i18n="btn_events">Events</button>

@@ -3,7 +3,7 @@
    Estd. March 12, 1995 • Reg #F23778 • 80G Certified Welfare Trust
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 /* --- 1. CSS VARIABLES & DESIGN TOKENS --- */
@@ -48,8 +48,8 @@
     --color-success-bg: #EAF7ED;
     
     /* Typography */
-    --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Plus Jakarta Sans', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
+    --font-body: 'Inter', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
     
     /* Spacings */
     --space-xs: 0.25rem;   /* 4px */
@@ -163,15 +163,15 @@ h1, h2, h3, h4, h5, h6 {
 .display-hero {
     font-size: clamp(2.25rem, 4vw + 1rem, 3.25rem);
     font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    line-height: 1.2;
+    letter-spacing: normal;
 }
 
 .headline-lg {
     font-size: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
     font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.015em;
+    line-height: 1.25;
+    letter-spacing: normal;
 }
 
 .headline-md {
